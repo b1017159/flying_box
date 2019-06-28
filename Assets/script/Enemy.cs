@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
         private float randm;
         public float speed;
         private float rotationSmooth = 100f;
-        public float scale;//最大スケールて
+        public float scale;//最大スケール
         private Vector3 targetPosition;  //行先
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
         private float color_speed=0.01f;

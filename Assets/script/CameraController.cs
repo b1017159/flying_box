@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+//test
 public class CameraController : MonoBehaviour
 {
         public GameObject player; // 玉のオブジェクト

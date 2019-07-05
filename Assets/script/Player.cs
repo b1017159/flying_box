@@ -75,7 +75,9 @@ public class Player : MonoBehaviour
                 if(Input.GetKey(KeyCode.LeftArrow)) {
                         sau-=rotate_speed;
                 }
-                //Debug.Log(updown+":"+sau);
+                if (Input.GetKey(KeyCode.S)){
+                  transform.Translate (0.0f,0.0f,0.1f);
+                }                //Debug.Log(updown+":"+sau);
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
                 transform.Translate (Vector3.forward * speed);
         }

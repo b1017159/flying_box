@@ -1,3 +1,4 @@
+//2019/07/05
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,11 +18,13 @@ public class Enemy : MonoBehaviour
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
         private float color_speed=0.01f;
         private float color=0;//初期透明度（透明）
+        private float rotation;
         void Start()
         {
                 targetPosition = GetRandomPositionOnLevel();
                 gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
+
         }
 
         // Update is called once per frame
@@ -43,17 +46,26 @@ public class Enemy : MonoBehaviour
                 // 前方に進む
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
-        void OnTriggerEnter(Collider other){
-                if(other.gameObject.CompareTag("Enemy")) {
-                        if(this.scale<other.gameObject.GetComponent<Enemy>().scale) {
+//        void OnTriggerEnter(Collider other){
+  //              if(other.gameObject.CompareTag("Enemy")) {
+//                        if(this.scale<other.gameObject.GetComponent<Enemy>().scale) {
                                 //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
                                 //ジェネリクス
                                 //Enemy型のコンポーネントを取得
                                 // その収集アイテムを非表示にします
-                                other.gameObject.SetActive(false);
-                        }
-                }
-        }
+//                                other.gameObject.SetActive(false);
+//                        }
+//                }
+//        }
+        void OnCollisionEnter(Collision collision) {
+            //衝突判定
+            if (collision.gameObject.tag == "Player") {
+                //相手のタグがPlayerならば、自分を消す
+                //Destroy(this.gameObject);
+                this.gameObject.SetActive (false);
+            }
+          }
+
         void OnTriggerExit(Collider other){
                 if(other.gameObject.CompareTag("Wall")) {
                         this.gameObject.SetActive(false);

@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
                 targetPosition = GetRandomPositionOnLevel();
                 gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
-
+                //transform.Rotate(new Vector3(0,0,90));
         }
 
         // Update is called once per frame
@@ -41,30 +41,42 @@ public class Enemy : MonoBehaviour
                         //Debug.Log(targetPosition);
                 }
                 // 目標地点の方向を向く
-                Quaternion targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+                Vector3 relativePos=targetPosition - transform.position;
+                Quaternion targetRotation = Quaternion.LookRotation(relativePos);
+
+                //Vector3 tempSpear = this.transform.rotation;
+                //tempSpear.z = 90;
+                //this.transform.rotation = tempSpear;
+
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSmooth);
                 // 前方に進む
+                //this.transform.rotation.eulerAngles.z=90;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                float z = 90;
+                float opposite =0;
+                //this.transform.rotation = Quaternion.Euler(x, 5f, z);
+                this.transform.Rotate( opposite, 0.0f, z);
+                Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         }
-//        void OnTriggerEnter(Collider other){
-  //              if(other.gameObject.CompareTag("Enemy")) {
-//                        if(this.scale<other.gameObject.GetComponent<Enemy>().scale) {
-                                //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
+        void OnTriggerEnter(Collider other){
+                if(other.gameObject.CompareTag("Enemy")) {
+                        if(this.scale<other.gameObject.GetComponent<Enemy>().scale) {
+                                Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
                                 //ジェネリクス
                                 //Enemy型のコンポーネントを取得
-                                // その収集アイテムを非表示にします
-//                                other.gameObject.SetActive(false);
-//                        }
-//                }
-//        }
+                                //その収集アイテムを非表示にします
+                                other.gameObject.SetActive(false);
+                        }
+                }
+        }
         void OnCollisionEnter(Collision collision) {
-            //衝突判定
-            if (collision.gameObject.tag == "Player") {
-                //相手のタグがPlayerならば、自分を消す
-                //Destroy(this.gameObject);
-                this.gameObject.SetActive (false);
-            }
-          }
+                //衝突判定
+                if (collision.gameObject.tag == "Player") {
+                        //相手のタグがPlayerならば、自分を消す
+                        //Destroy(this.gameObject);
+                        this.gameObject.SetActive (false);
+                }
+        }
 
         void OnTriggerExit(Collider other){
                 if(other.gameObject.CompareTag("Wall")) {
@@ -103,7 +115,7 @@ public class Enemy : MonoBehaviour
         }
         public Vector3 GetRandomPositionOnLevel()
         {//ランダムに場所を取る関数
-                float levelSize = 50f;
+                float levelSize = 150f;
                 return new Vector3(Random.Range(-levelSize, levelSize), 1, Random.Range(-levelSize, levelSize));
         }
 }

@@ -52,10 +52,10 @@ public class Enemy : MonoBehaviour
                 // 前方に進む
                 //this.transform.rotation.eulerAngles.z=90;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                float z = 90;
-                float opposite =0;
+                float opposite =180;
+                float chokaku=90;
                 //this.transform.rotation = Quaternion.Euler(x, 5f, z);
-                this.transform.Rotate( opposite, 0.0f, z);
+                this.transform.Rotate( 0.0f, opposite, opposite);
                 Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         }
         void OnTriggerEnter(Collider other){
@@ -91,7 +91,7 @@ public class Enemy : MonoBehaviour
                 //string name=gameObject.name;
                 //if(name==Rectangular_Enemy) {}
                 //名前によってスケールを変えたい
-                this.transform.localScale = new Vector3(2*scale, scale, scale);
+                this.transform.localScale = new Vector3(scale, scale, scale);
                 player_position=Player.m_instance.transform.position;                                      //自機のポジション
                 //Debug.Log(player_position);
                 camera_position=CameraController.m_instance.transform.position;

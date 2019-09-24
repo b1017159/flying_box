@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountTimer : MonoBehaviour
 {
@@ -43,13 +44,24 @@ public class CountTimer : MonoBehaviour
         //　タイマー表示用UIテキストに時間を表示する
         if ((int)seconds != (int)oldSeconds)
         {
-            Timer.text = minute.ToString("00") + ":" + ((int)seconds).ToString("00");
+            Timer.text = "Time:" + minute.ToString("00") + ":" + ((int)seconds).ToString("00");
         }
         oldSeconds = seconds;
         //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する
         if (totalTime <= 0f)
         {
-            Debug.Log("制限時間終了");
+            Scene loadscene = SceneManager.GetActiveScene();
+            Debug.Log(loadscene.name);
+            if (loadscene.name == "GameStage1")
+            {
+                SceneManager.LoadScene("GameStage2");
+            }
+            if (loadscene.name == "GameStage2")
+            {
+                SceneManager.LoadScene("GameStage3");
+            }
+
+
         }
     }
 }

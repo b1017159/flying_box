@@ -213,8 +213,8 @@ MonoBehaviour:
     y: 0
     width: 350
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -330,7 +330,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 78fbffff
+      m_ExpandedIDs: 6ef9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -442,7 +442,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f6510000
     m_LastClickedID: 20982
-    m_ExpandedIDs: 00000000ac2f00008a310000be330000dc3400002236000098390000a63b0000b63c000032400000
+    m_ExpandedIDs: 000000009231000072330000a4350000c23600000c3800007e3b0000e8410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -470,7 +470,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000ac2f00008a310000be330000dc340000223600009839000032400000
+    m_ExpandedIDs: ffffffff000000009231000072330000a4350000c23600000c3800007e3b0000e8410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.0112119615, y: -1.1232036, z: -2.0947747}
+    m_Target: {x: 0.57675457, y: 1.5697663, z: 1.427516}
     speed: 2
     m_Value: {x: 0.0112119615, y: -1.1232036, z: -2.0947747}
   m_RenderMode: 0
@@ -674,11 +674,11 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.012529938, y: -0.9857688, z: 0.14415763, w: 0.08568768}
+    m_Target: {x: 0.14615911, y: 0.01870633, z: -0.0027643961, w: 0.9890912}
     speed: 2
-    m_Value: {x: 0.012529807, y: -0.98575854, z: 0.14415614, w: 0.085686795}
+    m_Value: {x: -0.012529809, y: 0.98575854, z: -0.14415614, w: -0.08568681}
   m_Size:
-    m_Target: 9.854741
+    m_Target: 9.597094
     speed: 2
     m_Value: 9.854741
   m_Ortho:

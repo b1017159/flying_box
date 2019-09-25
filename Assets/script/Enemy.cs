@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
                 //if(name==Rectangular_Enemy) {}
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
-                player_position=Player.m_instance.transform.position;                                      //自機のポジション
+                player_position=Player.m_instance.transform.position;//自機のポジション
                 //Debug.Log(player_position);
                 camera_position=CameraController.m_instance.transform.position;
                 //メインカメラのポジション

@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
         public float uemax;//上に向く角度の最大値：負の値
         public float sitamax;//下に向く角度の最大値
         float updown=0;//上下
-        float sau=0;//左右
+        float sau=90;//左右
         private int score;   // スコア
         private float size=1.2f;// 巨大化
         // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         {
                 //m_instance = this;
                 //Debug.Log(this.transform.position);
-                Vector3 _Rotation = gameObject.transform.localEulerAngles;
+                //Vector3 _Rotation = gameObject.transform.localEulerAngles;
                 //Debug.Log("_Rotationl:"+_Rotation);
                 // float angle_x = transform.eulerAngles.x;
                 // float angle_y = transform.eulerAngles.y;
@@ -75,9 +75,10 @@ public class Player : MonoBehaviour
                 if(Input.GetKey(KeyCode.LeftArrow)) {
                         sau-=rotate_speed;
                 }
-                if (Input.GetKey(KeyCode.S)){
-                  transform.Translate (0.0f,0.0f,0.1f);
-                }                //Debug.Log(updown+":"+sau);
+                if (Input.GetKey(KeyCode.S)) {
+                        transform.Translate (0.0f,0.0f,0.1f);
+                }
+                Debug.Log(updown+":"+sau);
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
                 transform.Translate (Vector3.forward * speed);
         }

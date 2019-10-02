@@ -8,7 +8,7 @@ public class Create : MonoBehaviour
     public Button button;
     private void Start()
     {
-        for (int i = 1; i <= 35; i++)
+        for (int i = 1; i <= 21; i++)
         {
             var obj = Instantiate(button, contentRectTransform);
             obj.GetComponentInChildren<Text>().text = i.ToString();

@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
                 float opposite =180;
                 //float chokaku=90;
                 //this.transform.rotation = Quaternion.Euler(x, 5f, z);
-                this.transform.Rotate( 0.0f, opposite, opposite);
+               // this.transform.Rotate( 0.0f, opposite, opposite);
                 //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         }
         void OnTriggerEnter(Collider other){

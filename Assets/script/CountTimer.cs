@@ -17,13 +17,12 @@ public class CountTimer : MonoBehaviour
     private float seconds;
     //　前回Update時の秒数
     private float oldSeconds;
-    private Text Timer;
+    public GameObject Timer;
 
     void Start()
     {
         totalTime = minute * 60 + seconds;
         oldSeconds = 0f;
-        Timer = GetComponentInChildren<Text>();
     }
 
     void Update()
@@ -44,7 +43,9 @@ public class CountTimer : MonoBehaviour
         //　タイマー表示用UIテキストに時間を表示する
         if ((int)seconds != (int)oldSeconds)
         {
-            Timer.text = "Time:" + minute.ToString("00") + ":" + ((int)seconds).ToString("00");
+             Timer.GetComponent<TextMesh>().text = "Time:" + minute.ToString("00") + ":" + ((int)seconds).ToString("00");
+        
+          //  Timer.text = "Time:" + minute.ToString("00") + ":" + ((int)seconds).ToString("00");
         }
         oldSeconds = seconds;
         //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         public float sitamax;//下に向く角度の最大値
         float updown=0;//上下
         float sau=0;//左右
-        private int score;   // スコア
+        private static int score;   // スコア
         private float size=1.2f;// 巨大化
         // Start is called before the first frame update
         void Start()
@@ -99,4 +99,9 @@ public class Player : MonoBehaviour
                 // スコアの表示を更新
                 scoreText.text = "Count: " + score.ToString();
         }
+
+    public static int GetScore()
+    {
+        return score;
+    }
 }

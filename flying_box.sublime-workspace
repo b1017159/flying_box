@@ -1,0 +1,902 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ro",
+				"rotate_speed\tfloat"
+			],
+			[
+				"XR",
+				"XRNode\tXRNode"
+			],
+			[
+				"Ve",
+				"Vector3\tV"
+			],
+			[
+				"Uni",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"Raw",
+				"RawButton\tRawButton"
+			],
+			[
+				"Cla",
+				"Clamp(float value, float min, float max)\tfloat"
+			],
+			[
+				"cla",
+				"Clamp(float value, float min, float max)\tfloat"
+			],
+			[
+				"L",
+				"LThumbstick\tRawButton"
+			],
+			[
+				"R",
+				"RawButton\tRawButton"
+			],
+			[
+				"B",
+				"B\tRawButton"
+			],
+			[
+				"getax",
+				"Get(Axis2D virtualMask)\tVector2"
+			],
+			[
+				"score",
+				"scoreText\tGameObject"
+			],
+			[
+				"colo",
+				"caretColor\tColor"
+			],
+			[
+				"tw",
+				"MediaTweet(string imagePath)\tvoid"
+			],
+			[
+				"te",
+				"textColor\tColor"
+			],
+			[
+				"Twi",
+				"TwitterSetting\tTwitterSetting"
+			],
+			[
+				"twi",
+				"twitterSetting\ttwitterSetting"
+			],
+			[
+				"scene",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"sele",
+				"selectControll\tSelectControll"
+			],
+			[
+				"se",
+				"selectControll\tSelectControll"
+			],
+			[
+				"filterna",
+				"filterNameUIText\tTextMesh"
+			],
+			[
+				"consum",
+				"ConsumerSecret\tstring"
+			],
+			[
+				"Post",
+				"PostTweetWithMedia(string text, string imagePath, string consumerKey, string consumerSecret, AccessTokenResponse response, PostTweetCallback callback)\tIEnumerator"
+			],
+			[
+				"PostT",
+				"PostTweetURL\tstring"
+			],
+			[
+				"postt",
+				"PostTweetURL\tstring"
+			],
+			[
+				"GetHeader",
+				"GetHeaderWithAccessToken(string httpRequestType, string apiURL, string consumerKey, string consumerSecret, AccessTokenResponse response, Dictionary<string, string> parameters)\tstring"
+			],
+			[
+				"Dictiona",
+				"DictionaryBase\tDictionaryBase"
+			],
+			[
+				"media_i",
+				"media_id_string\tstring"
+			],
+			[
+				"Form",
+				"FromJson<T>(string json)\tT"
+			],
+			[
+				"consu",
+				"consumerSecret\tstring"
+			],
+			[
+				"st",
+				"string\tstring"
+			],
+			[
+				"by",
+				"bytes\tbyte[]"
+			],
+			[
+				"readby",
+				"ReadBytes(int count)\tbyte[]"
+			],
+			[
+				"stru",
+				"structImage\tstructImage"
+			],
+			[
+				"to",
+				"Token\tstring"
+			],
+			[
+				"toke",
+				"TokenSecret\tstring"
+			],
+			[
+				"PlayerPrefsTwitterUsertoken",
+				"PlayerPrefsTwitterUserTokenSecret\tstring"
+			],
+			[
+				"acce",
+				"AccessTokenResponse\tAccessTokenResponse"
+			],
+			[
+				"request",
+				"RequestTokenResponse\tRequestTokenResponse"
+			],
+			[
+				"Consu",
+				"consumerKey\tstring"
+			],
+			[
+				"con",
+				"consumerKey\tstring"
+			],
+			[
+				"Input",
+				"InputField\tInputField"
+			],
+			[
+				"Consumer",
+				"ConsumerSecret\tstring"
+			],
+			[
+				"Start",
+				"StartCoroutine(IEnumerator routine)\tCoroutine"
+			],
+			[
+				"save",
+				"SavedUI()\tIEnumerator"
+			],
+			[
+				"filter",
+				"filterNameUIText\tTextMesh"
+			],
+			[
+				"ienum",
+				"IEnumerator\tIEnumerator"
+			],
+			[
+				"smar",
+				"SmartPhoneGallery\tSmartPhoneGallery"
+			],
+			[
+				"filte",
+				"FilterName\tstring[]"
+			],
+			[
+				"Spri",
+				"SpriteRenderer\tSpriteRenderer"
+			],
+			[
+				"Vect",
+				"Vector3\tVector3"
+			],
+			[
+				"selec",
+				"SelectControll\tSelectControll"
+			],
+			[
+				"comicma",
+				"comicMaskPixels\tColor[]"
+			],
+			[
+				"comi",
+				"comicMask\tTexture2D"
+			],
+			[
+				"v",
+				"v\tfloat"
+			],
+			[
+				"ma",
+				"maxIndex\tint"
+			],
+			[
+				"Mat",
+				"Mathf\tMathf"
+			],
+			[
+				"Orderb",
+				"OrderByDescending(Func<float, TKey> keySelector)\tIOrderedEnumerable<float>"
+			],
+			[
+				"max",
+				"Max(float a, float b)\tfloat"
+			],
+			[
+				"co",
+				"color\tColor"
+			],
+			[
+				"in",
+				"Input\tInput"
+			],
+			[
+				"ca",
+				"CalcFilter(int w, int h, TextureFormat tf, Color[] pixels)\tTask"
+			],
+			[
+				"e",
+				"endCalc\tbool"
+			],
+			[
+				"Texture",
+				"Texture2D\tTexture2D"
+			],
+			[
+				"ra",
+				"RawButton\tRawButton"
+			],
+			[
+				"Sma",
+				"SmartPhoneFilter\tSmartPhoneFilter"
+			],
+			[
+				"Texu",
+				"Texture2D\tTexture2D"
+			],
+			[
+				"islo",
+				"isLoadImage\tbool"
+			],
+			[
+				"is",
+				"isLoadImage\tbool"
+			],
+			[
+				"getke",
+				"GetKeyDown(string name)\tbool"
+			],
+			[
+				"sma",
+				"smartPhoneGallery\tsmartPhoneGallery"
+			],
+			[
+				"getburr",
+				"GetDown(RawButton rawMask, Controller controllerMask = Active)\tbool"
+			],
+			[
+				"gect",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"String",
+				"string\tstring"
+			],
+			[
+				"geto",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"file",
+				"fileStream\tfileStream"
+			],
+			[
+				"pi",
+				"pixel\tColor"
+			],
+			[
+				"Getcomp",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"change",
+				"change_texture\tTexture2D"
+			],
+			[
+				"chan",
+				"change_texture\tTexture2D"
+			],
+			[
+				"TExture",
+				"Texture2D\tTexture2D"
+			],
+			[
+				"pix",
+				"pixels\tColor[]"
+			],
+			[
+				"Col",
+				"Color\tColor"
+			],
+			[
+				"loca",
+				"localPosition\tVector3"
+			],
+			[
+				"Vec",
+				"Vector3\tVector3"
+			],
+			[
+				"local",
+				"localScale\tVector3"
+			],
+			[
+				"Take",
+				"TakePictureDelayTime\tfloat"
+			],
+			[
+				"Enab",
+				"EnableZoomBarUISpeed\tfloat"
+			],
+			[
+				"Enba",
+				"EnableZoomBarUISpeed\tfloat"
+			],
+			[
+				"Defau",
+				"DefaultHandAlpha\tfloat"
+			],
+			[
+				"handtri",
+				"HandTriggerGrabRangeMin\tfloat"
+			],
+			[
+				"Handtri",
+				"HandTriggerGrabRangeMax\tfloat"
+			],
+			[
+				"Shoals",
+				"ShoalSpeedMin\tfloat"
+			],
+			[
+				"rots",
+				"RotSpeedMax\tfloat"
+			],
+			[
+				"rotsp",
+				"RotSpeedMin\tfloat"
+			],
+			[
+				"esca",
+				"EscapeSecMin\tfloat"
+			],
+			[
+				"Escape",
+				"EscapeRotSpeed\tfloat"
+			],
+			[
+				"escape",
+				"EscapeSpeed\tfloat"
+			],
+			[
+				"Es",
+				"EscapeDirIncrease\tfloat"
+			],
+			[
+				"defu",
+				"DefaultFishSize\tfloat"
+			],
+			[
+				"randmo",
+				"RandGoalMoveRangeY\tfloat"
+			],
+			[
+				"Calc",
+				"CalcAvgDirProb\tint"
+			],
+			[
+				"maxrange",
+				"MaxRangeExcursion\tfloat"
+			],
+			[
+				"fargene",
+				"FarGenerateRangeY\tfloat"
+			],
+			[
+				"midd",
+				"MiddleFishSpeed\tfloat"
+			],
+			[
+				"Minf",
+				"MinFishSpeed\tfloat"
+			],
+			[
+				"goal",
+				"goal\tVector3"
+			],
+			[
+				"calc",
+				"CalcGoalPointInCircle()\tvoid"
+			],
+			[
+				"float",
+				"floatValue\tfloat"
+			],
+			[
+				"loo",
+				"lookingTarget\tGameObject"
+			],
+			[
+				"fish",
+				"FishBoidMove\tFishBoidMove"
+			],
+			[
+				"fo",
+				"focusDistance\tfloat"
+			],
+			[
+				"d",
+				"depthOfField\tDepthOfFieldModel"
+			],
+			[
+				"boid",
+				"boid\tBoidManager"
+			],
+			[
+				"vecto",
+				"Vector3\tVector3"
+			],
+			[
+				"Boid",
+				"BoidManagerGenerator\tBoidManagerGenerator"
+			],
+			[
+				"Fish",
+				"FishBoidMove\tFishBoidMove"
+			],
+			[
+				"rand",
+				"rand\tfloat"
+			],
+			[
+				"min",
+				"minSpeed\tfloat"
+			],
+			[
+				"seriali",
+				"serializedObject\tSerializedObject"
+			],
+			[
+				"Seri",
+				"SerializedObject\tSerializedObject"
+			],
+			[
+				"Serialize",
+				"SerializedProperty\tSerializedProperty"
+			],
+			[
+				"Generate",
+				"GenerateRange\tfloat"
+			],
+			[
+				"Zoombar",
+				"ZoomBarEnableTime\tfloat"
+			],
+			[
+				"near",
+				"NearGenerateRangeY\tfloat"
+			],
+			[
+				"getcom",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"flash",
+				"flashUI\tTransform"
+			],
+			[
+				"Get",
+				"GetComponent<T>()\tT"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/script/Player.cs",
+			"settings":
+			{
+				"buffer_size": 3764,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"om",
+				"OmniSharpSublime: Reload Solution"
+			],
+			[
+				"coolfo",
+				"CoolFormat: Formatter Settings"
+			],
+			[
+				"cool",
+				"CoolFormat: Formatter Settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			],
+			[
+				"convert",
+				"Package Control: Remove Repository"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/project19/Documents/flying_box/Assets/script/Test/OVRInputTest.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/CountTimer.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/Player.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/Enemy.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/CameraController.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Let's Tweet/Demo.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/SmartPhoneControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/SmartPhoneGallery.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/SmartPhoneFilter.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/BoidManager.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/Enemy_info.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/SmartPhoneMode.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/ImageComp.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzImageTest.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Let's Tweet/Scripts/TwitterComponentHandler.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/TwitterSetting.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Let's Tweet/Twitter.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzFilterTest.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UILoading.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzCircleMove.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzAsync.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/BoidManagerGenerator.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/MakeBubble.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/BubbleEffect.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/OptionUI.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzLoadImage.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/OptionUIValues.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzGuruGuru.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UmistaCustomHandPose.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/SmartPhoneUIControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OVRHandVibration.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Let's Tweet/Scripts/Twitter.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/GetClonedProfile.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/TimeZoneControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/LensFlareControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/FogControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OVRHand.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Editor/OptionUIValuesEditor.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Editor/FishStatusEditor.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/FishStatus.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/InstantiatePostProcessingProfile.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/FishBoidMove.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzBoidsMove.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzTestFishDesc.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Editor/BoidManagerEditor.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/HUDEnable.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzTestLookingFish.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/LookForCam.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/ContrastControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI/BloomControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/Least2a.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzDofChanger.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUI.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/BloomControll.cs",
+		"/C/Users/project19/AppData/Roaming/Sublime Text 3/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/ContrastControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUIValues.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/FogControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/LensFlareControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Scene2/BubbleEffect.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Scene2/MakeBubble.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/TimeZoneControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/InstantiatePostProcessingProfile.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzTestOverrideTag.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/GetClonedProfile.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/GetClonedProfille.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzTestChangePPPValue.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUIValues.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUI.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUIControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/OptionUIValue.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UIs/OptionUIValue.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UIs/OptionUI.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UIs/BoidManagerGenerator.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UIs/OptionUIControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUIValue.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUIControll.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzTestLookCam.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/BoigManagerGenerator.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/MakePrefab.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzTestMakeBM.cs",
+		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzChangePicture.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/UIZoomBar.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/UIFlash.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/TakePicture.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/OVRHand.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/WaveControll.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/SetHoldObjectStatus.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/CameraControll.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Editor/BoidManagerEditor.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/UmistaCustomHandPose.cs",
+		"/C/Users/project19/Documents/Moive/Assets/FishBoidMove/Scripts/BoidManager.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/OVRHandVibration.cs",
+		"/C/Users/project19/Documents/Moive/Assets/FishBoidMove/Scripts/FishBoidMove.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzTestOverrideTag.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/FishMove.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzRaycastForward.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/HandPose.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzOVRHandVelocity.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzTeamMove.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzBoidsMove.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzStructTest.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Freshwater fish/Scripts/ShoalManager.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Freshwater fish/Scripts/Shoal.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Freshwater fish/Readme.txt",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzMove.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzFollowCamera.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Debug/zzChangePicture.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/zzChangePicture.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/zzTestMaterialValueChange.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/TouchController.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/HUDEnable.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/GrabTest.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Grabb.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scenes/TestScript.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Sound.cs",
+		"/C/Users/project19/Documents/Moive/Assets/Scripts/Test.cs"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1",
+			"{\n",
+			"inputDelayTime",
+			"acc",
+			"range",
+			"EnDisabledGroup",
+			"htvTest",
+			"hvtTEst",
+			"}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/script/Player.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3764,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3012,
+								3012
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "using ディレクティブは不要です。",
+								"101,106": "using ディレクティブは不要です。",
+								"1154,1162": "現在のコンテキストに 'rotation' という名前は存在しません。",
+								"26,31": "using ディレクティブは不要です。",
+								"79,84": "using ディレクティブは不要です。"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.333333333,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 52.0
+	},
+	"pinned_build_system": "",
+	"project": "flying_box.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

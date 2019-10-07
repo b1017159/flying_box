@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
         // Start is called before the first frame update
         private Vector3 player_position;
         private Vector3 camera_position;
+        private Vector3 pole_position;
         private float randm;
         public float speed;
         private float rotationSmooth = 100f;
@@ -19,12 +20,20 @@ public class Enemy : MonoBehaviour
         private float color_speed=0.01f;
         private float color=0;//初期透明度（透明）
         private float rotation;
+
+        //GameObject target_old = this.gameObject;
+        //Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
+        public GameObject targetObject;//ennemy_info
+
         void Start()
         {
-                targetPosition = GetRandomPositionOnLevel();
-                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
+                targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
+                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
-                //transform.Rotate(new Vector3(0,0,90));
+                transform.Rotate(new Vector3(0,0,90));
+
+                //Enemy_info target = targetObject.GetComponent<Enemy_info>();
+                //target.Display(scale);
         }
 
         // Update is called once per frame
@@ -53,15 +62,15 @@ public class Enemy : MonoBehaviour
                 //this.transform.rotation.eulerAngles.z=90;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
                 float opposite =180;
-                float chokaku=90;
+                //float chokaku=90;
                 //this.transform.rotation = Quaternion.Euler(x, 5f, z);
-                this.transform.Rotate( 0.0f, opposite, opposite);
-                Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
+               // this.transform.Rotate( 0.0f, opposite, opposite);
+                //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         }
         void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {
                         if(this.scale<other.gameObject.GetComponent<Enemy>().scale) {
-                                Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
+                                //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
                                 //ジェネリクス
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
@@ -84,6 +93,11 @@ public class Enemy : MonoBehaviour
                         //Debug.Log("wall");
                 }
         }
+        void OnCollisionStay(Collision other){//レティクルに当たると情報表示
+                if(other.gameObject.CompareTag("reticule")) {
+                        //targetObject.Display(scale);
+                }
+        }
         public void Init(){
                 randm=Random.Range(1.0f,scale);
                 //Debug.Log(randm);
@@ -92,12 +106,13 @@ public class Enemy : MonoBehaviour
                 //if(name==Rectangular_Enemy) {}
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
-                player_position=Player.m_instance.transform.position;                                      //自機のポジション
+                player_position=Player.m_instance.transform.position;//自機のポジション
                 //Debug.Log(player_position);
                 camera_position=CameraController.m_instance.transform.position;
+                pole_position=Pole.m_instance.transform.position;
                 //メインカメラのポジション
                 //Debug.Log(camera_position);
-                var pos = player_position-camera_position+player_position;
+                var pos = player_position-pole_position+player_position;
                 //Debug.Log(pos);
                 //ベクトル＋それなりの距離
                 randm=Random.Range(0,2);

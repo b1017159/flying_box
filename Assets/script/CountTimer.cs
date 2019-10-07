@@ -61,6 +61,10 @@ public class CountTimer : MonoBehaviour
             {
                 SceneManager.LoadScene("GameStage3");
             }
+            if (loadscene.name == "GameStage3")
+            {
+                SceneManager.LoadScene("ClearScene");
+            }
 
 
         }

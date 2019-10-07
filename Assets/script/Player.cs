@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
     public float sitamax;//下に向く角度の最大値
     float updown = 0; //上下
     float sau = 0; //左右
-    private int score;   // スコア
+    public static int score;   // スコア
     private float size = 1.2f; // 巨大化
     // Start is called before the first frame update
     void Start() {
@@ -65,10 +65,30 @@ public class Player : MonoBehaviour {
         //transform.Rotate(-moveVertical,moveHorizontal,0,Space.World);
 
         //oculasの左スティックで操作
-        updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
-        updown = Mathf.Clamp(updown, uemax, sitamax);
-        sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
-       
+       // updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
+       // updown = Mathf.Clamp(updown, uemax, sitamax);
+       // sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
+        // 上方向ボタンを押した瞬間にif文の中を実行
+        if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
+        {
+            updown -= rotate_speed;
+        }
+        // 下方向ボタンを押した瞬間にif文の中を実行
+        if (Input.GetKey(KeyCode.DownArrow) && updown < sitamax)
+        {
+            updown += rotate_speed;
+        }
+        // 右方向ボタンを押した瞬間にif文の中を実行
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            sau += rotate_speed;
+        }
+        // 左方向ボタンを押した瞬間にif文の中を実行
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            sau -= rotate_speed;
+        }
+
         if (OVRInput.Get(OVRInput.RawButton.A)) {
             transform.Translate (0.0f, 0.0f, 0.1f);
         }
@@ -98,4 +118,9 @@ public class Player : MonoBehaviour {
         //  scoreText.text = "Count: " + score.ToString();
         scoreText.GetComponent<TextMesh>().text = "Count: " + score.ToString();
     }
+    public static int GetScore()
+    {
+        return score;
+    }
+
 }

@@ -5,33 +5,26 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody rb; // Rididbody
-    public float speed; // 動く速さ
-    public Text scoreText; // スコアの UI
-    public float rotate_speed;
-    // プレイヤーのインスタンスを管理する static 変数
-    public static Player m_instance;
-    public float uemax;//上に向く角度の最大値：負の値
-    public float sitamax;//下に向く角度の最大値
-    float updown = 0;//上下
-    float sau = 0;//左右
-    private int score;   // スコア
-    private float size = 1.2f;// 巨大化
-    public static int scoredata  = 0;
-    int blockcount;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // static 変数にインスタンス情報を格納する
-        score = 0;
-        blockcount = 0;
-        SetCountText();
-        score = scoredata;
-        m_instance = this;
-       
-            
-        SetCountText();
-    }
+        private Rigidbody rb; // Rididbody
+        public float speed; // 動く速さ
+        public Text scoreText; // スコアの UI
+        public float rotate_speed;
+        // プレイヤーのインスタンスを管理する static 変数
+        public static Player m_instance;
+        public float uemax;//上に向く角度の最大値：負の値
+        public float sitamax;//下に向く角度の最大値
+        float updown=0;//上下
+        float sau=0;//左右
+        private static int score;   // スコア
+        private float size=1.2f;// 巨大化
+        // Start is called before the first frame update
+        void Start()
+        {
+                // static 変数にインスタンス情報を格納する
+                m_instance = this;
+                score = 0;
+                SetCountText();
+        }
 
         // Update is called once per frame
         void Update()
@@ -87,35 +80,28 @@ public class Player : MonoBehaviour
                 }                //Debug.Log(updown+":"+sau);
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
                 transform.Translate (Vector3.forward * speed);
-       
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("check");
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-
-            // その収集アイテムを非表示にします
-            other.gameObject.SetActive(false);
-            // スコアを加算します
-            blockcount = blockcount + 1;
-            //ゲーム起動時にこの関数が一度実行されてしまうので、スコアのずれを防ぐために条件文を追加
-            if (blockcount > 1)
-            {
-                score = score + 1;
-            }
-            size = size + score * 0.01f;
-            this.transform.localScale = new Vector3(size, size, size);
-            // UI の表示を更新します
-            SetCountText();
-            //スコアのデータを更新
-            scoredata = score;
         }
-    }
-    // UI の表示を更新する
-    void SetCountText()
+        void OnTriggerEnter(Collider other){
+                if(other.gameObject.CompareTag("Enemy")) {
+                        // その収集アイテムを非表示にします
+                        other.gameObject.SetActive(false);
+                        // スコアを加算します
+                        score = score + 1;
+                        size=size+score*0.01f;
+                        this.transform.localScale = new Vector3(size, size, size);
+                        // UI の表示を更新します
+                        SetCountText ();
+                }
+        }
+        // UI の表示を更新する
+        void SetCountText()
+        {
+                // スコアの表示を更新
+                scoreText.text = "Count: " + score.ToString();
+        }
+
+    public static int GetScore()
     {
-        // スコアの表示を更新
-        scoreText.text = "Score: " + score.ToString();
+        return score;
     }
 }

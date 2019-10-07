@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bd1972fdb27ab48933fbee88dc73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.001
-  scoreText: {fileID: 0}
+  speed: 0.1
+  scoreText: {fileID: 1735317597}
   rotate_speed: 1.5
   uemax: -60
   sitamax: 60
@@ -821,6 +821,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: ea691c0221dcf024fb7ec9448099b8ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 79545f6d384c842489d930ad350cfa2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea691c0221dcf024fb7ec9448099b8ca, type: 3}
 --- !u!1 &1068575777 stripped
@@ -1019,10 +1024,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1030,7 +1035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Score
 --- !u!222 &1735317598
 CanvasRenderer:
   m_ObjectHideFlags: 0

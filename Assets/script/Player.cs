@@ -15,13 +15,15 @@ public class Player : MonoBehaviour {
     public float sitamax;//下に向く角度の最大値
     float updown = 0; //上下
     float sau = 0; //左右
-    public static int score;   // スコア
+    private int score;
+    public static int scoredata = 0;   // スコア
     private float size = 1.2f; // 巨大化
     // Start is called before the first frame update
     void Start() {
         // static 変数にインスタンス情報を格納する
         m_instance = this;
         score = 0;
+        score = scoredata;
         SetCountText();
     }
 
@@ -93,6 +95,10 @@ public class Player : MonoBehaviour {
             transform.Translate (0.0f, 0.0f, 0.1f);
         }
 
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(0.0f, 0.0f, 0.1f);
+        }
      
 
         Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
@@ -110,6 +116,8 @@ public class Player : MonoBehaviour {
             this.transform.localScale = new Vector3(size, size, size);
             // UI の表示を更新します
             SetCountText ();
+            //スコアを次のシーンに引き継ぐ
+            scoredata = score;
         }
     }
     // UI の表示を更新する
@@ -120,7 +128,7 @@ public class Player : MonoBehaviour {
     }
     public static int GetScore()
     {
-        return score;
+        return scoredata;
     }
 
 }

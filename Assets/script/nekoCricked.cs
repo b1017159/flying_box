@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class nekoCricked : MonoBehaviour
 {
+    public GameObject gameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,18 @@ public class nekoCricked : MonoBehaviour
     {
 
         Debug.Log("タッチされたにゃー");
+        if (gameObject.activeInHierarchy)
+        {
+            MoveObj mo = gameObject.GetComponent<MoveObj>();
+            mo.ReturnObject();
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+            MoveObj mo = gameObject.GetComponent<MoveObj>();
+            mo.MoveObject();
+        }
 
     }
 }

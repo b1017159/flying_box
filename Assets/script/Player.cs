@@ -18,20 +18,39 @@ public class Player : MonoBehaviour
         private int score;   // スコア
         private float size=1.2f;// 巨大化
         // Start is called before the first frame update
+        private float color=0.0f;//初期透明度（透明）
         void Start()
         {
                 // static 変数にインスタンス情報を格納する
                 m_instance = this;
                 score = 0;
                 SetCountText();
+                if(this.name=="Player") {
+                        Debug.Log("Player"+this.transform.forward);
+                        gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
+                }
+                if(this.name=="warasa") {
+                        //Debug.Log(this.name);
+                        size=100.0f;
+                        Debug.Log("warasa"+this.transform.forward);
+                        //this.transform.forward=new Vector3(0.0f,0.0f,1.0f);
+                        Debug.Log(this.transform.forward);
+                }
         }
 
         // Update is called once per frame
         void Update()
         {
+                if(this.name=="warasa") {
+                        Debug.Log("warasa"+this.transform.forward);
+                        Debug.Log(Vector3.forward);
+                        this.transform.forward=new Vector3(-1.0f,0.0f,0.0f);
+                        Debug.Log(this.transform.forward);
+                        Debug.Log(Vector3.forward);
+                }
                 //m_instance = this;
                 //Debug.Log(this.transform.position);
-                Vector3 _Rotation = gameObject.transform.localEulerAngles;
+                //Vector3 _Rotation = gameObject.transform.localEulerAngles;
                 //Debug.Log("_Rotationl:"+_Rotation);
                 // float angle_x = transform.eulerAngles.x;
                 // float angle_y = transform.eulerAngles.y;
@@ -78,12 +97,17 @@ public class Player : MonoBehaviour
                 if (Input.GetKey(KeyCode.S)) {
                         transform.Translate (0.0f,0.0f,0.1f);
                 }
-                //Debug.Log(updown+":"+sau);
+                Debug.Log(updown+":"+sau);
+                //if(this.name=="Player") {
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
-                transform.Translate (Vector3.forward * speed);
+                //}
+                //transform.Translate (Vector3.forward * speed);
+                Rigidbody rigidbody = GetComponent<Rigidbody>();
+                rigidbody.velocity = Vector3.forward * speed;
         }
         void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {
+                        //Debug.Log("player");
                         // その収集アイテムを非表示にします
                         other.gameObject.SetActive(false);
                         // スコアを加算します

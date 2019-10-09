@@ -22,18 +22,21 @@ public class Enemy : MonoBehaviour
         private float rotation;
 
         //GameObject target_old = this.gameObject;
-        //Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
-        public GameObject targetObject;//ennemy_info
+        // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
+        Enemy_info target;//enemyinfoのスクリプトを取得
+        public GameObject targetObject;        //ennemy_info
 
         void Start()
         {
                 targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
                 gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
-                transform.Rotate(new Vector3(0,0,90));
+                //transform.Rotate(new Vector3(0,0,90));
 
-                //Enemy_info target = targetObject.GetComponent<Enemy_info>();
-                //target.Display(scale);
+                target = this.transform.Find("enemy_info").GetComponent<Enemy_info>();
+                //発生するまで親子関係が無いので上で書かずstartで書く
+                // Enemy_info target = targetObject.GetComponent<Enemy_info>();
+                target.Display(scale);
         }
 
         // Update is called once per frame
@@ -61,10 +64,10 @@ public class Enemy : MonoBehaviour
                 // 前方に進む
                 //this.transform.rotation.eulerAngles.z=90;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                float opposite =180;
+                //float opposite =180;
                 //float chokaku=90;
                 //this.transform.rotation = Quaternion.Euler(x, 5f, z);
-                this.transform.Rotate( 0.0f, opposite, opposite);
+                //this.transform.Rotate( 0.0f, opposite, opposite);
                 //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         }
         void OnTriggerEnter(Collider other){
@@ -75,26 +78,36 @@ public class Enemy : MonoBehaviour
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
+                                target.Display(scale);
                         }
                 }
         }
-        void OnCollisionEnter(Collision collision) {
-                //衝突判定
-                if (collision.gameObject.tag == "Player") {
-                        //相手のタグがPlayerならば、自分を消す
-                        //Destroy(this.gameObject);
-                        this.gameObject.SetActive (false);
-                }
-        }
+        //void OnCollisionEnter(Collision collision) {
+        //衝突判定
+        //      if (collision.gameObject.tag == "Player") {
+        //相手のタグがPlayerならば、自分を消す
+        //            Debug.Log("player");
+        //Destroy(this.gameObject);
+        //          this.gameObject.SetActive (false);
+        //  }
+        //  }
 
         void OnTriggerExit(Collider other){
                 if(other.gameObject.CompareTag("Wall")) {
                         this.gameObject.SetActive(false);
                         //Debug.Log("wall");
                 }
-        }
-        void OnCollisionStay(Collision other){//レティクルに当たると情報表示
                 if(other.gameObject.CompareTag("reticule")) {
+                        target.Color_zero();
+                }
+        }
+        void OnTriggerStay(Collider other){
+                //Istriが付いているのでOnCollisionStayではない　引数も注意
+                //レティクルに当たると情報表示
+                if(other.gameObject.CompareTag("reticule")) {
+                        //Debug.Log("reticule");
+                        target.Aaper();
+                        //Debug.Log("reticule");
                         //targetObject.Display(scale);
                 }
         }
@@ -102,8 +115,6 @@ public class Enemy : MonoBehaviour
                 randm=Random.Range(1.0f,scale);
                 //Debug.Log(randm);
                 scale=randm;
-                //string name=gameObject.name;
-                //if(name==Rectangular_Enemy) {}
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
                 player_position=Player.m_instance.transform.position;//自機のポジション

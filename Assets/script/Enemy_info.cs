@@ -11,16 +11,19 @@ public class Enemy_info : MonoBehaviour
         //小文字にしない
         private RectTransform myRectTfm;
         private float color=0;//初期透明度（透明）
-        public GameObject messageText;
         void Start()
         {
                 //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 myRectTfm = GetComponent<RectTransform>();
+                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
         }
 
         // Update is called once per frame
         void Update()
         {
+                //if(color<1) color=color+0.01f;
+                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
+                //最初は透明だが時間経過で色がつく
                 //replayer_rotate=Player.m_instance.transform.localEulerAngles;//自機の傾き
                 //replayer_rotate.z=-replayer_rotate.z;
                 //transform.localEulerAngles=replayer_rotate;
@@ -33,8 +36,16 @@ public class Enemy_info : MonoBehaviour
                 // 自身の向きをカメラに向ける
                 myRectTfm.LookAt(Camera.main.transform);
         }
-        void Display(float scale){
+        public void Display(float scale){
                 string enemy_scale=scale.ToString();
-                messageText.GetComponent<TextMesh>().text = enemy_scale;
+                //Debug.Log(enemy_scale+":"+"scale");
+                this.GetComponent<TextMesh>().text = enemy_scale;
+        }
+        public void Aaper(){
+                //public voidを忘れないように
+                color=100;
+        }
+        public void Color_zero(){
+                color=0;
         }
 }

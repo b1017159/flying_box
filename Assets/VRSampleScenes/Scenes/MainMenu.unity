@@ -128,13 +128,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 778082979}
     m_Modifications:
+    - target: {fileID: 193144, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -146,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.25881907
+      value: -0.258819
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -154,11 +158,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.9659259
       objectReference: {fileID: 0}
     - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498362, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 11471256, guid: fe0047c62a262f74991aa39a7bc71ae4, type: 3}
       propertyPath: m_Item
@@ -388,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 426494, guid: 8425dec361a86f6419d316a88d6c87d9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 426494, guid: 8425dec361a86f6419d316a88d6c87d9, type: 3}
       propertyPath: m_LocalScale.y
@@ -1185,13 +1193,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1371930614}
     m_Modifications:
+    - target: {fileID: 101316, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1203,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.25881907
+      value: -0.258819
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1211,11 +1223,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.9659259
       objectReference: {fileID: 0}
     - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464712, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 11419562, guid: 19eafe53a7aadc644bc46200d92edfcb, type: 3}
       propertyPath: m_CameraFade

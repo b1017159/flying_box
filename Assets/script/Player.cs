@@ -24,18 +24,18 @@ public class Player : MonoBehaviour
                 // static 変数にインスタンス情報を格納する
                 m_instance = this;
                 score = 0;
-                SetCountText();
-                if(this.name=="Player") {
-                        Debug.Log("Player"+this.transform.forward);
-                        gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
-                }
-                if(this.name=="warasa") {
-                        //Debug.Log(this.name);
-                        size=100.0f;
-                        Debug.Log("warasa"+this.transform.forward);
-                        //this.transform.forward=new Vector3(0.0f,0.0f,1.0f);
-                        Debug.Log(this.transform.forward);
-                }
+                // SetCountText();
+                // if(this.name=="Player") {
+                //         Debug.Log("Player"+this.transform.forward);
+                //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
+                // }
+                // if(this.name=="warasa") {
+                //         //Debug.Log(this.name);
+                //         size=100.0f;
+                //         Debug.Log("warasa"+this.transform.forward);
+                //         //this.transform.forward=new Vector3(0.0f,0.0f,1.0f);
+                //         Debug.Log(this.transform.forward);
+                // }
         }
 
         // Update is called once per frame
@@ -101,9 +101,9 @@ public class Player : MonoBehaviour
                 //if(this.name=="Player") {
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
                 //}
-                //transform.Translate (Vector3.forward * speed);
-                Rigidbody rigidbody = GetComponent<Rigidbody>();
-                rigidbody.velocity = Vector3.forward * speed;
+                transform.Translate (Vector3.forward * speed);
+                //Rigidbody rigidbody = GetComponent<Rigidbody>();
+                //rigidbody.velocity = Vector3.forward * speed;
         }
         void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {

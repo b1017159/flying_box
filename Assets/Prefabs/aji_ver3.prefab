@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pare_enemy: {fileID: 0}
   pare_pos: {x: 0, y: 0, z: 0}
-  messageText: {fileID: 0}
 --- !u!1 &9142316076923886520
 GameObject:
   m_ObjectHideFlags: 0

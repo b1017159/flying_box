@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         private float color=0.0f;//初期透明度（透明）
         void Start()
         {
+                transform.position=new Vector3(0,0,0);
                 // static 変数にインスタンス情報を格納する
                 m_instance = this;
                 score = 0;
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour
                 if (Input.GetKey(KeyCode.S)) {
                         transform.Translate (0.0f,0.0f,0.1f);
                 }
-                Debug.Log(updown+":"+sau);
+                //Debug.Log(updown+":"+sau);
                 //if(this.name=="Player") {
                 transform.rotation = Quaternion.Euler(updown,sau,0 );
                 //}

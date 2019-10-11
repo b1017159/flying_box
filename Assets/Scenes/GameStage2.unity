@@ -725,11 +725,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: itou_ver.3
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7800f24ea5de3354f99c6f59c645489d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -785,6 +780,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7800f24ea5de3354f99c6f59c645489d, type: 3}
 --- !u!1 &1244082361
@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 1244082364}
   - component: {fileID: 1244082363}
   m_Layer: 0
-  m_Name: 1
+  m_Name: One_person
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1200,7 +1200,7 @@ GameObject:
   - component: {fileID: 1618892357}
   - component: {fileID: 1618892356}
   m_Layer: 0
-  m_Name: 3
+  m_Name: Third_person
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

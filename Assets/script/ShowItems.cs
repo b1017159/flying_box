@@ -9,6 +9,7 @@ public class ShowItems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //はじめに子オブジェクトをすべて取得する｡
         foreach(Transform childTranstorm in parentObject.transform)
         {
             childObjects.Add(childTranstorm);

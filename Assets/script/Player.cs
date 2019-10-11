@@ -71,7 +71,7 @@ public class Player : MonoBehaviour {
                  updown = Mathf.Clamp(updown, uemax, sitamax);
                  sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
                 // 上方向ボタンを押した瞬間にif文の中を実行
-                /*if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
+                if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
                 {
                         updown -= rotate_speed;
                 }
@@ -89,16 +89,16 @@ public class Player : MonoBehaviour {
                 if (Input.GetKey(KeyCode.LeftArrow))
                 {
                         sau -= rotate_speed;
-                }*/
+                }
 
                  if (OVRInput.Get(OVRInput.RawButton.A)) {
                  transform.Translate (0.0f, 0.0f, 0.1f);
                  }
-                //
-                // if (Input.GetKey(KeyCode.S))
-                // {
-                //         transform.Translate(0.0f, 0.0f, 0.1f);
-                // }
+              
+                 if (Input.GetKey(KeyCode.S))
+                 {
+                        transform.Translate(0.0f, 0.0f, 0.1f);
+                 }
 
 
                 Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);

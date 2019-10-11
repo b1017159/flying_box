@@ -79,14 +79,17 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\script\CameraController.cs" />
+    <Compile Include="Assets\script\CameraLook.cs" />
     <Compile Include="Assets\script\CameraMover.cs" />
     <Compile Include="Assets\script\CountTimer.cs" />
     <Compile Include="Assets\script\Create.cs" />
     <Compile Include="Assets\script\Enemy.cs" />
     <Compile Include="Assets\script\EnemyManager.cs" />
+    <Compile Include="Assets\script\LookY.cs" />
     <Compile Include="Assets\script\MoveObj.cs" />
     <Compile Include="Assets\script\nekoCricked.cs" />
     <Compile Include="Assets\script\Player.cs" />
+    <Compile Include="Assets\script\ShowItems.cs" />
     <Compile Include="Assets\script\Sphere100.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
@@ -387,6 +390,9 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>/Users/nekokaido/Unity/2019.2.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>/Users/nekokaido/flying_box/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>/Users/nekokaido/flying_box/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
@@ -395,9 +401,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>/Users/nekokaido/flying_box/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>/Users/nekokaido/flying_box/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Users/nekokaido/Unity/2019.2.6f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

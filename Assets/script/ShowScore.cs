@@ -17,7 +17,7 @@ public class ShowScore : MonoBehaviour
     {
         Result = GetComponentInChildren<TextMesh>();
 
-        score = Player.GetScore();
+        score = ScoreText.GetScore();
     }
 
     // Update is called once per frame

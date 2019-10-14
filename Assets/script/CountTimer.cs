@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class CountTimer : MonoBehaviour
 {
-
     //　トータル制限時間
     private float totalTime;
     //　制限時間（分）

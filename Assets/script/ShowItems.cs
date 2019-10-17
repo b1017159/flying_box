@@ -5,7 +5,10 @@ using UnityEngine;
 public class ShowItems : MonoBehaviour
 {
     [SerializeField] private GameObject parentObject;
+
     private List<Transform> childObjects = new List<Transform>(12);
+
+    public float rotatespeed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,6 @@ public class ShowItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //this.transform.Rotate(new Vector3(0.0f, rotatespeed * Time.deltaTime, 0.0f));
     }
 }

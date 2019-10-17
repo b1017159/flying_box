@@ -24,7 +24,8 @@ public class nekoCricked : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             MoveObj mo = gameObject.GetComponent<MoveObj>();
-            mo.ReturnObject();
+            
+            mo.MoveObject(-1);
             gameObject.SetActive(false);
         }
         else

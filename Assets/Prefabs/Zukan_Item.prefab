@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 2446621184405005201}
   - component: {fileID: 2446621184405005200}
   m_Layer: 0
-  m_Name: MenuItemMaze
+  m_Name: Zukan_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2446621184453350386}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24368626, guid: faa5d63fc44b7934da13fa4307dcad1e,
     type: 2}

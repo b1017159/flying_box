@@ -328,6 +328,7 @@
     <Compile Include="Assets\script\Enemy.cs" />
     <Compile Include="Assets\script\Enemy_info.cs" />
     <Compile Include="Assets\script\EnemyManager.cs" />
+    <Compile Include="Assets\script\GetBackToTitle.cs" />
     <Compile Include="Assets\script\Line.cs" />
     <Compile Include="Assets\script\LookY.cs" />
     <Compile Include="Assets\script\MoveObj.cs" />

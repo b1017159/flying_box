@@ -22,8 +22,8 @@ public class MoveObj : MonoBehaviour
     {
         position = this.transform.position;
         rotation = this.transform.eulerAngles;
-        Debug.Log(position);
-        Debug.Log(rotation);
+        //Debug.Log(position);
+        //Debug.Log(rotation);
 
         if (startMoveEnable)
         {
@@ -43,14 +43,14 @@ public class MoveObj : MonoBehaviour
 
     public void MoveObject(int reverse = 1)
     {
-        Debug.Log(position);
+        //Debug.Log(position);
         transform.DOMove(new Vector3(positionX, reverse*positionY, positionZ), AnimationTime).SetRelative();
         return;
     }
 
     public void RotateObject()
     {
-        Debug.Log(rotation);
+        //Debug.Log(rotation);
         transform.DORotate(new Vector3(rotateX, rotateY, rotateZ), AnimationTime).SetRelative();
         return;
     }

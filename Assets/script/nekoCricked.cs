@@ -14,7 +14,7 @@ public class nekoCricked : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void onClickAct()

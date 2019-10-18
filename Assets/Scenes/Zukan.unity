@@ -172,6 +172,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5925e5b92c4262e4eb73101058b15799, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5925e5b92c4262e4eb73101058b15799, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5925e5b92c4262e4eb73101058b15799, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 5925e5b92c4262e4eb73101058b15799, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -760,9 +772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc3a81b42e141e285c2eee9f8d75d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentObject: {fileID: 1371930613}
-  wheelSpeed: 6
-  rotatespeed: 1
+  wheelSpeed: 1
+  rotatespeed: 10
 --- !u!114 &1371930617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1371930614}
   item: {fileID: 2446621184453350386, guid: a83f93c9d75da411e8b11cda7edaac33, type: 3}
-  num_item: 5
+  num_item: 11
 --- !u!1001 &1655933477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1006,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 493278, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 3}
       propertyPath: m_LocalRotation.x

@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoveEnable: 0
-  startRotateEnable: 0
+  startRotateEnable: 1
   positionX: 0
   positionY: 0
   positionZ: 0
@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1371930613}
+  wheelSpeed: 6
   rotatespeed: 1
 --- !u!114 &1371930617
 MonoBehaviour:
@@ -776,7 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1371930614}
   item: {fileID: 2446621184453350386, guid: a83f93c9d75da411e8b11cda7edaac33, type: 3}
-  num_item: 10
+  num_item: 5
 --- !u!1001 &1655933477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1139,7 +1140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8150554, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf8c8cc05aad7b40a8deb4f73296da4, type: 3}

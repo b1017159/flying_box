@@ -45,12 +45,14 @@ public class MoveObj : MonoBehaviour
     {
         Debug.Log(position);
         transform.DOMove(new Vector3(positionX, reverse*positionY, positionZ), AnimationTime).SetRelative();
+        return;
     }
 
     public void RotateObject()
     {
         Debug.Log(rotation);
         transform.DORotate(new Vector3(rotateX, rotateY, rotateZ), AnimationTime).SetRelative();
+        return;
     }
 
 }

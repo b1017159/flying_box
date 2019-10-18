@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
         public float speed;
         private float rotationSmooth = 100f;
         public float scale;//最大スケール
+        public string name;
         private Vector3 targetPosition;  //行先
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
         private float color_speed=0.01f;
@@ -34,9 +35,10 @@ public class Enemy : MonoBehaviour
                 //transform.Rotate(new Vector3(0,0,90));
 
                 target = this.transform.Find("enemy_info").GetComponent<Enemy_info>();
-                //発生するまで親子関係が無いので上で書かずstartで書く
-                // Enemy_info target = targetObject.GetComponent<Enemy_info>();
-                target.Display(scale);
+        //発生するまで親子関係が無いので上で書かずstartで書く
+        // Enemy_info target = targetObject.GetComponent<Enemy_info>();
+        name = transform.name;
+                target.Display(scale,name);
         }
 
         // Update is called once per frame
@@ -78,7 +80,7 @@ public class Enemy : MonoBehaviour
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                target.Display(scale);
+                                target.Display(scale,name);
                         }
                 }
         }
@@ -108,7 +110,7 @@ public class Enemy : MonoBehaviour
                         //Debug.Log("reticule");
                         target.Aaper();
                         //Debug.Log("reticule");
-                        //targetObject.Display(scale);
+                        //targetObject.Display(scale,name);
                 }
         }
         public void Init(){

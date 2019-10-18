@@ -4,48 +4,51 @@ using UnityEngine;
 
 public class Enemy_info : MonoBehaviour
 {
-        // Start is called before the first frame update
-        //private Vector3 replayer_rotate;
-        public GameObject pare_enemy;
-        public Vector3 pare_pos;
-        //小文字にしない
-        private RectTransform myRectTfm;
-        private float color=0;//初期透明度（透明）
-        void Start()
-        {
-                //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
-                myRectTfm = GetComponent<RectTransform>();
-                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
-        }
+	// Start is called before the first frame update
+	//private Vector3 replayer_rotate;
+	public GameObject pare_enemy;
+	public Vector3 pare_pos;
+	//小文字にしない
+	private RectTransform myRectTfm;
+	private float color = 0;//初期透明度（透明）
+	void Start()
+	{
+		//gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
+		myRectTfm = GetComponent<RectTransform>();
+		gameObject.GetComponent<Renderer>().material.color = new Color(1, 1, 1, color);//透明化
+	}
 
-        // Update is called once per frame
-        void Update()
-        {
-                //if(color<1) color=color+0.01f;
-                gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
-                //最初は透明だが時間経過で色がつく
-                //replayer_rotate=Player.m_instance.transform.localEulerAngles;//自機の傾き
-                //replayer_rotate.z=-replayer_rotate.z;
-                //transform.localEulerAngles=replayer_rotate;
-                if(!(transform.parent==null)) pare_enemy=transform.parent.gameObject;
-                //親がいるなら親のgameobjectを取得
-                pare_pos=transform.parent.position;
-                pare_pos.y=pare_pos.y-0.03f;
-                pare_pos.z=pare_pos.z-0.08f;
-                transform.position=pare_pos;
-                // 自身の向きをカメラに向ける
-                myRectTfm.LookAt(Camera.main.transform);
-        }
-        public void Display(float scale){
-                string enemy_scale=scale.ToString();
-                //Debug.Log(enemy_scale+":"+"scale");
-                this.GetComponent<TextMesh>().text = enemy_scale;
-        }
-        public void Aaper(){
-                //public voidを忘れないように
-                color=100;
-        }
-        public void Color_zero(){
-                color=0;
-        }
+	// Update is called once per frame
+	void Update()
+	{
+		//if(color<1) color=color+0.01f;
+		gameObject.GetComponent<Renderer>().material.color = new Color(1, 1, 1, color);
+		//最初は透明だが時間経過で色がつく
+		//replayer_rotate=Player.m_instance.transform.localEulerAngles;//自機の傾き
+		//replayer_rotate.z=-replayer_rotate.z;
+		//transform.localEulerAngles=replayer_rotate;
+		if (!(transform.parent == null)) pare_enemy = transform.parent.gameObject;
+		//親がいるなら親のgameobjectを取得
+		pare_pos = transform.parent.position;
+		pare_pos.y = pare_pos.y - 0.03f;
+		pare_pos.z = pare_pos.z - 0.08f;
+		transform.position = pare_pos;
+		// 自身の向きをカメラに向ける
+		myRectTfm.LookAt(Camera.main.transform);
+	}
+	public void Display(float scale)
+	{
+		string enemy_scale = scale.ToString();
+		//Debug.Log(enemy_scale+":"+"scale");
+		this.GetComponent<TextMesh>().text = enemy_scale;
+	}
+	public void Aaper()
+	{
+		//public voidを忘れないように
+		color = 100;
+	}
+	public void Color_zero()
+	{
+		color = 0;
+	}
 }

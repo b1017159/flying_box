@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bd1972fdb27ab48933fbee88dc73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minute: 0
+  seconds: 20
   speed: 0.01
   rotate_speed: 0.5
   uemax: -60
@@ -833,8 +835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42557f218986646e5acd4cf1d7b0893f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minute: 0
-  seconds: 15
   Timer: {fileID: 1010486778}
 --- !u!102 &1010486781
 TextMesh:
@@ -1049,6 +1049,7 @@ GameObject:
   - component: {fileID: 1129235656}
   - component: {fileID: 1129235655}
   - component: {fileID: 1129235654}
+  - component: {fileID: 1129235657}
   m_Layer: 0
   m_Name: reticule_pic
   m_TagString: Untagged
@@ -1132,6 +1133,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129235657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129235653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dceabcd7d11840e28315a57d9adb816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reticle: {fileID: 21300000, guid: 1e7fee6baa3bc43b19d37cdc543d6d6f, type: 3}
+  NotReticle: {fileID: 21300000, guid: 2b14aadb3d9944ec09454715a1c22d38, type: 3}
 --- !u!1 &1503954899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,8 +1614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42557f218986646e5acd4cf1d7b0893f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minute: 0
-  seconds: 15
   Timer: {fileID: 1874410423}
 --- !u!102 &1874410426
 TextMesh:

@@ -334,6 +334,7 @@
     <Compile Include="Assets\script\nekoCricked.cs" />
     <Compile Include="Assets\script\Player.cs" />
     <Compile Include="Assets\script\Pole.cs" />
+    <Compile Include="Assets\script\ReticleSprite.cs" />
     <Compile Include="Assets\script\reticule.cs" />
     <Compile Include="Assets\script\Scene1Controller.cs" />
     <Compile Include="Assets\script\Scene2Controller.cs" />

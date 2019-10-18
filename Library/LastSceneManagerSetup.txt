@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/VRSampleScenes/Scenes/MainMenu.unity
+- path: Assets/Scenes/Zukan.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

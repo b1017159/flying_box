@@ -5,12 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Scene2Controller : MonoBehaviour
+public class TitleToStage1 : MonoBehaviour
 {
-
-    // ボタンをクリックするとBattleSceneに移動します
-    public void ButtonClicked()
+     void update()
     {
-        SceneManager.LoadScene("GameMenu");
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene("NameMenu");
+        }
     }
 }

@@ -6,27 +6,36 @@ using System;
 
 public class Toggle_Day : MonoBehaviour
 {
+    public static int oneDay;
+
+    private void SetOneDay(int a)
+    {
+      oneDay = a;
+      Debug.Log(a);
+    }
 
     public void ChageMornning()
     {
-        Debug.Log("Toggle switched");
-
+        SetOneDay(0);
         transform.eulerAngles = new Vector3(90, 0, 0);
 
     }
 
     public void ChageAfternoon()
     {
-        Debug.Log("Toggle switched");
-
+        SetOneDay(1);
         transform.eulerAngles = new Vector3(0, 0, 0);
-
     }
 
     public void ChageNight()
     {
-        Debug.Log("Toggle switched");
+        SetOneDay(2);
         transform.eulerAngles = new Vector3(-90, 0, 0);
+    }
+
+    public static int GetOneDay()
+    {
+        return oneDay;
     }
 
 }

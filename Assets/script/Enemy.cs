@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
         private float rotationSmooth = 100f;
 
         public float scale;//最大スケール
+    public string name;
         private Vector3 targetPosition;  //行先
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
         private float color_speed=0.01f;
@@ -27,28 +28,29 @@ public class Enemy : MonoBehaviour
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
         Enemy_info target;//enemyinfoのスクリプトを取得
         public GameObject targetObject;        //ennemy_info
-        public GameObject S_color;
+    public GameObject S_color;
 
-        void Start()
+    void Start()
         {
                 targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
-                //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
+               // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
                 //transform.Rotate(new Vector3(0,0,90));
 
                 target = this.transform.Find("enemy_info").GetComponent<Enemy_info>();
-                //発生するまで親子関係が無いので上で書かずstartで書く
-                // Enemy_info target = targetObject.GetComponent<Enemy_info>();
-                if(target==null) print("enemy_infoないぞカス");
-                target.Display(scale);
+        //発生するまで親子関係が無いので上で書かずstartで書く
+        // Enemy_info target = targetObject.GetComponent<Enemy_info>();
+        name = transform.name;
+        if (target == null) print("enemy_infoなし");
+        target.Display(scale,name);
         }
 
         // Update is called once per frame
         void Update()
-        {
-
-                //if (color<1) color=color+color_speed;
-                //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
+    {
+      
+      //  if (color<1) color=color+color_speed;
+        //        gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
                 //最初は透明だが時間経過で色がつく
                 float sqrDistanceToTarget = Vector3.SqrMagnitude(transform.position - targetPosition);
                 //自身と目標の距離の差
@@ -69,26 +71,30 @@ public class Enemy : MonoBehaviour
                 // 前方に進む
                 //this.transform.rotation.eulerAngles.z=90;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                //float opposite =180;
-                //float chokaku=90;
-                //this.transform.rotation = Quaternion.Euler(x, 5f, z);
-                //this.transform.Rotate( 0.0f, opposite, opposite);
-                //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
-
-                //角度を調整してから表示
-                if(S_color==null) print(this.name+"写真ないぞカス");
-                if(S_color!=null) S_color.gameObject.SetActive(true); //salmon display
+        //float opposite =180;
+        //float chokaku=90;
+        //this.transform.rotation = Quaternion.Euler(x, 5f, z);
+        //this.transform.Rotate( 0.0f, opposite, opposite);
+        //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
+        //角度を調整してから表示
+        if (S_color == null)
+        { print(this.name + "写真ないぞカス"); }
+        if (S_color != null)
+        {
+            Debug.Log("prefabON");
+            S_color.gameObject.SetActive(true); //salmon display
         }
-        void OnTriggerEnter(Collider other){
+    }
+    void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {
-                        if (this.scale<other.gameObject.GetComponent<Enemy>().scale) {
-
-                                //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
-                                //ジェネリクス
-                                //Enemy型のコンポーネントを取得
-                                //その収集アイテムを非表示にします
-                                other.gameObject.SetActive(false);
-                                target.Display(scale);
+            if (this.scale<other.gameObject.GetComponent<Enemy>().scale) {
+               
+                //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
+                //ジェネリクス
+                //Enemy型のコンポーネントを取得
+                //その収集アイテムを非表示にします
+                other.gameObject.SetActive(false);
+                                target.Display(scale,name);
                         }
                 }
         }
@@ -115,16 +121,16 @@ public class Enemy : MonoBehaviour
                 //Istriが付いているのでOnCollisionStayではない　引数も注意
                 //レティクルに当たると情報表示
                 if(other.gameObject.CompareTag("reticule")) {
-                        reticleSignal = 1;
-                        //Debug.Log("reticule");
-                        target.Aaper();
-                        //Debug.Log("reticule");
-                        //targetObject.Display(scale);
-                }
-                else
-                {
-                        reticleSignal = 0;
-                }
+            reticleSignal = 1;
+            //Debug.Log("reticule");
+            target.Aaper();
+            //Debug.Log("reticule");
+            //targetObject.Display(scale,name);
+        }
+        else
+        {
+            reticleSignal = 0;
+        }
         }
         public void Init(){
                 randm=Random.Range(1.0f,scale);

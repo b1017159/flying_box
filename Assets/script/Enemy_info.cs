@@ -35,10 +35,12 @@ public class Enemy_info : MonoBehaviour
 		transform.position = pare_pos;
 		// 自身の向きをカメラに向ける
 		myRectTfm.LookAt(Camera.main.transform);
-	}
-	public void Display(float scale)
+        this.transform.forward = new Vector3(this.transform.position.x - Camera.main.transform.position.x, this.transform.position.y - Camera.main.transform.position.y, this.transform.position.z - Camera.main.transform.position.z);
+
+    }
+    public void Display(float scale, string name)
 	{
-		string enemy_scale = scale.ToString();
+		string enemy_scale = scale.ToString() + ", "+ name;
 		//Debug.Log(enemy_scale+":"+"scale");
 		this.GetComponent<TextMesh>().text = enemy_scale;
 	}

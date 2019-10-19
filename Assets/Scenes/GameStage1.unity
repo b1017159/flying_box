@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_elapsedTimeMax: 60
   m_elapsedTime: 0
   m_enemyPrefabs:
-  - {fileID: 4111064621016358594, guid: 8c0c1e29672d2234e81fc5b7a3503931, type: 3}
+  - {fileID: 1407464109}
 --- !u!4 &307241806
 Transform:
   m_ObjectHideFlags: 0
@@ -1450,6 +1450,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407464109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4111064621016358594, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+    type: 3}
+  m_PrefabInstance: {fileID: 4111064620207277351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1548818024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1613,6 +1625,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea691c0221dcf024fb7ec9448099b8ca, type: 3}
+--- !u!1 &2011466077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5127174323194441263, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+    type: 3}
+  m_PrefabInstance: {fileID: 4111064620207277351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2047655422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,6 +1744,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5344790257375719303, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+        type: 3}
+      propertyPath: m_Name
+      value: itou_ver.3_E
+      objectReference: {fileID: 0}
+    - target: {fileID: 5344790257375719303, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111064621016358594, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+        type: 3}
+      propertyPath: scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111064621016358594, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+        type: 3}
+      propertyPath: S_color
+      value: 
+      objectReference: {fileID: 2011466077}
+    - target: {fileID: 5127174323194441263, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 886595535480613663, guid: 8c0c1e29672d2234e81fc5b7a3503931,
         type: 3}
       propertyPath: m_Size.z
@@ -1746,10 +1789,10 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.044013977
       objectReference: {fileID: 0}
-    - target: {fileID: 5344790257375719303, guid: 8c0c1e29672d2234e81fc5b7a3503931,
+    - target: {fileID: 886595535480613663, guid: 8c0c1e29672d2234e81fc5b7a3503931,
         type: 3}
-      propertyPath: m_Name
-      value: itou_ver.3_E
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8968878745822682516, guid: 8c0c1e29672d2234e81fc5b7a3503931,
         type: 3}
@@ -1804,16 +1847,6 @@ PrefabInstance:
     - target: {fileID: 8968878745822682516, guid: 8c0c1e29672d2234e81fc5b7a3503931,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111064621016358594, guid: 8c0c1e29672d2234e81fc5b7a3503931,
-        type: 3}
-      propertyPath: scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5127174323194441263, guid: 8c0c1e29672d2234e81fc5b7a3503931,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

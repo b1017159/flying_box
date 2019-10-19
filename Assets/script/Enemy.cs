@@ -77,9 +77,13 @@ public class Enemy : MonoBehaviour
         //this.transform.Rotate( 0.0f, opposite, opposite);
         //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
         //角度を調整してから表示
-        if (S_color == null) print(this.name + "写真ないぞカス");
-        if (S_color != null) S_color.gameObject.SetActive(true); //salmon display
-
+        if (S_color == null)
+        { print(this.name + "写真ないぞカス"); }
+        if (S_color != null)
+        {
+            Debug.Log("prefabON");
+            S_color.gameObject.SetActive(true); //salmon display
+        }
     }
     void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {

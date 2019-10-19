@@ -452,8 +452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   scale: 1
+  name: 
   targetObject: {fileID: 915812297160021044}
-  S_color: {fileID: 5127174323194441263}
+  S_color: {fileID: 9091094862930139297, guid: 7800f24ea5de3354f99c6f59c645489d, type: 3}
 --- !u!54 &-7934789054047599098
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -553,6 +554,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8968878745822682516}
     m_Modifications:
+    - target: {fileID: 3871108943665389456, guid: 5869967c021e3804eb5e61d6b8ffaf47,
+        type: 3}
+      propertyPath: m_Name
+      value: enemy_info
+      objectReference: {fileID: 0}
     - target: {fileID: 3871108943665389455, guid: 5869967c021e3804eb5e61d6b8ffaf47,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -657,11 +663,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871108943665389456, guid: 5869967c021e3804eb5e61d6b8ffaf47,
-        type: 3}
-      propertyPath: m_Name
-      value: enemy_info
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5869967c021e3804eb5e61d6b8ffaf47, type: 3}

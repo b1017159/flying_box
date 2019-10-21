@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
     private GameObject FPS;　//一人称カメラ
@@ -36,6 +38,16 @@ public class Player : MonoBehaviour
     public static int scoredata = 0; // スコア
     private float size = 1.2f; // 巨大化
                                // Start is called before the first frame update
+    public static int count = 0;
+    public float scale;
+
+    //HPオブジェクト
+    public GameObject heart;
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject heart4;
+
     void Start()
     {
         // static 変数にインスタンス情報を格納する
@@ -51,11 +63,42 @@ public class Player : MonoBehaviour
         secondsdata = seconds;
         totaltimedata = totalTime;
 
+        if (count == 1)
+        {
+            heart4.SetActive(false);
+
+        }
+        if (count == 2)
+        {
+            heart4.SetActive(false);
+            heart3.SetActive(false);
+
+        }
+        if (count == 3)
+        {
+            heart4.SetActive(false);
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+
+        }
+        if (count == 4)
+        {
+            heart4.SetActive(false);
+            heart3.SetActive(false);
+            heart2.SetActive(false);
+            heart1.SetActive(false);
+
+        }
+
     }
+
 
     // Update is called once per frame
     void Update()
     {
+
+        scale = this.transform.localScale.x + 9;
+
         // use OVRInput
         OVRInput.Update();
         //　制限時間が0秒以下なら何もしない
@@ -63,7 +106,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        Debug.Log(totalTime);
+        //Debug.Log(totalTime);
         //　一旦トータルの制限時間を計測；
         totalTime = minute * 60 + seconds;
         totalTime -= Time.deltaTime;
@@ -165,26 +208,92 @@ public class Player : MonoBehaviour
 
 
 
-        Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
+        //Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
         //Debug.Log(updown+":"+sau);
         transform.rotation = Quaternion.Euler(updown, sau, 0);
         transform.Translate(Vector3.forward * speed);
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+
+        Scene loadscene = SceneManager.GetActiveScene();
+        if (count == 5)
         {
-            // その収集アイテムを非表示にします
-            other.gameObject.SetActive(false);
-            // スコアを加算します
-            score = score + 1;
-            size = size + score * 0.01f;
-            this.transform.localScale = new Vector3(size, size, size);
-            //スコアを次のシーンに引き継ぐ
-            scoredata = score;
+            if (loadscene.name == "GameStage1")
+            {
+                SceneManager.LoadScene("Stage1 G");
+                count = 0;
+            }
+            if (loadscene.name == "GameStage2")
+            {
+                SceneManager.LoadScene("Stage2 G");
+                count = 0;
+            }
+            if (loadscene.name == "GameStage3")
+            {
+                SceneManager.LoadScene("Stage3 G");
+                count = 0;
+            }
+
         }
     }
 
+        void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (this.scale > other.gameObject.GetComponent<Enemy>().scale)
+            {
+                Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
 
+                // その収集アイテムを非表示にします
+                other.gameObject.SetActive(false);
+                // スコアを加算します
+                score = score + 1;
+                size = size + score * 0.01f;
+                this.transform.localScale = new Vector3(size, size, size);
+                //スコアを次のシーンに引き継ぐ
+                scoredata = score;
+            }
+            if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)
+            {
+                Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
+                Debug.Log(other.gameObject);
+                //自分より大きい魚にぶつかったらカウントを+1
+                count++;
+                Debug.Log(count);
 
+               
+                    if (count == 1)
+                    {
+                        heart4.SetActive(false);
+                    }
+                    if (count == 2)
+                    {
+                        heart4.SetActive(false);
+                        heart3.SetActive(false);
+                    }
+                    if (count == 3)
+                    {
+                        heart4.SetActive(false);
+                        heart3.SetActive(false);
+                        heart2.SetActive(false);
+                    }
+                    if (count == 4)
+                    {
+                        heart4.SetActive(false);
+                        heart3.SetActive(false);
+                        heart2.SetActive(false);
+                        heart1.SetActive(false);
+                    }
+                    if (count == 5)
+                    {
+                        heart4.SetActive(false);
+                        heart3.SetActive(false);
+                        heart2.SetActive(false);
+                        heart1.SetActive(false);
+                        heart.SetActive(false);
+                    }
+                    other.gameObject.SetActive(false);
+            }
+
+        }
+    }
 }

@@ -21,7 +21,7 @@ public class ReticleSprite : MonoBehaviour
     void Update()
     {
         reticleSignal = Enemy.reticleSignal;
-        Debug.Log(reticleSignal);
+//        Debug.Log(reticleSignal);
         if (reticleSignal == 1) //レティクル内に魚がいる時にレティクルを切り替え
         {
             MainSpriteRenderer.sprite = Reticle;

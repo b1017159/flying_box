@@ -41,13 +41,6 @@ public class Player : MonoBehaviour
     public static int count = 0;
     public float scale;
 
-    //HPオブジェクト
-    public GameObject heart;
-    public GameObject heart1;
-    public GameObject heart2;
-    public GameObject heart3;
-    public GameObject heart4;
-
     void Start()
     {
         // static 変数にインスタンス情報を格納する
@@ -62,33 +55,6 @@ public class Player : MonoBehaviour
         minutedata = minute;
         secondsdata = seconds;
         totaltimedata = totalTime;
-
-        if (count == 1)
-        {
-            heart4.SetActive(false);
-
-        }
-        if (count == 2)
-        {
-            heart4.SetActive(false);
-            heart3.SetActive(false);
-
-        }
-        if (count == 3)
-        {
-            heart4.SetActive(false);
-            heart3.SetActive(false);
-            heart2.SetActive(false);
-
-        }
-        if (count == 4)
-        {
-            heart4.SetActive(false);
-            heart3.SetActive(false);
-            heart2.SetActive(false);
-            heart1.SetActive(false);
-
-        }
 
     }
 
@@ -206,42 +172,19 @@ public class Player : MonoBehaviour
             transform.Translate(0.0f, 0.0f, 0.1f);
         }
 
-
-
         //Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
         //Debug.Log(updown+":"+sau);
         transform.rotation = Quaternion.Euler(updown, sau, 0);
         transform.Translate(Vector3.forward * speed);
-
-        Scene loadscene = SceneManager.GetActiveScene();
-        if (count == 5)
-        {
-            if (loadscene.name == "GameStage1")
-            {
-                SceneManager.LoadScene("Stage1 G");
-                count = 0;
-            }
-            if (loadscene.name == "GameStage2")
-            {
-                SceneManager.LoadScene("Stage2 G");
-                count = 0;
-            }
-            if (loadscene.name == "GameStage3")
-            {
-                SceneManager.LoadScene("Stage3 G");
-                count = 0;
-            }
-
-        }
     }
 
         void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (this.scale > other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale/10 > other.gameObject.GetComponent<Enemy>().scale)
             {
-                Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
+                Debug.Log(this.scale/10 + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
 
                 // その収集アイテムを非表示にします
                 other.gameObject.SetActive(false);
@@ -252,45 +195,11 @@ public class Player : MonoBehaviour
                 //スコアを次のシーンに引き継ぐ
                 scoredata = score;
             }
-            if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale/10 <= other.gameObject.GetComponent<Enemy>().scale)
             {
-                Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
-                Debug.Log(other.gameObject);
+                Debug.Log(this.scale/10 + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
                 //自分より大きい魚にぶつかったらカウントを+1
                 count++;
-                Debug.Log(count);
-
-               
-                    if (count == 1)
-                    {
-                        heart4.SetActive(false);
-                    }
-                    if (count == 2)
-                    {
-                        heart4.SetActive(false);
-                        heart3.SetActive(false);
-                    }
-                    if (count == 3)
-                    {
-                        heart4.SetActive(false);
-                        heart3.SetActive(false);
-                        heart2.SetActive(false);
-                    }
-                    if (count == 4)
-                    {
-                        heart4.SetActive(false);
-                        heart3.SetActive(false);
-                        heart2.SetActive(false);
-                        heart1.SetActive(false);
-                    }
-                    if (count == 5)
-                    {
-                        heart4.SetActive(false);
-                        heart3.SetActive(false);
-                        heart2.SetActive(false);
-                        heart1.SetActive(false);
-                        heart.SetActive(false);
-                    }
                     other.gameObject.SetActive(false);
             }
 

@@ -32,4 +32,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClearScene.unity
     guid: 11cd58489006fd6408a49bd98dbd9795
+  - enabled: 1
+    path: Assets/Scenes/GameTitle.unity
+    guid: 78dec737d9ac8481a9d956a8d4872321
+  - enabled: 1
+    path: Assets/Scenes/LightMenu.unity
+    guid: 56807890cd66f4720b9e11aeb4d7b16d
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: f1ce6e84f65b1422eb0b6f8dae3db6b0
+  - enabled: 1
+    path: Assets/Scenes/Stage3 G.unity
+    guid: f5685973a9fff40c4aa4a01403eb8509
+  - enabled: 1
+    path: Assets/Scenes/Stage2 G.unity
+    guid: af302dfff4e7d4a33bfeab03f117b7ff
+  - enabled: 1
+    path: Assets/Scenes/Stage1 G.unity
+    guid: 928c80d2c7f4d40869fb0fccd272bd3d
   m_configObjects: {}

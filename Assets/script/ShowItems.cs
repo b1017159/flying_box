@@ -8,17 +8,16 @@ public class ShowItems : MonoBehaviour
     //[SerializeField] private GameObject parentObject;
     private float delay_time;
     private List<Transform> childObjects;
-    private int num_item, pin;
+    private int pin;
     //private float checkpoint, headposition, endposition;
     private float mouseInputed = 0.0f;
-    [SerializeField] public float wheelSpeed = 0.1f;
+    [SerializeField] public float wheelSpeed = 1.0f;
     public float rotatespeed = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        pin = 0;
         delay_time = GetComponent<MoveObj>().AnimationTime;
-        num_item = GetComponent<CreateInstance>().num_item;
+        pin = GetComponent<CreateInstance>().pin;        
     }
 
     // Update is called once per frame
@@ -32,25 +31,44 @@ public class ShowItems : MonoBehaviour
         {
             if (System.Math.Abs(mouseInputed) > 1.0f)
             {
-                int n = 0;
+                int n;
                 if (mouseInputed > 1.0f) n = 1;
-                else n = 0;
+                else n = -1;
 
-                for(int i = 0; i < num_item; i++)
+                if(n == 1)
                 {
-                    childObjects[i].DORotate(new Vector3(0.0f, (n + i)*48.0f, 0.0f), 0.1f);
+                    childObjects[pin - 1].gameObject.SetActive(false);
+                    Transform tf = childObjects[childObjects.Count - 1];
+                    childObjects.RemoveAt(childObjects.Count - 1);
+                    childObjects.Insert(0, tf);
+                    childObjects[0].gameObject.SetActive(true);
+                    childObjects[0].DORotate(new Vector3(0.0f, -48.0f, 0.0f), 0.0f);
+                } else if (n == -1)
+                {
+                    childObjects[0].gameObject.SetActive(false);
+                    Transform tf = childObjects[0];
+                    childObjects.RemoveAt(0);
+                    childObjects.Add(tf);
+                    childObjects[pin - 1].gameObject.SetActive(true);
+                    childObjects[pin - 1].DORotate(new Vector3(0.0f, 48.0f * pin, 0.0f), 0.0f);
+                }
+                for(int i = 0; i < pin; i++)
+                {
+                    childObjects[i].DORotate(new Vector3(0.0f, 48.0f * n, 0.0f), 0.1f).SetRelative();
                 }
                 mouseInputed = 0.0f;
-            }
-            //マウスウィール入力
-            float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
-            if (System.Math.Abs(scrollWheel) > 0)
+                delay_time = 0.01f;
+            } else
             {
-                MouseWheel(scrollWheel);
+                //マウスウィール入力
+                float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+                if (System.Math.Abs(scrollWheel) > 0)
+                {
+                    MouseWheel(scrollWheel);
+                }
             }
-            
+   
         }
-        
     }
 
     private void MouseWheel(float delta)
@@ -63,7 +81,7 @@ public class ShowItems : MonoBehaviour
         childObjects = ch;
         foreach (Transform child in childObjects)
         {
-            string log = child.gameObject.name.ToString();
+            string log = child.gameObject.name;
             Debug.Log(log);
         }
     }

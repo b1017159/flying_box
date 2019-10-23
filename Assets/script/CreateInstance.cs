@@ -10,19 +10,23 @@ public class CreateInstance : MonoBehaviour
     private GameObject item;
 
     private List<Transform> childObjects = new List<Transform>();
-    public int num_item = 5;
+    public int pin = 5;
     
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < num_item; i++)
+        Texture[] images = Resources.LoadAll<Texture>("SakanaZukan/");
+        
+        for (int i = 0; i < images.Length; i++)
         {
             GameObject obj;
             obj = Instantiate(item, new Vector3(0, 0, 0), Quaternion.identity, parent) as GameObject;
             obj.gameObject.name += i.ToString();
+            obj.gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", images[i]);          
             obj.gameObject.transform.Rotate(0.0f, 48.0f * i, 0.0f);
+
             childObjects.Add(obj.transform);
-            if (i > 4) obj.gameObject.SetActive(false);
+            if (i >= pin) obj.gameObject.SetActive(false);
             
         }
         GetComponent<ShowItems>().SetChild(childObjects);
@@ -34,6 +38,4 @@ public class CreateInstance : MonoBehaviour
     }
     //getterメソッド
     public List<Transform> GetChildren() { return childObjects; }
-    //public float GetEulerAnglesY() { return transform.eulerAngles.y; }
-    //public void SetEulerAnglesY(float y) { transform.eulerAngles.y = y; }
 }

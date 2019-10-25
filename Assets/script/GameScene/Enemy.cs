@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
                 target = this.transform.Find("enemy_info").GetComponent<Enemy_info>();
                 //発生するまで親子関係が無いので上で書かずstartで書く
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
-                name = transform.name;
+                if(name==null) name = transform.name;
                 if (target == null) print("enemy_infoなし");
                 if(target!=null) target.Display(scale,name);
         }

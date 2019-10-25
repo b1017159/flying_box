@@ -452,9 +452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   scale: 1
-  name: 
+  name: "\u30A4\u30C8\u30A6"
   targetObject: {fileID: 915812297160021044}
-  S_color: {fileID: 9091094862930139297, guid: 7800f24ea5de3354f99c6f59c645489d, type: 3}
+  S_color: {fileID: 5127174323194441263}
 --- !u!54 &-7934789054047599098
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5344790257375719303}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -617,7 +617,7 @@ PrefabInstance:
     - target: {fileID: 3871108943665389455, guid: 5869967c021e3804eb5e61d6b8ffaf47,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.81
       objectReference: {fileID: 0}
     - target: {fileID: 3871108943665389455, guid: 5869967c021e3804eb5e61d6b8ffaf47,
         type: 3}

@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   scale: 2
-  name: 
+  name: "\u30B7\u30DE\u30BE\u30A4"
   targetObject: {fileID: 5640842487843418869}
   S_color: {fileID: 3486422484868286794}
 --- !u!54 &4425245461654882528

@@ -344,7 +344,7 @@
     <Compile Include="Assets\script\GameTitle\LightOnOff.cs" />
     <Compile Include="Assets\script\GameTitle\LookY.cs" />
     <Compile Include="Assets\script\GameTitle\MenuToOption.cs" />
-    <Compile Include="Assets\script\GameTitle\NameToVR.cs" />
+    <Compile Include="Assets\script\GameTitle\NameSceneManager.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnMenu.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnTitle.cs" />
     <Compile Include="Assets\script\GameTitle\Scene1Controller.cs" />
@@ -354,8 +354,7 @@
     <Compile Include="Assets\script\GameTitle\Scene5Controller.cs" />
     <Compile Include="Assets\script\GameTitle\Scene6Controller.cs" />
     <Compile Include="Assets\script\GameTitle\SpotLightOnOff.cs" />
-    <Compile Include="Assets\script\GameTitle\TitleToMenu.cs" />
-    <Compile Include="Assets\script\GameTitle\TitleToName.cs" />
+    <Compile Include="Assets\script\GameTitle\TitleSceneManager.cs" />
     <Compile Include="Assets\script\GameTitle\TitleToStage1.cs" />
     <Compile Include="Assets\script\GameTitle\Toggle_Day.cs" />
     <Compile Include="Assets\script\GameTitle\VRToStage1.cs" />

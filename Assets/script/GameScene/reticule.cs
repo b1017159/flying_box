@@ -43,10 +43,10 @@ public class reticule : MonoBehaviour
         if (this.name == "reticuleFPS")
         {
             replayer_position = first_person_camera.position;//自機のポジション
-            replayer_forward = first_person_camera.forward;//自機ののベクトル
+            replayer_forward = first_person_camera.forward;//自機のベクトル
             replayer_rotate = first_person_camera.localEulerAngles;//自機の傾き
 
-            Debug.Log("kawauchi");
+            //Debug.Log("kawauchi");
 
         }
         if (this.name == "reticuleTPS")
@@ -55,7 +55,7 @@ public class reticule : MonoBehaviour
             replayer_forward = Player.m_instance.transform.forward;//自機ののベクトル
             replayer_rotate = Player.m_instance.transform.localEulerAngles;//自機の傾き
 
-            Debug.Log("Riku");
+            //Debug.Log("Riku");
 
         }
         var retipos = replayer_position + replayer_forward * distance;
@@ -64,6 +64,6 @@ public class reticule : MonoBehaviour
 
         transform.position = retipos;
         transform.localEulerAngles = replayer_rotate;
-
+        Debug.Log(replayer_rotate);
     }
 }

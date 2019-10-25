@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NameToVR : MonoBehaviour
+public class NameSceneManager : MonoBehaviour
 {
     void Update()
     {
@@ -16,6 +16,10 @@ public class NameToVR : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N) && obj3.activeInHierarchy)
         {
             SceneManager.LoadScene("Name");
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("GameTitle");
         }
     }
 }

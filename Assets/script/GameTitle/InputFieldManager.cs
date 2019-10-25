@@ -9,6 +9,7 @@ public class InputFieldManager : MonoBehaviour
     //InputFieldを格納するための変数
     public InputField inputField;
     public Text text;
+    public static string name ="あなた";
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +36,16 @@ public class InputFieldManager : MonoBehaviour
     public void GetInputName()
     {
         //InputFieldからテキスト情報を取得する
-        string name = inputField.text;
+        name = inputField.text;
         Debug.Log(name);
 
         //テキストにinputFieldの内容を反映
         text.text = inputField.text;
+    }
+
+    public static string GetName()
+    {
+        return name;
     }
 
     //テキストを表示するかの関数

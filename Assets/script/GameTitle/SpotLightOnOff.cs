@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SpotLightOnOff : Toggle_Day
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -13,11 +12,12 @@ public class SpotLightOnOff : Toggle_Day
 
         if (A == 2)
         {
-            GameObject obj = GameObject.Find("SunLight");
-            Destroy(obj);
-            GameObject obj2 = GameObject.Find("Sphere100");
-            obj2.SetActive(false);
-            GameObject obj3 = GameObject.Find("Light");
+            //太陽光見えなくする
+            GameObject obj = GameObject.Find("Directional Light");
+            obj.SetActive(false);
+
+            //太陽光削除
+            GameObject obj3 = GameObject.Find("SunLight");
             Destroy(obj3);
         }
         else

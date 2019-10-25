@@ -11,6 +11,8 @@ public class ShowScore : MonoBehaviour
 
     int score;
 
+    string username;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +20,15 @@ public class ShowScore : MonoBehaviour
         Result = GetComponentInChildren<TextMesh>();
 
         score = ScoreText.GetScore();
+
+        username = InputFieldManager.GetName();
     }
 
     // Update is called once per frame
     void Update()
     {
         OVRInput.Update();
-        Result.text ="あなたのスコア　"+score+"m";
+        Result.text = username+"のスコア　"+score+"m";
 
         Scene loadscene = SceneManager.GetActiveScene();
         if (OVRInput.Get(OVRInput.RawButton.A)) 

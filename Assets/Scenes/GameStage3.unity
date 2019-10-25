@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bd1972fdb27ab48933fbee88dc73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fish: {fileID: 1537397980}
+  fish2: {fileID: 1537397979}
   minute: 0
   seconds: 20
   speed: 0.01
@@ -2030,6 +2032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: itou_ver.3
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7800f24ea5de3354f99c6f59c645489d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2085,13 +2092,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7800f24ea5de3354f99c6f59c645489d, type: 3}
+--- !u!1 &1537397979 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9091094862930139297, guid: 7800f24ea5de3354f99c6f59c645489d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537397978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1537397980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129350255495253916, guid: 7800f24ea5de3354f99c6f59c645489d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1537397978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730768513
 GameObject:
   m_ObjectHideFlags: 0

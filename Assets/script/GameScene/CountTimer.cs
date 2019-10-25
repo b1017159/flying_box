@@ -15,6 +15,11 @@ public class CountTimer : MonoBehaviour
     //　前回Update時の秒数
     private float oldSeconds;
     public GameObject Timer;
+    private GameObject FPS;　//一人称カメラ
+    private GameObject TPS; //三人称カメラ
+
+    public static int signal;
+
     void Start()
     {
 
@@ -43,19 +48,48 @@ public class CountTimer : MonoBehaviour
         {
             Scene loadscene = SceneManager.GetActiveScene();
             Debug.Log(loadscene.name);
-            if (loadscene.name == "GameStage1")
-            {
-                SceneManager.LoadScene("GameStage2");
-            }
-            if (loadscene.name == "GameStage2")
-            {
-                SceneManager.LoadScene("GameStage3");
-            }
-            if (loadscene.name == "GameStage3")
-            {
-                SceneManager.LoadScene("ClearScene");
-            }
+            FPS = GameObject.Find("One_person");
+            TPS = GameObject.Find("Third_person");
+           
+                //Debug.Log(signal);
+                if (loadscene.name == "GameStage1")
+                {
+                     SceneManager.LoadScene("GameStage2");
+                    if (FPS.activeSelf)
+                    {
+                        signal = 1;
+                    }
+                    else if (TPS.activeSelf)
+                    {
+                        signal = 3;
+                    }
 
+                }
+                if (loadscene.name == "GameStage2")
+                {
+                     SceneManager.LoadScene("GameStage3");
+                    if (FPS.activeSelf)
+                    {
+                        signal = 1;
+                    }
+                    else if (TPS.activeSelf)
+                    {
+                        signal = 3;
+                    }
+                }
+                if (loadscene.name == "GameStage3")
+                {
+                     SceneManager.LoadScene("ClearScene");
+                    if (FPS.activeSelf)
+                    {
+                        signal = 1;
+                    }
+                    else if (TPS.activeSelf)
+                    {
+                        signal = 3;
+                    }
+                }
+            
 
         }
     }

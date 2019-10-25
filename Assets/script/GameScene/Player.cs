@@ -7,10 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    
+
+    public static int Camerasignal;
+
+    public GameObject fish;
+    public GameObject fish2;
+
+    private GameObject reticuleFPS;
+    private GameObject reticuleTPS;
+    private GameObject reticule_picFPS;
+    private GameObject reticule_picTPS;
+
     private GameObject FPS;　//一人称カメラ
     private GameObject TPS; //三人称カメラ
-                            //　トータル制限時間
-    private float totalTime;
+    private float totalTime;//　トータル制限時間
     //　制限時間（分）
     [SerializeField]
     private int minute;
@@ -41,20 +52,53 @@ public class Player : MonoBehaviour
     public static int count = 0;
     public float scale;
 
+    private void Awake()
+    {
+        // static 変数にインスタンス情報を格納する
+
+        m_instance = this;
+    }
+
     void Start()
     {
         // static 変数にインスタンス情報を格納する
-        m_instance = this;
+
+        //m_instance = this;
+        //初期化
+        reticuleFPS = GameObject.Find("reticuleFPS");
+        reticuleTPS = GameObject.Find("reticuleTPS");
+        reticule_picFPS = GameObject.Find("reticule_picFPS");
+        reticule_picTPS = GameObject.Find("reticule_picTPS");
         score = 0;
         score = scoredata;
         //   SetCountText();
-        FPS = GameObject.Find("One_person");
+        FPS = GameObject.Find("First_person");
         TPS = GameObject.Find("Third_person");
         TPS.SetActive(false);
         totalTime = minute * 60 + seconds;
         minutedata = minute;
         secondsdata = seconds;
         totaltimedata = totalTime;
+        Camerasignal = CountTimer.signal;
+        if (Camerasignal == 1)
+        {
+            FPS.SetActive(true);
+            TPS.SetActive(false);
+            fish.SetActive(false);
+            fish2.SetActive(false);//自身の魚を見えなくする
+            reticuleFPS.SetActive(true);
+            reticuleTPS.SetActive(false);
+        }
+        else
+        {
+            FPS.SetActive(false);
+            TPS.SetActive(true);
+
+            reticuleFPS.SetActive(false);
+            reticuleTPS.SetActive(true);
+        }
+
+        
 
     }
 
@@ -63,7 +107,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        scale = this.transform.localScale.x + 9;
+        scale = this.transform.localScale.x;
 
         // use OVRInput
         OVRInput.Update();
@@ -85,6 +129,7 @@ public class Player : MonoBehaviour
         secondsdata = seconds;
 
 
+       
 
         //カメラの一人称と三人称の切り替え
         if (Input.GetKeyDown("space"))
@@ -94,12 +139,23 @@ public class Player : MonoBehaviour
                 FPS.SetActive(false);
                 TPS.SetActive(true);
                 //    scoreText = GameObject.Find("3DScore");
+                fish.SetActive(true);
+                fish2.SetActive(true);//自身の魚がみえてる
+                reticuleFPS.SetActive(false);
+                reticuleTPS.SetActive(true);
+                reticule_picFPS.SetActive(false);
+                reticule_picTPS.SetActive(true);
             }
-            else
+            else//if(FPS.activeSelf)
             {
                 FPS.SetActive(true);
                 TPS.SetActive(false);
-                //   scoreText = GameObject.Find("3DScore_one");
+                fish.SetActive(false);
+                fish2.SetActive(false);//自身の魚を見えなくする
+                reticuleFPS.SetActive(true);
+                reticuleTPS.SetActive(false);
+                reticule_picFPS.SetActive(true);
+                reticule_picTPS.SetActive(false);
             }
         }
         //Quaternion rotation = InputTracking.GetLocalRotation(XRNode.CenterEye);
@@ -176,6 +232,7 @@ public class Player : MonoBehaviour
         //Debug.Log(updown+":"+sau);
         transform.rotation = Quaternion.Euler(updown, sau, 0);
         transform.Translate(Vector3.forward * speed);
+
     }
 
         void OnTriggerEnter(Collider other)
@@ -205,4 +262,6 @@ public class Player : MonoBehaviour
 
         }
     }
+
+    
 }

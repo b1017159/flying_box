@@ -343,6 +343,7 @@
     <Compile Include="Assets\script\Scene5Controller.cs" />
     <Compile Include="Assets\script\Scene6Controller.cs" />
     <Compile Include="Assets\script\ScoreText.cs" />
+    <Compile Include="Assets\script\ShowDetail.cs" />
     <Compile Include="Assets\script\ShowItems.cs" />
     <Compile Include="Assets\script\ShowScore.cs" />
     <Compile Include="Assets\script\Sphere100.cs" />

@@ -50,7 +50,6 @@ public class MoveObj : MonoBehaviour
 
     public void RotateObject()
     {
-        //Debug.Log(rotation);
         transform.DORotate(new Vector3(rotateX, rotateY, rotateZ), AnimationTime).SetRelative();
         return;
     }

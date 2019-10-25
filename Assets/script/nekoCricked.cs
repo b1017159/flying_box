@@ -18,23 +18,11 @@ public class nekoCricked : MonoBehaviour
         
     }
 
-    public void onClickAct()
+    public void OnClickAct()
     {
-        SceneManager.LoadScene("GameTitle");
-        //Debug.Log("タッチされたにゃー");
-        //if (gameObject.activeInHierarchy)
-        //{
-        //    MoveObj mo = gameObject.GetComponent<MoveObj>();
-
-        //    mo.MoveObject(-1);
-        //    gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    gameObject.SetActive(true);
-        //    MoveObj mo = gameObject.GetComponent<MoveObj>();
-        //    mo.MoveObject();
-        //}
-
+        //SceneManager.LoadScene("GameTitle");
+        Debug.Log("タッチされたにゃー");
+        GameObject obj = transform.parent.gameObject;
+        obj.GetComponent<ShowDetail>().ShowDetailItem();
     }
 }

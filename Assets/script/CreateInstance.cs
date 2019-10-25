@@ -9,7 +9,7 @@ public class CreateInstance : MonoBehaviour
     [SerializeField]
     private GameObject item;
 
-    private List<Transform> childObjects = new List<Transform>();
+    private List<Transform> children = new List<Transform>();
     public int pin = 5;
     
     // Start is called before the first frame update
@@ -22,14 +22,14 @@ public class CreateInstance : MonoBehaviour
             GameObject obj;
             obj = Instantiate(item, new Vector3(0, 0, 0), Quaternion.identity, parent) as GameObject;
             obj.gameObject.name += i.ToString();
-            obj.gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", images[i]);          
-            obj.gameObject.transform.Rotate(0.0f, 48.0f * i, 0.0f);
+            obj.gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", images[i]);
+            obj.gameObject.transform.Rotate(0.0f, 48.0f * (i % (images.Length / 2)), 0.0f);
 
-            childObjects.Add(obj.transform);
+            children.Add(obj.transform);
             if (i >= pin) obj.gameObject.SetActive(false);
             
         }
-        GetComponent<ShowItems>().SetChild(childObjects);
+        GetComponent<ShowItems>().SetChildren(children);
     }
     // Update is called once per frame
     void Update()
@@ -37,5 +37,5 @@ public class CreateInstance : MonoBehaviour
         
     }
     //getterメソッド
-    public List<Transform> GetChildren() { return childObjects; }
+    public List<Transform> GetChildren() { return children; }
 }

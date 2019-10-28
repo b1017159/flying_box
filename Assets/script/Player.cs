@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public GameObject damage_effect; //ダメージ食らった時のエフェクトっす
+
     private GameObject FPS;　//一人称カメラ
     private GameObject TPS; //三人称カメラ
                             //　トータル制限時間
@@ -50,6 +52,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+
+        //damage_effect = GetComponent<Renderer>();
+
         // static 変数にインスタンス情報を格納する
         m_instance = this;
         score = 0;
@@ -292,8 +297,15 @@ public class Player : MonoBehaviour
                         heart.SetActive(false);
                     }
                     other.gameObject.SetActive(false);
-            }
 
+                damage_effect.GetComponent<Renderer>().material.color = new Color(0.5f, 0f, 0f, 0.5f);
+                    
+
+            }
+            else
+            {
+                damage_effect.GetComponent<Renderer>().material.color = Color.Lerp(damage_effect.GetComponent<Renderer>().material.color, Color.clear, Time.deltaTime);
+            }
         }
     }
 }

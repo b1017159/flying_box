@@ -773,7 +773,7 @@ MonoBehaviour:
   rotateX: 0
   rotateY: 720
   rotateZ: 0
-  AnimationTime: 2
+  AnimationTime: 1.5
 --- !u!114 &1371930616
 MonoBehaviour:
   m_ObjectHideFlags: 0

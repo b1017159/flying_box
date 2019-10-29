@@ -47,16 +47,14 @@ public class ShowItems : MonoBehaviour
                 }
 
                 mouseInputed = 0.0f;
-                delay_time = 0.1f;
-            } else
-            {
-                //マウスウィール入力
-                float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
-                if (System.Math.Abs(scrollWheel) > 0)
-                {
-                    MouseWheel(scrollWheel);
-                }
-            }
+                delay_time = 0.3f;
+            }    
+        }
+        //マウスウィール入力
+        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+        if (System.Math.Abs(scrollWheel) > 0)
+        {
+            MouseWheel(scrollWheel);
         }
     }
 
@@ -87,7 +85,7 @@ public class ShowItems : MonoBehaviour
         }
         for (int i = 0; i < pin; i++)
         {
-            list[i].DORotate(new Vector3(0.0f, 48.0f * n, 0.0f), 0.1f).SetRelative();
+            list[i].DORotate(new Vector3(0.0f, 48.0f * n, 0.0f), 0.3f).SetRelative();
         }
     }
 

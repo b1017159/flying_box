@@ -9,7 +9,7 @@ public class ShowScore : MonoBehaviour
 {
     private TextMesh Result;
 
-    int score;
+    double score;
 
     string username;
 

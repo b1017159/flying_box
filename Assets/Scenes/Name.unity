@@ -1333,9 +1333,6 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
-  m_OnValueChanged:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 844626732}
         m_MethodName: GetInputName
@@ -1348,6 +1345,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 844626732}
         m_MethodName: TextOnOff
         m_Mode: 1

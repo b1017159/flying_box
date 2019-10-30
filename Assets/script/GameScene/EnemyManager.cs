@@ -12,8 +12,8 @@ public class EnemyManager : MonoBehaviour
         public Enemy[] m_enemyPrefabs; // 敵のプレハブを管理する配列
         void Update()
         {
-                // 経過時間を更新する
-                m_elapsedTime += Time.deltaTime;
+        // 経過時間を更新する
+        m_elapsedTime += Time.deltaTime;
                 // 出現タイミングを管理するタイマーを更新する
                 m_timer += Time.deltaTime;
                 // ゲームの経過時間から出現間隔（秒）を算出する

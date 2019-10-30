@@ -41,9 +41,10 @@ public class Enemy_info : MonoBehaviour
         public void Display(float scale, string name)
         {
                 string enemy_scale = scale.ToString("F2") + "\n "+ name;
-                //Fで小数点指定
-                //Debug.Log(enemy_scale+":"+"scale");
-                this.GetComponent<TextMesh>().text = enemy_scale;
+        //Fで小数点指定
+        //Debug.Log(enemy_scale+":"+"scale");
+        this.GetComponent<RectTransform>().localScale = new Vector3(1/scale/2, 1/scale/2, 1/scale/2);
+        this.GetComponent<TextMesh>().text = enemy_scale;
         }
         public void Aaper()
         {

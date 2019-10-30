@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     public static float totaltimedata;
     private Rigidbody rb; // Rididbody
     public float speed = 0.01f; // 動く速さ
-
     //  public GameObject scoreText; // スコアの UI
     public float rotate_speed = 0.5f;
     // public Camera maincamera;
@@ -34,8 +33,11 @@ public class Player : MonoBehaviour
     public float sitamax = 60;//下に向く角度の最大値
     float updown = 0; //上下
     float sau = 0; //左右
-    public int score;
-    public static int scoredata = 0; // スコア
+    public static int ControllSwitch;
+    public double score;
+    public static float scaledata; //魚のスケールを引き継ぐための変数
+    public static double scoredata = 1; // スコア
+    public static int camerasig;
     private float size = 1.2f; // 巨大化
                                // Start is called before the first frame update
     public static int count = 0;
@@ -45,12 +47,18 @@ public class Player : MonoBehaviour
     {
         // static 変数にインスタンス情報を格納する
         m_instance = this;
-        score = 0;
+        score = 1;
+        Time.timeScale = 1.0f;
+        ControllSwitch = 1;
+        // スコアを加算します
         score = scoredata;
+        scale = scaledata;
         //   SetCountText();
         FPS = GameObject.Find("One_person");
         TPS = GameObject.Find("Third_person");
+        camerasig = 3;
         TPS.SetActive(false);
+        FPS.SetActive(true);
         totalTime = minute * 60 + seconds;
         minutedata = minute;
         secondsdata = seconds;
@@ -62,8 +70,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        scale = this.transform.localScale.x + 9;
+        
+        scale = this.transform.localScale.x;
 
         // use OVRInput
         OVRInput.Update();
@@ -84,120 +92,96 @@ public class Player : MonoBehaviour
         minutedata = minute;
         secondsdata = seconds;
 
-
-
-        //カメラの一人称と三人称の切り替え
-        if (Input.GetKeyDown("space"))
+      if(ControllSwitch == 1)
         {
-            if (FPS.activeSelf)
+            //カメラの一人称と三人称の切り替え
+          //  if (Input.GetKeyDown("space"))
+            //{
+                if (camerasig == 3)
+                {
+                    FPS.SetActive(false);
+                    TPS.SetActive(true);
+                }
+                else
+                {
+                    FPS.SetActive(true);
+                    TPS.SetActive(false);
+                }
+           // }
+            //oculasの左スティックで操作
+            updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
+            updown = Mathf.Clamp(updown, uemax, sitamax);
+            sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
+            // 上方向ボタンを押した瞬間にif文の中を実行
+            if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
             {
-                FPS.SetActive(false);
-                TPS.SetActive(true);
-                //    scoreText = GameObject.Find("3DScore");
+                updown -= rotate_speed;
             }
-            else
+            // 下方向ボタンを押した瞬間にif文の中を実行
+            if (Input.GetKey(KeyCode.DownArrow) && updown < sitamax)
             {
-                FPS.SetActive(true);
-                TPS.SetActive(false);
-                //   scoreText = GameObject.Find("3DScore_one");
+                updown += rotate_speed;
+            }
+            // 右方向ボタンを押した瞬間にif文の中を実行
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                sau += rotate_speed;
+            }
+            // 左方向ボタンを押した瞬間にif文の中を実行
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                sau -= rotate_speed;
+            }
+
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
+                transform.Translate(0.0f, 0.0f, 0.1f);
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(0.0f, 0.0f, 0.1f);
             }
         }
-        //Quaternion rotation = InputTracking.GetLocalRotation(XRNode.CenterEye);
-        //  Vector3 rotation = maincamera.transform.forward;
-        // updown -= rotation.y * rotate_speed;
-        //sau += rotation.x * rotate_speed;
-        //   Debug.Log(rotation);
-        //m_instance = this;
-        //Debug.Log(this.transform.position);
-        //Vector3 _Rotation = gameObject.transform.localEulerAngles;
-        //Debug.Log("_Rotationl:"+_Rotation);
-        // float angle_x = transform.eulerAngles.x;
-        // float angle_y = transform.eulerAngles.y;
-        // float angle_z = transform.eulerAngles.z;
-        //Debug.Log(angle_x+":"+angle_y+":"+angle_z);
-        //オブジェクトの角度を取得
-
-        // カーソルキーの入力を取得
-        // var moveHorizontal = Input.GetAxis("Horizontal");//横キー
-        // var moveVertical = Input.GetAxis("Vertical");//縦キー
-        // //Debug.Log(this.transform.localRotation.x);
-        // if(angle_x<max&&angle_x>mini) {
-        //         if(angle_x>max-20.0f) {
-        //                 transform.rotation = Quaternion.Euler(max, angle_y, angle_z);
-        //                 //オブジェクトを指定した角度にする
-        //         }
-        //         if(angle_x<100) {
-        //                 transform.rotation = Quaternion.Euler(mini, angle_y, angle_z);
-        //         }
-        // }
-        // //Debug.Log("moveHorizontal:"+moveHorizontal);
-        // //Debug.Log("moveVertical:"+moveVertical);
-        // // カーソルキーの入力に合わせて移動方向を設定
-        // var movement = new Vector3(-moveVertical,moveHorizontal,0);
-        // transform.Rotate(movement);
-        //transform.Rotate(-moveVertical,moveHorizontal,0,Space.World);
-
-        //oculasの左スティックで操作
-        updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
-        updown = Mathf.Clamp(updown, uemax, sitamax);
-        sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
-        // 上方向ボタンを押した瞬間にif文の中を実行
-        if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
-        {
-            updown -= rotate_speed;
-        }
-        // 下方向ボタンを押した瞬間にif文の中を実行
-        if (Input.GetKey(KeyCode.DownArrow) && updown < sitamax)
-        {
-            updown += rotate_speed;
-        }
-        // 右方向ボタンを押した瞬間にif文の中を実行
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            sau += rotate_speed;
-        }
-        // 左方向ボタンを押した瞬間にif文の中を実行
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            sau -= rotate_speed;
-        }
-
-        if (OVRInput.Get(OVRInput.RawButton.A))
-        {
-            transform.Translate(0.0f, 0.0f, 0.1f);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0.0f, 0.0f, 0.1f);
-        }
-
         //Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
         //Debug.Log(updown+":"+sau);
         transform.rotation = Quaternion.Euler(updown, sau, 0);
-        transform.Translate(Vector3.forward * speed);
+        transform.Translate(Vector3.forward * speed * Time.timeScale);
+
     }
 
         void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (this.scale/10 > other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale + score > other.gameObject.GetComponent<Enemy>().scale)
             {
-                Debug.Log(this.scale/10 + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
+                Debug.Log(this.scale + score + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
 
                 // その収集アイテムを非表示にします
                 other.gameObject.SetActive(false);
                 // スコアを加算します
-                score = score + 1;
-                size = size + score * 0.01f;
+                //
+                if(other.gameObject.GetComponent<Enemy>().scale < this.scale + score - 1)
+                {
+                    score = score + 0.01;  // スコアを加算します
+                    size = size + 1 * 0.001f;
+                    Debug.Log(size);
+
+                }else
+                {
+                    score = score + 0.1;　//スコアを加算
+                    size = size + 1 * 0.01f;
+                    Debug.Log(size);
+                } 
                 this.transform.localScale = new Vector3(size, size, size);
                 //スコアを次のシーンに引き継ぐ
                 scoredata = score;
+                scaledata = scale;
             }
-            if (this.scale/10 <= other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale + score <= other.gameObject.GetComponent<Enemy>().scale)
             {
-                Debug.Log(this.scale/10 + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
+                Debug.Log(this.scale + score + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
                 //自分より大きい魚にぶつかったらカウントを+1
                 count++;
                     other.gameObject.SetActive(false);

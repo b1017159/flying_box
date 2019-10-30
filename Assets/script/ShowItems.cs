@@ -49,12 +49,12 @@ public class ShowItems : MonoBehaviour
                 mouseInputed = 0.0f;
                 delay_time = 0.3f;
             }    
-        }
         //マウスウィール入力
         float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
         if (System.Math.Abs(scrollWheel) > 0)
         {
             MouseWheel(scrollWheel);
+        }
         }
     }
 

@@ -31,11 +31,9 @@ namespace VRStandardAssets.Menu
         private void Update ()
         {
             // Set the target position based on whether the item is being looked at or not.
-            //m_TargetPosition = m_Item.IsOver ? m_PoppedPosition : m_StartPosition;
+            m_TargetPosition = m_Item.IsOver ? m_PoppedPosition : m_StartPosition;
             if (gameObject.activeInHierarchy)
             {
-                m_TargetPosition = m_PoppedPosition;
-
                 // Move towards the target position.
                 m_Transform.position = Vector3.MoveTowards(m_Transform.position, m_TargetPosition, m_PopSpeed * Time.deltaTime);
             }

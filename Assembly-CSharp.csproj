@@ -349,7 +349,6 @@
     <Compile Include="Assets\script\Sphere100.cs" />
     <Compile Include="Assets\script\Test\OVRInputTest.cs" />
     <Compile Include="Assets\script\Toggle_Day.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleRenderScale.cs" />

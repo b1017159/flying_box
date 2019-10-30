@@ -20,9 +20,7 @@ public class nekoCricked : MonoBehaviour
 
     public void OnClickAct()
     {
-        //SceneManager.LoadScene("GameTitle");
         Debug.Log("タッチされたにゃー");
-        GameObject obj = transform.parent.gameObject;
-        obj.GetComponent<ShowDetail>().ShowDetailItem();
+        GetComponent<ShowDetail>().ShowDetailItem();
     }
 }

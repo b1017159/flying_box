@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2446621184405005199}
   - component: {fileID: 2446621184405005201}
   - component: {fileID: 2446621184405005200}
+  - component: {fileID: 4762681629474222786}
   m_Layer: 0
   m_Name: Zukan_Item
   m_TagString: Untagged
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_Transform: {fileID: 2446621184453596858}
   m_Item: {fileID: 2446621184463593840}
   m_PopSpeed: 100
-  m_PopDistance: 2
+  m_PopDistance: 1
 --- !u!82 &2446621184452076660
 AudioSource:
   m_ObjectHideFlags: 0
@@ -398,5 +399,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9110fb95f5e2f4a8ca318671fd29c389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4762681629474222786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446621184453350386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1722a385572c7431680ba8455d77c459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

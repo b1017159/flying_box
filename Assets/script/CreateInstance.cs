@@ -11,12 +11,12 @@ public class CreateInstance : MonoBehaviour
 
     private List<Transform> children = new List<Transform>();
     public int pin = 5;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         Texture[] images = Resources.LoadAll<Texture>("SakanaZukan/");
-        
+
         for (int i = 0; i < images.Length; i++)
         {
             GameObject obj;
@@ -27,14 +27,14 @@ public class CreateInstance : MonoBehaviour
 
             children.Add(obj.transform);
             if (i >= pin) obj.gameObject.SetActive(false);
-            
+
         }
         GetComponent<ShowItems>().SetChildren(children);
     }
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     //getterメソッド
     public List<Transform> GetChildren() { return children; }

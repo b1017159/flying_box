@@ -25,7 +25,7 @@ public class ShowItems : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(delay_time > 0.0f)
+        if (delay_time > 0.0f)
         {
             delay_time -= Time.deltaTime * 1.0f;
         }
@@ -38,7 +38,7 @@ public class ShowItems : MonoBehaviour
                 else n = -1;
                 if (separate)
                 {
-                    RotateChildren(n,ch1);
+                    RotateChildren(n, ch1);
                     RotateChildren(n, ch2);
                 }
                 else
@@ -48,13 +48,13 @@ public class ShowItems : MonoBehaviour
 
                 mouseInputed = 0.0f;
                 delay_time = 0.3f;
-            }    
-        //マウスウィール入力
-        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
-        if (System.Math.Abs(scrollWheel) > 0)
-        {
-            MouseWheel(scrollWheel);
-        }
+            }
+            //マウスウィール入力
+            float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+            if (System.Math.Abs(scrollWheel) > 0)
+            {
+                MouseWheel(scrollWheel);
+            }
         }
     }
 
@@ -89,15 +89,9 @@ public class ShowItems : MonoBehaviour
         }
     }
 
-    public void SetChildren(List<Transform> chr)
-    {
-        children = chr;
-        foreach (Transform child in children)
-        {
-            string log = child.gameObject.name;
-            Debug.Log(log);
-        }
-    }
+    public void SetChildren(List<Transform> chr) => children = chr;
+
+    public List<Transform> GetChildren() => this.children;
 
     private IEnumerator SeparateChildren()
     {
@@ -111,7 +105,7 @@ public class ShowItems : MonoBehaviour
             pos = ch1[i].transform.position;
             pos.y += 2.0f;
             ch1[i].transform.position = pos;
-            
+
             if (i >= pin) ch1[i].gameObject.SetActive(false);
         }
         for (int i = 0; i < ch2.Count; i++)
@@ -120,7 +114,7 @@ public class ShowItems : MonoBehaviour
             pos = ch2[i].transform.position;
             pos.y -= 1.5f;
             ch2[i].transform.position = pos;
-            
+
             if (i >= pin) ch2[i].gameObject.SetActive(false);
         }
         Debug.Log(ch1.Count);

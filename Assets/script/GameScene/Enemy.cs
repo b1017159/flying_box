@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         private float color_speed=0.01f;
         private float color=0;//初期透明度（透明）
         private float rotation;
-        public static int reticleSignal = 0;
+        public static int reticleSignal = 0;//FPSorTPSを判断
 
         //GameObject target_old = this.gameObject;
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
                                 target.Display(scale,name);
-                                print("Triggererror");
+                                //print("Triggererror");
                         }
                 }
         }
@@ -123,7 +123,6 @@ public class Enemy : MonoBehaviour
                 //レティクルに当たると情報表示
                 if(other.gameObject.CompareTag("reticule")) {
                         reticleSignal = 1;
-                        //Debug.Log("reticule");
                         target.Aaper();
                         //Debug.Log("reticule");
                         //targetObject.Display(scale,name);

@@ -142,7 +142,7 @@ public class Enemy : MonoBehaviour
                 player_position=Player.m_instance.transform.position;//自機のポジション
                 //Debug.Log(player_position);
                 camera_position=CameraController.m_instance.transform.position;
-                pole_position=Pole.m_instance.transform.position;
+                //pole_position=Pole.m_instance.transform.position;
                 //メインカメラのポジション
                 //Debug.Log(camera_position);
                 var pos = player_position-pole_position+player_position;

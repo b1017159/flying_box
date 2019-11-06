@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
 {
     private GameObject FPS;　//一人称カメラ
     private GameObject TPS; //三人称カメラ
-                            //　トータル制限時間
+    private GameObject damagecube_TPS;
+    private GameObject damagecube_FPS;
+
     private float totalTime;
     //　制限時間（分）
     [SerializeField]
@@ -56,6 +58,10 @@ public class Player : MonoBehaviour
         //   SetCountText();
         FPS = GameObject.Find("One_person");
         TPS = GameObject.Find("Third_person");
+        damagecube_TPS = GameObject.Find("DamageEffect_TPS");
+        damagecube_FPS = GameObject.Find("DamageEffect_FPS");
+        damagecube_TPS.SetActive(false);
+        damagecube_FPS.SetActive(false);
         camerasig = 3;
         TPS.SetActive(false);
         FPS.SetActive(true);
@@ -70,7 +76,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
         scale = this.transform.localScale.x;
 
         // use OVRInput
@@ -92,22 +98,20 @@ public class Player : MonoBehaviour
         minutedata = minute;
         secondsdata = seconds;
 
-      if(ControllSwitch == 1)
+        if (ControllSwitch == 1)
         {
             //カメラの一人称と三人称の切り替え
-          //  if (Input.GetKeyDown("space"))
-            //{
-                if (camerasig == 3)
-                {
-                    FPS.SetActive(false);
-                    TPS.SetActive(true);
-                }
-                else
-                {
-                    FPS.SetActive(true);
-                    TPS.SetActive(false);
-                }
-           // }
+            if (camerasig == 3)
+            {
+                FPS.SetActive(false);
+                TPS.SetActive(true);
+            }
+            else
+            {
+                FPS.SetActive(true);
+                TPS.SetActive(false);
+            }
+            
             //oculasの左スティックで操作
             updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
             updown = Mathf.Clamp(updown, uemax, sitamax);
@@ -140,7 +144,7 @@ public class Player : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S))
             {
-                transform.Translate(0.0f, 0.0f, 0.1f);
+                transform.Translate(0.0f, 0.0f, 0.3f);
             }
         }
         //Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);
@@ -150,13 +154,27 @@ public class Player : MonoBehaviour
 
     }
 
-        void OnTriggerEnter(Collider other)
+    void damageEFON()
+    {
+        damagecube_FPS.SetActive(true);
+        damagecube_TPS.SetActive(true);
+
+        Debug.Log("ダメージONがよばれています");
+    }
+    void damageEFOFF()
+    {
+        damagecube_FPS.SetActive(false);
+        damagecube_TPS.SetActive(false);
+        print("ダメージOFFがよばれています");
+    }
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if (this.scale + score > other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale > other.gameObject.GetComponent<Enemy>().scale)
             {
-                Debug.Log(this.scale + score + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
+                Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
 
                 // その収集アイテムを非表示にします
                 other.gameObject.SetActive(false);
@@ -179,12 +197,15 @@ public class Player : MonoBehaviour
                 scoredata = score;
                 scaledata = scale;
             }
-            if (this.scale + score <= other.gameObject.GetComponent<Enemy>().scale)
+            if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)
             {
                 Debug.Log(this.scale + score + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
                 //自分より大きい魚にぶつかったらカウントを+1
                 count++;
                     other.gameObject.SetActive(false);
+                Invoke("damageEFON", 0.1f);//ダメージ食らう
+                Invoke("damageEFOFF", 0.5f);//ダメージ消える
+                
             }
 
         }

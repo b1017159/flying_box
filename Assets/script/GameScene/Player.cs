@@ -40,11 +40,11 @@ public class Player : MonoBehaviour
         public static float scaledata; //魚のスケールを引き継ぐための変数
         public static double scoredata = 30; // スコア
         public static int camerasig;
-        public float size = 3f; // 初期大きさ
-        private float scale_multiple=0.3f;//スケールは0.1倍になる
         public static int count = 0;
-        public float scale;
 
+        public float size = 3f; // 初期大きさ
+        public float scale;
+        private float scale_multiple=0.3f;//スケールは0.1倍になる
         void Start()
         {
                 // static 変数にインスタンス情報を格納する
@@ -68,7 +68,9 @@ public class Player : MonoBehaviour
                 minutedata = minute;
                 secondsdata = seconds;
                 totaltimedata = totalTime;
-                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);//最初の大きさ
+
+                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
+                //最初の大きさ
         }
 
         // Update is called once per frame
@@ -174,12 +176,12 @@ public class Player : MonoBehaviour
                                 if(other.gameObject.GetComponent<Enemy>().scale < this.scale + score - 1)
                                 {
                                         score = score + 1; // スコアを加算します
-                                        size = size + scale_multiple;
+                                        size = size + 0.1f;
                                 }else{
                                         score = score + 1;//スコアを加算
-                                        size = size + scale_multiple;
+                                        size = size + 0.1f;
                                 }
-                                this.transform.localScale = new Vector3(size, size, size);
+                                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                                 //スコアを次のシーンに引き継ぐ
                                 scoredata = score;
                                 scaledata = scale;

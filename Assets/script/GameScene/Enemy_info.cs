@@ -11,6 +11,7 @@ public class Enemy_info : MonoBehaviour
         //小文字にしない
         private RectTransform myRectTfm;
         private float color = 0;//初期透明度（透明）
+        private float one_hund_scale;
         void Start()
         {
                 //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
@@ -38,13 +39,15 @@ public class Enemy_info : MonoBehaviour
                 this.transform.forward = new Vector3(this.transform.position.x - Camera.main.transform.position.x, this.transform.position.y - Camera.main.transform.position.y, this.transform.position.z - Camera.main.transform.position.z);
 
         }
-        public void Display(float scale, string name)
+        public void Display(float scale,float multiple, string name)
         {
-                string enemy_scale = scale.ToString("F2") + "\n "+ name;
-        //Fで小数点指定
-        //Debug.Log(enemy_scale+":"+"scale");
-        this.GetComponent<RectTransform>().localScale = new Vector3(1/scale/2, 1/scale/2, 1/scale/2);
-        this.GetComponent<TextMesh>().text = enemy_scale;
+                one_hund_scale=scale*(100/(multiple*10));
+                string enemy_scale = one_hund_scale.ToString("F0") +"cm"+"\n "+ name;
+                //string enemy_scale = scale.ToString("F2")+"\n "+ name;//メートル用
+                //Fで小数点指定
+                //Debug.Log(enemy_scale+":"+"scale");
+                this.GetComponent<RectTransform>().localScale = new Vector3(1/scale/2, 1/scale/2, 1/scale/2);
+                this.GetComponent<TextMesh>().text = enemy_scale;
         }
         public void Aaper()
         {

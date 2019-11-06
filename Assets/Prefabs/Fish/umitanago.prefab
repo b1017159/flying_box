@@ -219,8 +219,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  scale: 1
+  scale: 2
+  min_scale: 1
   name: "\u30A6\u30DF\u30BF\u30CA\u30B4"
+  Chase: 0
   targetObject: {fileID: 6061387090010801087}
   S_color: {fileID: 987866239260725393}
 --- !u!1 &2080776399222721597

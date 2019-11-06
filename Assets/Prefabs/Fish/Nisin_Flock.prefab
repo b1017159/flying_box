@@ -4861,6 +4861,20 @@ Transform:
   m_Father: {fileID: 8770316078558091776}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7144210904438175575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241325958457803478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71178706b2422cd4eb495bf090fff5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pare_enemy: {fileID: 0}
+  pare_pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6278098913930219709
 GameObject:
   m_ObjectHideFlags: 0
@@ -9737,20 +9751,6 @@ Transform:
   m_Father: {fileID: 7144210903860319928}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7144210904438175575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6241325958457803478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71178706b2422cd4eb495bf090fff5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pare_enemy: {fileID: 0}
-  pare_pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7144210904451891214
 GameObject:
   m_ObjectHideFlags: 0
@@ -11448,8 +11448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  scale: 10
+  speed: 10
+  scale: 1
   name: 
   targetObject: {fileID: 6241325958457803478}
   S_color: {fileID: 0}

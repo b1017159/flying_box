@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"damage",
+				"damagecube\tGameObject"
+			],
+			[
+				"da",
+				"damage_swich\tbool"
+			],
+			[
+				"Re",
+				"Renderer\tRenderer"
+			],
+			[
+				"Ma",
+				"Material\tMaterial"
+			],
+			[
+				"Color",
+				"Color()\tColor()"
+			],
+			[
+				"Pla",
+				"Player\tPlayer"
+			],
+			[
 				"ro",
 				"rotate_speed\tfloat"
 			],
@@ -490,42 +514,18 @@
 			[
 				"Serialize",
 				"SerializedProperty\tSerializedProperty"
-			],
-			[
-				"Generate",
-				"GenerateRange\tfloat"
-			],
-			[
-				"Zoombar",
-				"ZoomBarEnableTime\tfloat"
-			],
-			[
-				"near",
-				"NearGenerateRangeY\tfloat"
-			],
-			[
-				"getcom",
-				"GetComponent<T>()\tT"
-			],
-			[
-				"flash",
-				"flashUI\tTransform"
-			],
-			[
-				"Get",
-				"GetComponent<T>()\tT"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Assets/script/Player.cs",
+			"file": "Assets/script/GameScene/Player.cs",
 			"settings":
 			{
-				"buffer_size": 3764,
+				"buffer_size": 5931,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -541,15 +541,15 @@
 		"selected_items":
 		[
 			[
+				"cool",
+				"CoolFormat: Formatter Settings"
+			],
+			[
 				"om",
 				"OmniSharpSublime: Reload Solution"
 			],
 			[
 				"coolfo",
-				"CoolFormat: Formatter Settings"
-			],
-			[
-				"cool",
 				"CoolFormat: Formatter Settings"
 			],
 			[
@@ -605,9 +605,18 @@
 	},
 	"file_history":
 	[
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/Player.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/Enemy.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/Gameover/GameOver.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/HPbar.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/reticule.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/Sphere100.cs",
+		"/C/Users/project19/AppData/Roaming/Sublime Text 3/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/CameraController.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/Damage_Effect.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/Player.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/Test/OVRInputTest.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/CountTimer.cs",
-		"/C/Users/project19/Documents/flying_box/Assets/script/Player.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/Enemy.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/CameraController.cs",
 		"/C/Users/project19/Documents/Umistagram/Assets/Let's Tweet/Demo.cs",
@@ -659,7 +668,6 @@
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/Debug/zzDofChanger.cs",
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUI.cs",
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/BloomControll.cs",
-		"/C/Users/project19/AppData/Roaming/Sublime Text 3/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/ContrastControll.cs",
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/OptionUIValues.cs",
 		"/C/Users/project19/Documents/Umistagram/Assets/Umistagram/Scripts/UI/FogControll.cs",
@@ -739,6 +747,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"damagecube",
 			"1",
 			"{\n",
 			"inputDelayTime",
@@ -770,37 +779,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/script/Player.cs",
+					"file": "Assets/script/GameScene/Player.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3764,
+						"buffer_size": 5931,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3012,
-								3012
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"oops":
-							{
-								"0,5": "using ディレクティブは不要です。",
-								"101,106": "using ディレクティブは不要です。",
-								"1154,1162": "現在のコンテキストに 'rotation' という名前は存在しません。",
-								"26,31": "using ディレクティブは不要です。",
-								"79,84": "using ディレクティブは不要です。"
-							},
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 399.333333333,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

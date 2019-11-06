@@ -48,7 +48,7 @@ public class HPbar : MonoBehaviour
     void Update()
     {
         count = Player.count;
-        Debug.Log(count);
+        //Debug.Log(count);
         if (count == 1)
         {
             heart4.SetActive(false);

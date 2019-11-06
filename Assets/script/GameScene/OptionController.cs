@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 public class OptionController : MonoBehaviour
 {
     public GameObject status; //スコアやタイムなどを全て格納
@@ -16,16 +17,16 @@ public class OptionController : MonoBehaviour
     public GameObject CameraText_3_non; //非選択時のTPSの文字表示
     public GameObject CameraText_1_non; //非選択時のTPSの文字表示
     public GameObject sound;
-    private GameObject FPS;　//一人称カメラ
     private int changemenu; //メニューを切り替えるための変数
     private int mode; //オプションとゲームシーンを切り替え
     // Start is called before the first frame update
     void Start()
     {
+       
         mode = 0;
         changemenu = 0;
-        FPS = GameObject.Find("One_person");
-        if (FPS.activeSelf)
+        Camerasig = Player.camerasig;
+        if (Camerasig == 1)
         {
             CameraText_1.SetActive(false);
             CameraText_1_non.SetActive(true);
@@ -46,11 +47,13 @@ public class OptionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+
+        if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickDown))
         {
             changemenu += 1;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        if (OVRInput.GetDown(OVRInput.RawButton.LThumbstickUp))
         {
             changemenu -= 1;
         } 
@@ -66,7 +69,7 @@ public class OptionController : MonoBehaviour
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);
             checkbox_backgame.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Space)) //カメラの切り替えを行う
+            if (OVRInput.GetDown(OVRInput.RawButton.A)) //カメラの切り替えを行う
             {
                 if (Camerasig == 1)
                 {
@@ -99,7 +102,7 @@ public class OptionController : MonoBehaviour
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(true);
             checkbox_backgame.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
                 SceneManager.LoadScene("GameTitle");
             }
@@ -110,8 +113,9 @@ public class OptionController : MonoBehaviour
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);
             checkbox_backgame.SetActive(true);
-            
-                if (Input.GetKeyDown(KeyCode.Return))
+
+
+            if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
                 if(Camerasig == 1)
                 {
@@ -131,11 +135,12 @@ public class OptionController : MonoBehaviour
             changemenu = 0;
         }
 
-        Debug.Log(changemenu);
+        //Debug.Log(changemenu);
 
 
 
-        if (Input.GetKeyDown(KeyCode.P))
+
+        if (OVRInput.GetDown(OVRInput.RawButton.X))
         {
             mode = 1;
             changemenu = 0;

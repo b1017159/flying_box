@@ -30,6 +30,5 @@ public class ReticleSprite : MonoBehaviour
         {
             MainSpriteRenderer.sprite = NotReticle;
         }
-
     }
 }

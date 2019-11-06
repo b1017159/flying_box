@@ -78,10 +78,11 @@ public class Enemy : MonoBehaviour
                 //Debug.Log(relativePos+":"+relativePos.z+":"+this.transform.rotation);
                 //角度を調整してから表示
                 if (S_color == null)
-                { print(this.name + "写真なし"); }
+                { //print(this.name + "写真なし");
+        }
                 if (S_color != null)
                 {
-                        Debug.Log("prefabON");
+                       // Debug.Log("prefabON");
                         S_color.gameObject.SetActive(true); //salmon display
                 }
         }

@@ -15,13 +15,23 @@ public class CountTimer : MonoBehaviour
     //　前回Update時の秒数
     private float oldSeconds;
     public GameObject Timer;
+    private GameObject FPS;　//一人称カメラ
+    private GameObject TPS; //三人称カメラ
+
+    public static int signal;
+
+    private int CamerasigCT;
+    
+
     void Start()
     {
-
+        FPS = GameObject.Find("First_person");
+        TPS = GameObject.Find("Third_person");
         minute = Player.minutedata;
         seconds = Player.secondsdata;
         totalTime = Player.totaltimedata;
         oldSeconds = 0f;
+        CamerasigCT = Player.camerasig;
     }
 
     void Update()
@@ -30,7 +40,6 @@ public class CountTimer : MonoBehaviour
         minute = Player.minutedata;
         seconds = Player.secondsdata;
         totalTime = minute * 60 + seconds;
-
         //　タイマー表示用UIテキストに時間を表示する
         if ((int)seconds != (int)oldSeconds)
         {
@@ -43,19 +52,47 @@ public class CountTimer : MonoBehaviour
         {
             Scene loadscene = SceneManager.GetActiveScene();
             Debug.Log(loadscene.name);
-            if (loadscene.name == "GameStage1")
-            {
-                SceneManager.LoadScene("GameStage2");
-            }
-            if (loadscene.name == "GameStage2")
-            {
-                SceneManager.LoadScene("GameStage3");
-            }
-            if (loadscene.name == "GameStage3")
-            {
-                SceneManager.LoadScene("ClearScene");
-            }
+       
+           
+                //Debug.Log(signal);
+                if (loadscene.name == "GameStage1")
+                {
+                     SceneManager.LoadScene("GameStage2");
+                    if (CamerasigCT==1)
+                    {
+                        signal = 1;
+                    }
+                    else if (CamerasigCT == 3)
+                    {
+                        signal = 3;
+                    }
 
+                }
+                if (loadscene.name == "GameStage2")
+                {
+                     SceneManager.LoadScene("GameStage3");
+                    if (CamerasigCT == 1)
+                    {
+                        signal = 1;
+                    }
+                    else if (CamerasigCT == 3)
+                    {
+                        signal = 3;
+                    }
+                }
+                if (loadscene.name == "GameStage3")
+                {
+                     SceneManager.LoadScene("ClearScene");
+                    if (CamerasigCT == 1)
+                    {
+                        signal = 1;
+                    }
+                    else if (CamerasigCT == 3)
+                    {
+                        signal = 3;
+                    }
+                }
+            
 
         }
     }

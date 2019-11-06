@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/GameTitle.unity
+    guid: 78dec737d9ac8481a9d956a8d4872321
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: f1ce6e84f65b1422eb0b6f8dae3db6b0
+  - enabled: 1
+    path: Assets/Scenes/LightMenu.unity
+    guid: 56807890cd66f4720b9e11aeb4d7b16d
+  - enabled: 1
+    path: Assets/Scenes/Name.unity
+    guid: 5c1defa0b201c46f2a16a86fee456e63
+  - enabled: 1
+    path: Assets/Scenes/VRsetting.unity
+    guid: f9e0ccf20b72a471986326f5aaf0ba3c
+  - enabled: 1
     path: Assets/Scenes/GameStage1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -35,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage1 G.unity
     guid: 928c80d2c7f4d40869fb0fccd272bd3d
+  - enabled: 1
+    path: Assets/Scenes/Zukan.unity
+    guid: 3959fdef1e02d4d4fb01414c7de44414
   m_configObjects: {}

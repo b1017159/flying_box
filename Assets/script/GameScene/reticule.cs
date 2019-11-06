@@ -40,15 +40,17 @@ public class reticule : MonoBehaviour
     {
 
 
+
         if (this.name == "reticuleFPS")
         {
             replayer_position = first_person_camera.position;//自機のポジション
-            replayer_forward  = first_person_camera.forward;//自機のベクトル
-            replayer_rotate   = first_person_camera.localEulerAngles;//自機の傾き
+            replayer_forward = first_person_camera.forward;//自機のベクトル
+            replayer_rotate = first_person_camera.localEulerAngles;//自機の傾き
 
             //Debug.Log("kawauchi");
 
         }
+
         if (this.name == "reticuleTPS")
         {
             replayer_position = Player.m_instance.transform.position;//自機のポジション

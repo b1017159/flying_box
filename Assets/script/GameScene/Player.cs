@@ -38,10 +38,10 @@ public class Player : MonoBehaviour
         public static int ControllSwitch;
         public double score;
         public static float scaledata; //魚のスケールを引き継ぐための変数
-        public static double scoredata = 1; // スコア
+        public static double scoredata = 30; // スコア
         public static int camerasig;
-        private float size = 1.2f; // 巨大化
-                                   // Start is called before the first frame update
+        public float size = 3f; // 初期大きさ
+        private float scale_multiple=0.3f;//スケールは0.1倍になる
         public static int count = 0;
         public float scale;
 
@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
         {
                 // static 変数にインスタンス情報を格納する
                 m_instance = this;
-                score = 1;
                 Time.timeScale = 1.0f;
                 ControllSwitch = 1;
                 // スコアを加算します
@@ -69,16 +68,13 @@ public class Player : MonoBehaviour
                 minutedata = minute;
                 secondsdata = seconds;
                 totaltimedata = totalTime;
-
+                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);//最初の大きさ
         }
-
 
         // Update is called once per frame
         void Update()
         {
-
                 scale = this.transform.localScale.x;
-
                 // use OVRInput
                 OVRInput.Update();
                 //　制限時間が0秒以下なら何もしない
@@ -136,12 +132,10 @@ public class Player : MonoBehaviour
                         {
                                 sau -= rotate_speed;
                         }
-
                         if (OVRInput.Get(OVRInput.RawButton.A))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.1f);
                         }
-
                         if (Input.GetKey(KeyCode.S))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.3f);
@@ -158,14 +152,13 @@ public class Player : MonoBehaviour
         {
                 damagecube_FPS.SetActive(true);
                 damagecube_TPS.SetActive(true);
-
-                Debug.Log("ダメージONがよばれています");
+                //Debug.Log("ダメージONがよばれています");
         }
         void damageEFOFF()
         {
                 damagecube_FPS.SetActive(false);
                 damagecube_TPS.SetActive(false);
-                print("ダメージOFFがよばれています");
+                //print("ダメージOFFがよばれています");
         }
 
         void OnTriggerEnter(Collider other)
@@ -175,22 +168,16 @@ public class Player : MonoBehaviour
                         if (this.scale > other.gameObject.GetComponent<Enemy>().scale)
                         {
                                 Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
-
                                 // その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
                                 // スコアを加算します
-                                //
                                 if(other.gameObject.GetComponent<Enemy>().scale < this.scale + score - 1)
                                 {
-                                        score = score + 0.01; // スコアを加算します
-                                        size = size + 1 * 0.001f;
-                                        Debug.Log(size);
-
-                                }else
-                                {
-                                        score = score + 0.1; 　//スコアを加算
-                                                size = size + 1 * 0.01f;
-                                        //Debug.Log(size);
+                                        score = score + 1; // スコアを加算します
+                                        size = size + scale_multiple;
+                                }else{
+                                        score = score + 1;//スコアを加算
+                                        size = size + scale_multiple;
                                 }
                                 this.transform.localScale = new Vector3(size, size, size);
                                 //スコアを次のシーンに引き継ぐ
@@ -198,14 +185,13 @@ public class Player : MonoBehaviour
                                 scaledata = scale;
                         }
                         if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)
-                        {
+                        {//ダメージ判定
                                 Debug.Log(this.scale + score + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "HP一つ消えるで!!");
                                 //自分より大きい魚にぶつかったらカウントを+1
                                 count++;
                                 other.gameObject.SetActive(false);
                                 Invoke("damageEFON", 0.1f);//ダメージ食らう
                                 Invoke("damageEFOFF", 0.5f);//ダメージ消える
-
                         }
 
                 }

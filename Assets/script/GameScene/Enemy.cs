@@ -14,9 +14,8 @@ public class Enemy : MonoBehaviour
         private float randm;
         public float speed=1f;
         private float rotationSmooth = 100f;
-
         public float scale=10f;//最大スケール
-        public float min_scale=0.1f;//最小スケール
+        public float min_scale=1f;//最小スケール
         private float scale_multiple=0.3f;//スケールは0.1倍になる
         public string name;
         private Vector3 targetPosition;  //行先
@@ -36,7 +35,7 @@ public class Enemy : MonoBehaviour
         void Start()
         {
                 if(Chase==true) changeTargetSqrDistance=0; //こうしないと追いかける魚が回転し始める
-                targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
+                targetPosition = GetRandomPositionOnLevel(this.transform.position.y);                //ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
                 //transform.Rotate(new Vector3(0,0,90));
@@ -60,7 +59,7 @@ public class Enemy : MonoBehaviour
                 //自身と目標の距離の差
                 if (sqrDistanceToTarget < changeTargetSqrDistance)
                 {
-                        targetPosition = GetRandomPositionOnLevel();//小さければ選びなおし
+                        targetPosition = GetRandomPositionOnLevel(this.transform.position.y);//小さければ選びなおし
                         //Debug.Log(targetPosition);
                 }
                 // 目標地点の方向を向く
@@ -163,12 +162,14 @@ public class Enemy : MonoBehaviour
                 pos.z= pos.z+randm;
                 transform.localPosition = pos;
         }
-        public Vector3 GetRandomPositionOnLevel()
-        {//ランダムに場所を取る関数
-         // if(Chase==true) {
-         //         return Player.m_instance.transform.position;
-         // }
+        public Vector3 GetRandomPositionOnLevel(float y)
+        {
+                //Playerが下に行き過ぎるとEnemyが全員上を向いてしまうのでY座標は固定する
+                //ランダムに場所を取る関数
+                // if(Chase==true) {
+                //         return Player.m_instance.transform.position;
+                // }
                 float levelSize = 150f;
-                return new Vector3(Random.Range(-levelSize, levelSize), 1, Random.Range(-levelSize, levelSize));
+                return new Vector3(Random.Range(-levelSize, levelSize), y, Random.Range(-levelSize, levelSize));
         }
 }

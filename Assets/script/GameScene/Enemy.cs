@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
         private float rotationSmooth = 100f;
 
         public float scale=10f;//最大スケール
+        public float min_scale=0.1f;
         public string name;
         private Vector3 targetPosition;  //行先
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
@@ -132,7 +133,7 @@ public class Enemy : MonoBehaviour
                 }
         }
         public void Init(){
-                randm=Random.Range(0.3f,scale);
+                randm=Random.Range(min_scale,scale);
                 //Debug.Log(randm);
                 scale=randm;
                 //名前によってスケールを変えたい

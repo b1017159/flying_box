@@ -3402,6 +3402,7 @@ MonoBehaviour:
   uemax: -60
   sitamax: 60
   score: 1
+  size: 1
   scale: 0
 --- !u!4 &990142611 stripped
 Transform:

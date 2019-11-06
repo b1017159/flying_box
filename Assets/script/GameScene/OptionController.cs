@@ -131,7 +131,7 @@ public class OptionController : MonoBehaviour
                         changemenu = 0;
                 }
 
-                Debug.Log(changemenu);
+                //Debug.Log(changemenu);
 
 
 

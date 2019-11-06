@@ -140,6 +140,7 @@ public class Enemy : MonoBehaviour
                 scale=randm*scale_multiple;
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
+                //if(Chase==true) this.transform.localScale=Player.m_instance.scale;//プレイヤーと同じ大きさ
                 player_position=Player.m_instance.transform.position;//自機のポジション
                 //Debug.Log(player_position);
                 camera_position=CameraController.m_instance.transform.position;

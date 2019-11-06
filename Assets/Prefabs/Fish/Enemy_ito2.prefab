@@ -438,8 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  scale: 2
+  speed: 5
+  scale: 1
   name: "\u30A4\u30C8\u30A6"
   targetObject: {fileID: 5599478588737187496}
   S_color: {fileID: 5599478587979189284}

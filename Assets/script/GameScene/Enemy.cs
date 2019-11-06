@@ -81,7 +81,6 @@ public class Enemy : MonoBehaviour
                 { print(this.name + "写真なし"); }
                 if (S_color != null)
                 {
-                        Debug.Log("prefabON");
                         S_color.gameObject.SetActive(true); //salmon display
                 }
         }

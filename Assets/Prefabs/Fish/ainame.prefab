@@ -511,8 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  scale: 1
-  name: "\u30A2\u30CB\u30DE"
+  scale: 3
+  name: "\u30A2\u30A4\u30CA\u30E1"
   targetObject: {fileID: 3239514471185635376}
   S_color: {fileID: 187180303034579865}
 --- !u!1 &8073534916608251054

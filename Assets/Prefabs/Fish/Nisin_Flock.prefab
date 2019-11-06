@@ -70,7 +70,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789045789675}
   S_color: {fileID: 8592012223726698633}
 --- !u!54 &4534022864239414458
@@ -172,7 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364788889255854}
   S_color: {fileID: 8592012223850757324}
 --- !u!54 &4534022864382603519
@@ -274,7 +278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789179504736}
   S_color: {fileID: 8592012223591947010}
 --- !u!54 &4534022864104658737
@@ -376,7 +382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789517637076}
   S_color: {fileID: 8592012224210704054}
 --- !u!54 &4534022864844790405
@@ -478,7 +486,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789589298054}
   S_color: {fileID: 8592012224274237668}
 --- !u!54 &4534022864782230743
@@ -580,7 +590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789569667071}
   S_color: {fileID: 8592012224258833565}
 --- !u!54 &4534022864796709038
@@ -682,7 +694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789561890361}
   S_color: {fileID: 8592012224250795355}
 --- !u!54 &4534022864788937064
@@ -784,7 +798,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364789449030264}
   S_color: {fileID: 8592012224398342426}
 --- !u!54 &4534022864908956969
@@ -886,7 +902,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790115334081}
   S_color: {fileID: 8592012222656722083}
 --- !u!54 &4534022863160785040
@@ -988,7 +1006,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790380344499}
   S_color: {fileID: 8592012222376507345}
 --- !u!54 &4534022862920940514
@@ -1090,7 +1110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790688449572}
   S_color: {fileID: 8592012223225939782}
 --- !u!54 &4534022863665253237
@@ -1192,7 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790679610792}
   S_color: {fileID: 8592012223216969418}
 --- !u!54 &4534022863692196601
@@ -1294,7 +1318,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790515198770}
   S_color: {fileID: 8592012223316895824}
 --- !u!54 &4534022863860540515
@@ -1396,7 +1422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 8228364790786073722}
   S_color: {fileID: 8592012223059191576}
 --- !u!54 &4534022863563778859
@@ -4861,6 +4889,20 @@ Transform:
   m_Father: {fileID: 8770316078558091776}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7144210904438175575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241325958457803478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71178706b2422cd4eb495bf090fff5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pare_enemy: {fileID: 0}
+  pare_pos: {x: 0, y: 0, z: 0}
 --- !u!1 &6278098913930219709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6387,7 +6429,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210903871565059}
   S_color: {fileID: 7144210905108558344}
 --- !u!54 &7144210903315269497
@@ -6582,7 +6626,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904356773268}
   S_color: {fileID: 7144210904644419987}
 --- !u!54 &7144210903372030882
@@ -7314,7 +7360,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904992293291}
   S_color: {fileID: 7144210904574414452}
 --- !u!54 &7144210903634023178
@@ -7416,7 +7464,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904389504200}
   S_color: {fileID: 7144210905344665051}
 --- !u!54 &7144210903754974376
@@ -7763,7 +7813,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904257371470}
   S_color: {fileID: 7144210905022305823}
 --- !u!54 &7144210903844556385
@@ -9644,7 +9696,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210905182432629}
   S_color: {fileID: 7144210904961901376}
 --- !u!54 &7144210904397069840
@@ -9737,20 +9791,6 @@ Transform:
   m_Father: {fileID: 7144210903860319928}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7144210904438175575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6241325958457803478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71178706b2422cd4eb495bf090fff5dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pare_enemy: {fileID: 0}
-  pare_pos: {x: 0, y: 0, z: 0}
 --- !u!1 &7144210904451891214
 GameObject:
   m_ObjectHideFlags: 0
@@ -10265,7 +10305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904495028094}
   S_color: {fileID: 7144210905066213408}
 --- !u!54 &7144210904535363168
@@ -10791,7 +10833,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210903909304841}
   S_color: {fileID: 7144210904123406589}
 --- !u!54 &7144210904702084665
@@ -10893,7 +10937,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210904915776462}
   S_color: {fileID: 7144210903786315753}
 --- !u!54 &7144210904732579080
@@ -11315,7 +11361,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 7144210903612319812}
   S_color: {fileID: 7144210904388064766}
 --- !u!54 &7144210904922764033
@@ -11450,7 +11498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   scale: 10
-  name: 
+  min_scale: 10
+  name: "\u30CB\u30B7\u30F3\u306E\u7FA4\u308C"
+  Chase: 0
   targetObject: {fileID: 6241325958457803478}
   S_color: {fileID: 0}
 --- !u!136 &7144210904939034140
@@ -13089,7 +13139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
+  min_scale: 0.1
   name: "\u30CB\u30B7\u30F3"
+  Chase: 0
   targetObject: {fileID: 1698998409367990432}
   S_color: {fileID: 1340381345334326210}
 --- !u!54 &6577821608310767601

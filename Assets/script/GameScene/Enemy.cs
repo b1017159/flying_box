@@ -16,9 +16,11 @@ public class Enemy : MonoBehaviour
         private float rotationSmooth = 100f;
 
         public float scale=10f;//最大スケール
+        public float min_scale=0.1f;//最小スケール
+        private float scale_multiple=0.3f;//スケールは0.1倍になる
         public string name;
         private Vector3 targetPosition;  //行先
-        private float changeTargetSqrDistance = 0f;//この距離以下になったら新しい場所を探す
+        private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
         private float color_speed=0.01f;
         private float color=0;//初期透明度（透明）
         private float rotation;
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
 
         void Start()
         {
+                if(Chase==true) changeTargetSqrDistance=0; //こうしないと追いかける魚が回転し始める
                 targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
@@ -43,7 +46,7 @@ public class Enemy : MonoBehaviour
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
                 if(name==null) name = transform.name;
                 if (target == null) print("enemy_infoなし");
-                if(target!=null) target.Display(scale,name);
+                if(target!=null) target.Display(scale,scale_multiple,name);
         }
 
         // Update is called once per frame
@@ -94,7 +97,7 @@ public class Enemy : MonoBehaviour
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                target.Display(scale,name);
+                                target.Display(scale,scale_multiple,name);
                                 //print("Triggererror");
                         }
                 }
@@ -133,9 +136,8 @@ public class Enemy : MonoBehaviour
                 }
         }
         public void Init(){
-                randm=Random.Range(0.3f,scale);
-                //Debug.Log(randm);
-                scale=randm;
+                randm=Random.Range(min_scale,scale);
+                scale=randm*scale_multiple;
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
                 player_position=Player.m_instance.transform.position;//自機のポジション

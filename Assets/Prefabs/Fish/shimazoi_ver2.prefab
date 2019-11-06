@@ -225,9 +225,9 @@ GameObject:
   m_Component:
   - component: {fileID: 806980605413669617}
   - component: {fileID: 7329884733492107147}
-  - component: {fileID: 5640842487450339868}
   - component: {fileID: 4425245461654882528}
   - component: {fileID: 4425245461654882529}
+  - component: {fileID: 5640842487450339868}
   m_Layer: 0
   m_Name: shimazoi_ver2
   m_TagString: Enemy
@@ -271,23 +271,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5640842487450339868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4425245461654882530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  scale: 1
-  name: "\u30B7\u30DE\u30BE\u30A4"
-  targetObject: {fileID: 5640842487843418869}
-  S_color: {fileID: 3486422484868286794}
 --- !u!54 &4425245461654882528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -317,6 +300,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 4.309615}
   m_Center: {x: 0, y: 0, z: 0.09149361}
+--- !u!114 &5640842487450339868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425245461654882530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  scale: 4
+  min_scale: 3
+  name: "\u30B7\u30DE\u30BE\u30A4"
+  Chase: 0
+  targetObject: {fileID: 5640842487843418869}
+  S_color: {fileID: 3486422484868286794}
 --- !u!1 &5235990783664279609
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
         public float scale;
         private float scale_multiple=0.3f;//スケールは0.1倍になる
         private Animator animation;//アニメータコントローラー
+        public MP3 mp3;  //.Mswichの数字でSEを管理
         void Start()
         {
                 // static 変数にインスタンス情報を格納する
@@ -194,6 +195,7 @@ public class Player : MonoBehaviour
                                 //スコアを次のシーンに引き継ぐ
                                 scoredata = score;
                                 scaledata = scale;
+                                mp3.Mswich=1;//咀嚼音
                         }
                         if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)
                         {//ダメージ判定
@@ -203,6 +205,7 @@ public class Player : MonoBehaviour
                                 other.gameObject.SetActive(false);
                                 Invoke("damageEFON", 0.1f);//ダメージ食らう
                                 Invoke("damageEFOFF", 0.5f);//ダメージ消える
+                                mp3.Mswich=2;//ダメージ音
                         }
 
                 }

@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
         public float size = 3f; // 初期大きさ
         public float scale;
         private float scale_multiple=0.3f;//スケールは0.1倍になる
+        private Animator animation;//アニメータコントローラー
         void Start()
         {
                 // static 変数にインスタンス情報を格納する
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
 
                 this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                 //最初の大きさ
+                animation = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -141,6 +143,13 @@ public class Player : MonoBehaviour
                         if (Input.GetKey(KeyCode.S))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.3f);
+                                animation.SetBool("dash", true);
+                                //Dashアニメーションを実行
+                        }
+                        else
+                        {
+                                animation.SetBool("dash",false);
+                                //Slowアニメーションを実行
                         }
                 }
                 //Debug.Log(OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).magnitude);

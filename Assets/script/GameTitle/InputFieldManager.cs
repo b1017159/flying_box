@@ -21,27 +21,23 @@ public class InputFieldManager : MonoBehaviour
         text = text.GetComponent<Text>();
 
         //テキストにinputFieldの内容を反映
-        text.text = inputField.text;
+        //text.text = inputField.text;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-
             SceneManager.LoadScene("GameTitle");
         }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            inputField.DeactivateInputField();
-        }
-       
     }
 
     //入力された名前情報を読み取ってコンソールに出力する関数
     public void SetInputName()
     {
+        inputField.DeactivateInputField();
+        //確認画面に移動
+
         //InputFieldからテキスト情報を取得する
         name = inputField.text;
         Debug.Log(name);
@@ -49,7 +45,7 @@ public class InputFieldManager : MonoBehaviour
         //テキストにinputFieldの内容を反映
         text.text = inputField.text;
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (inputField.text !=　"")
         {
             SceneManager.LoadScene("NameEnter");
         }

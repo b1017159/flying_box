@@ -105,8 +105,8 @@ public class OptionController : MonoBehaviour
 
         if (changemenu == 0)
         {
-            TextObject3.SetActive(false);
-            TextObject6.SetActive(false);
+            //TextObject3.SetActive(false);
+            //TextObject6.SetActive(false);
             checkbox_camera.SetActive(true);
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);

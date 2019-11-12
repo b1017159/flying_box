@@ -7,30 +7,38 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+
     //効果音
     public AudioClip audioClip1;
     public AudioClip audioClip2;
     private AudioSource audioSource;
+
     //一人称時のカメラの向きを取得するときに使用するぜ
     private Vector3 FPS_forward;
     private Vector3 FPS_rotate;
     public Transform FPS_camera_forward;
+
     //カメラが一人称か、三人称か判定するときに使用するぜ
     public static int Camerasignal;
+
     //自分の魚を消すときのオブジェクト宣言
-    public GameObject fish;
-    public GameObject fish2;
+    public GameObject Armature;
+    public GameObject Plane_001;
+
     //レティクル関係のオブジェクト宣言
     private GameObject reticuleFPS;
     private GameObject reticuleTPS;
     private GameObject reticule_picFPS;
     private GameObject reticule_picTPS;
+
     //ダメージエフェクトのオブジェクト宣言
     public GameObject damagecube_TPS;//TPSでのダメージエフェクト宣言
     public GameObject damagecube_FPS;//FPSでのダメージエフェクト宣言
+
     //カメラのオブジェクト宣言
     private GameObject FPS;　//一人称カメラ
     private GameObject TPS; //三人称カメラ
+
   　 //　トータル制限時間
     private float totalTime;
     //　制限時間（分）
@@ -65,6 +73,15 @@ public class Player : MonoBehaviour
     public static int count = 0;
     public float scale;
 
+    //コントローラの宣言
+    OVRInput.Controller LeftCon;
+    OVRInput.Controller RightCon;
+    
+    //速度制限で使うぜ
+    public float Max_speed = 1.00f;
+    public float Min_speed = 0.01f;
+    public float Speed_Down;
+
     private void Awake()
     {
         // static 変数にインスタンス情報を格納する
@@ -73,8 +90,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-      
-        //初期化
+
+        //コントローラーの初期化
+        LeftCon = OVRInput.Controller.LTouch;
+        RightCon = OVRInput.Controller.RTouch;
+
+
+        //レティクル関係の初期化
         reticuleFPS = GameObject.Find("reticuleFPS");　　　　　//シーン内でのレティクル棒を検索（FPS）
         reticuleTPS = GameObject.Find("reticuleTPS");          //シーン内でのレティクル棒を検索（TPS）
         reticule_picFPS = GameObject.Find("reticule_picFPS");  //シーン内でのレティクル画像を検索（FPS）
@@ -100,8 +122,8 @@ public class Player : MonoBehaviour
         secondsdata = seconds;
         totaltimedata = totalTime;
 
-       damagecube_TPS.SetActive(false);　　　　　　　　　　　//初期の段階はエフェクトoff
-       damagecube_FPS.SetActive(false);　　　　　　　　　　　//初期の段階はエフェクトoff
+       damagecube_TPS.SetActive(false);//初期の段階はエフェクトoff
+       damagecube_FPS.SetActive(false);//初期の段階はエフェクトoff
      
 
         Camerasignal = CountTimer.signal;
@@ -112,8 +134,8 @@ public class Player : MonoBehaviour
         {
             FPS.SetActive(true);
             TPS.SetActive(false);
-            fish.SetActive(false);
-            fish2.SetActive(false);//自身の魚を見えなくする
+            Armature.SetActive(false);
+            Plane_001.SetActive(false);//自身の魚を見えなくする
             reticuleFPS.SetActive(true);
             reticuleTPS.SetActive(false);
 
@@ -123,8 +145,8 @@ public class Player : MonoBehaviour
             //カメラシグナルが３の時、カメラシグナル１の逆
             FPS.SetActive(false);
             TPS.SetActive(true);
-            fish.SetActive(true);
-            fish2.SetActive(true);//自身の魚を見えなくする
+            Armature.SetActive(true);
+            Plane_001.SetActive(true);//自身の魚を見えなくする
             reticuleFPS.SetActive(false);
             reticuleTPS.SetActive(true);
         }
@@ -138,7 +160,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         FPS_forward = FPS_camera_forward.forward;//一人称視点の時に自機のベクトルを取得
-
         FPS_rotate = FPS_camera_forward.localEulerAngles;//一人称視点の時に自機の傾きを取得
 
         scale = this.transform.localScale.x;//自分の大きさを取得（サイズ）
@@ -168,10 +189,11 @@ public class Player : MonoBehaviour
             if (camerasig == 3)
             {
                 //三人称にしたときに、自身が見えるようにするのと、一人称のレティクル関係を消す
+                //自身の魚がみえてる
                 FPS.SetActive(false);
                 TPS.SetActive(true);
-                fish.SetActive(true);
-                fish2.SetActive(true);//自身の魚がみえてる
+                Armature.SetActive(true);
+                Plane_001.SetActive(true);//自身の魚がみえてる
                 reticuleFPS.SetActive(false);
                 reticuleTPS.SetActive(true);
                 reticule_picFPS.SetActive(false);
@@ -180,14 +202,17 @@ public class Player : MonoBehaviour
             else
             {
                 //一人称にしたときに、三人称と逆のこと
+                transform.rotation = Quaternion.Euler(FPS_forward);//自身の向きをカメラの向きにそろえる
+                //自身の魚を見えなくする
                 FPS.SetActive(true);
                 TPS.SetActive(false);
-                fish.SetActive(false);
-                fish2.SetActive(false);//自身の魚を見えなくする
+                Armature.SetActive(false);
+                Plane_001.SetActive(false);
                 reticuleFPS.SetActive(true);
                 reticuleTPS.SetActive(false);
                 reticule_picFPS.SetActive(true);
                 reticule_picTPS.SetActive(false);
+
             }
         
 
@@ -236,8 +261,40 @@ public class Player : MonoBehaviour
             else
             {
                 //FPSの時、向いた方向に進みます
-               
-                transform.Translate(FPS_camera_forward.forward * speed);
+                transform.Translate(FPS_camera_forward.transform.forward * speed);
+                //加速度を取得
+                Vector3 accLeft = OVRInput.GetLocalControllerAcceleration(LeftCon);
+                Vector3 accRight = OVRInput.GetLocalControllerAcceleration(RightCon);
+
+                //三次元ベクトルからfloatに変換
+                float Rlength = accRight.magnitude;
+                float Llength = accLeft.magnitude;
+                
+                //閾値を指定（振ってないとき加速度を0にします）
+                if (Rlength <= 2.0f)
+                {
+                    Rlength = 0.0f;
+                }
+                if (Llength <= 2.0f)
+                {
+                    Llength = 0.0f;
+                }
+ 
+                //左右のコントローラの加速度を足します
+                float Sam_Length = (Rlength + Llength) / 50.0f;
+ 
+                //水槽のなか
+                Speed_Down += Sam_Length;
+
+                //0,005ずつ速度が下がります
+                Speed_Down -= 0.005f;
+
+                //加速制限を設けた
+                Speed_Down = Mathf.Clamp(Speed_Down, Min_speed, Max_speed);
+
+                //制限したものを返す
+                speed = Speed_Down;
+
             }
         }
     }
@@ -266,7 +323,7 @@ public class Player : MonoBehaviour
                 // その収集アイテムを非表示にします
                 other.gameObject.SetActive(false);
                 // スコアを加算します
-                //
+                
                 if(other.gameObject.GetComponent<Enemy>().scale < this.scale)
                 {
                     score = score + 0.01;  // スコアを加算します

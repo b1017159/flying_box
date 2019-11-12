@@ -102,10 +102,10 @@ public class OptionController : MonoBehaviour
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(true);
             checkbox_backgame.SetActive(false);
-            if (OVRInput.GetDown(OVRInput.RawButton.A))
+           /* if (OVRInput.GetDown(OVRInput.RawButton.A))
             {
                 SceneManager.LoadScene("GameTitle");
-            }
+            }*/
         }
         if (changemenu == 3)
         {

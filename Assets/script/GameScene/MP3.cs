@@ -26,12 +26,14 @@ public class MP3 : MonoBehaviour
         public void SE(int se){
                 if(se==1) {
                         sources[1].PlayOneShot(sound1);
-                        //sources[0].Stop();
-                        Mswich=4;
+            Debug.Log("音なるよ");
+            //sources[0].Stop();
+            Mswich =4;
                 }
                 if(se==2) {
                         sources[1].PlayOneShot(sound2);
-                        Mswich=4;
+            Debug.Log("音なるよ");
+            Mswich =4;
                 }
                 if(se==0) {
                         sources[0].Play();

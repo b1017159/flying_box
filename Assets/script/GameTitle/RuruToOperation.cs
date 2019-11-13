@@ -12,9 +12,6 @@ public class RuruToOperation : MonoBehaviour
             SceneManager.LoadScene("Operation");
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.One))
-        {
-            SceneManager.LoadScene("Operation");
-        }
+     
     }
 }

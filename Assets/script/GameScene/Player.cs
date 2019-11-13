@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -81,7 +80,7 @@ public class Player : MonoBehaviour
         {
                 scale = this.transform.localScale.x;
                 // use OVRInput
-                OVRInput.Update();
+              
                 //　制限時間が0秒以下なら何もしない
                 if (totalTime <= 0f)
                 {
@@ -113,10 +112,7 @@ public class Player : MonoBehaviour
                                 TPS.SetActive(false);
                         }
 
-                        //oculasの左スティックで操作
-                        updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
-                        updown = Mathf.Clamp(updown, uemax, sitamax);
-                        sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
+                       
                         // 上方向ボタンを押した瞬間にif文の中を実行
                         if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
                         {
@@ -137,10 +133,7 @@ public class Player : MonoBehaviour
                         {
                                 sau -= rotate_speed;
                         }
-                        if (OVRInput.Get(OVRInput.RawButton.A))
-                        {
-                                transform.Translate(0.0f, 0.0f, 0.1f);
-                        }
+                        
                         if (Input.GetKey(KeyCode.S))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.3f);

@@ -10,7 +10,7 @@ public class NameSceneManager : MonoBehaviour
         GameObject obj3 = GameObject.Find("NOText");
         if (Input.GetKeyDown(KeyCode.Y) && obj3.activeInHierarchy)
         {
-            SceneManager.LoadScene("VRSetting");
+            SceneManager.LoadScene("Ruru");
         }
 
         if (Input.GetKeyDown(KeyCode.N) && obj3.activeInHierarchy)

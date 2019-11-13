@@ -332,6 +332,7 @@
     <Compile Include="Assets\script\GameScene\Enemy_info.cs" />
     <Compile Include="Assets\script\GameScene\EnemyManager.cs" />
     <Compile Include="Assets\script\GameScene\HPbar.cs" />
+    <Compile Include="Assets\script\GameScene\MP3.cs" />
     <Compile Include="Assets\script\GameScene\OptionController.cs" />
     <Compile Include="Assets\script\GameScene\Player.cs" />
     <Compile Include="Assets\script\GameScene\Pole.cs" />

@@ -117,7 +117,7 @@ public class RankingSceneManager : MonoBehaviour
                 }
                 else
                 {
-                        sendScoreButton.interactable = true;//ハイスコア更新してなくてもランキング登録できる
+                        sendScoreButton.interactable = true; //ハイスコア更新してなくてもランキング登録できる
                         // var highScore = _board.BuildScore(_ncmbRecord[COLUMN_SCORE].ToString());
                         //
                         // if (_board.Order == ScoreOrder.OrderByAscending)

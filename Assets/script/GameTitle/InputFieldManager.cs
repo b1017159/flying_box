@@ -18,7 +18,6 @@ public class InputFieldManager : MonoBehaviour
                 //InputFieldコンポーネントを取得
                 inputField = GameObject.Find("InputField").GetComponent<InputField>();
                 text = text.GetComponent<Text>();
-
                 //テキストにinputFieldの内容を反映
                 //text.text = inputField.text;
         }

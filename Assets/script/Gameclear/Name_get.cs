@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Ranking : MonoBehaviour
+public class Name_get : MonoBehaviour
 {
-        private double score;
         // Start is called before the first frame update
         void Start()
         {
-                score = Player.scoredata;
-                naichilab.RankingLoader.Instance.SendScoreAndShowRanking (score);
-                //100を魚の大きさにする
+                //this.GetComponent<TextMesh>().text =InputFieldManager.name;
         }
 
         // Update is called once per frame

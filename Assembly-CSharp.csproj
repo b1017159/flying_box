@@ -69,7 +69,6 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\InputName.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Sample\SampleSceneManager.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Scripts\IScore.cs" />
     <Compile Include="Assets\naichilab\unity-simple-ranking\Scripts\NcmbYieldableExtensions.cs" />
@@ -401,6 +400,7 @@
     <Compile Include="Assets\script\GameTitle\CreateInstance.cs" />
     <Compile Include="Assets\script\GameTitle\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\script\GameTitle\InputFieldManager.cs" />
+    <Compile Include="Assets\script\GameTitle\InputName.cs" />
     <Compile Include="Assets\script\GameTitle\LightOnOff.cs" />
     <Compile Include="Assets\script\GameTitle\LookY.cs" />
     <Compile Include="Assets\script\GameTitle\MenuToOption.cs" />

@@ -12,9 +12,5 @@ public class OperationToStage1 : MonoBehaviour
             SceneManager.LoadScene("GameStage1");
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.One))
-        {
-            SceneManager.LoadScene("GameStage1");
-        }
     }
 }

@@ -27,15 +27,15 @@ public class ShowScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OVRInput.Update();
+      
         Result.text = username+"のスコア　"+score+"m";
 
         Scene loadscene = SceneManager.GetActiveScene();
-        if (OVRInput.Get(OVRInput.RawButton.A)) 
+        if (Input.GetKeyDown(KeyCode.A))
         {
                 SceneManager.LoadScene("GameStage1");   
         }
-        if (OVRInput.Get(OVRInput.RawButton.B))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             SceneManager.LoadScene("GameTitle");
         }

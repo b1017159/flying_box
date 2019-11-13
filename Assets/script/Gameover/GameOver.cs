@@ -14,11 +14,11 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene("GameStage1");
         }
-        if (Input.GetKey(KeyCode.B))
+        if (Input.GetKey(KeyCode.T))
         {
             SceneManager.LoadScene("GameMenu");
         }

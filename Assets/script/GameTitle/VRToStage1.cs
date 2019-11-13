@@ -16,12 +16,12 @@ public class VRToStage1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            SceneManager.LoadScene("GameStage1");
+            SceneManager.LoadScene("Ruru");
         }
 
         if(OVRInput.GetDown(OVRInput.Button.One))
         {
-            SceneManager.LoadScene("GameStage1");
+            SceneManager.LoadScene("Ruru");
         }
 
     }

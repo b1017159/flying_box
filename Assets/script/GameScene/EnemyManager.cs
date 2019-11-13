@@ -10,10 +10,11 @@ public class EnemyManager : MonoBehaviour
         public float m_elapsedTimeMax; // 経過時間の最大値
         public float m_elapsedTime; // 経過時間
         public Enemy[] m_enemyPrefabs; // 敵のプレハブを管理する配列
+        private int chase_count=0;
         void Update()
         {
-        // 経過時間を更新する
-        m_elapsedTime += Time.deltaTime;
+                // 経過時間を更新する
+                m_elapsedTime += Time.deltaTime;
                 // 出現タイミングを管理するタイマーを更新する
                 m_timer += Time.deltaTime;
                 // ゲームの経過時間から出現間隔（秒）を算出する
@@ -28,6 +29,12 @@ public class EnemyManager : MonoBehaviour
                 m_timer = 0;
                 // 出現する敵をランダムに決定する
                 var enemyIndex = Random.Range( 0, m_enemyPrefabs.Length );
+                if(enemyIndex==10) {
+                        if(chase_count<5) {
+                                chase_count++;
+                                return;
+                        }
+                }
                 // 出現する敵のプレハブを配列から取得する
                 var enemyPrefab = m_enemyPrefabs[ enemyIndex ];
                 // 敵のゲームオブジェクトを生成する

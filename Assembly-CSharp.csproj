@@ -308,6 +308,7 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\Prefabs\Fish\memo.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -331,6 +332,7 @@
     <Compile Include="Assets\script\GameScene\Enemy_info.cs" />
     <Compile Include="Assets\script\GameScene\EnemyManager.cs" />
     <Compile Include="Assets\script\GameScene\HPbar.cs" />
+    <Compile Include="Assets\script\GameScene\MP3.cs" />
     <Compile Include="Assets\script\GameScene\OptionController.cs" />
     <Compile Include="Assets\script\GameScene\Player.cs" />
     <Compile Include="Assets\script\GameScene\Pole.cs" />
@@ -338,7 +340,6 @@
     <Compile Include="Assets\script\GameScene\reticule.cs" />
     <Compile Include="Assets\script\GameScene\ScoreText.cs" />
     <Compile Include="Assets\script\GameScene\Sphere100.cs" />
-    <Compile Include="Assets\script\GameTitle\ButtonSwitch.cs" />
     <Compile Include="Assets\script\GameTitle\Create.cs" />
     <Compile Include="Assets\script\GameTitle\CreateInstance.cs" />
     <Compile Include="Assets\script\GameTitle\DontDestroyOnLoad.cs" />
@@ -346,14 +347,18 @@
     <Compile Include="Assets\script\GameTitle\LightOnOff.cs" />
     <Compile Include="Assets\script\GameTitle\LookY.cs" />
     <Compile Include="Assets\script\GameTitle\MenuToOption.cs" />
+    <Compile Include="Assets\script\GameTitle\NameGet.cs" />
     <Compile Include="Assets\script\GameTitle\NameSceneManager.cs" />
+    <Compile Include="Assets\script\GameTitle\OperationToStage1.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnMenu.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnTitle.cs" />
+    <Compile Include="Assets\script\GameTitle\RuruToOperation.cs" />
     <Compile Include="Assets\script\GameTitle\SpotLightOnOff.cs" />
     <Compile Include="Assets\script\GameTitle\TitleSceneManager.cs" />
     <Compile Include="Assets\script\GameTitle\TitleToStage1.cs" />
     <Compile Include="Assets\script\GameTitle\Toggle_Day.cs" />
     <Compile Include="Assets\script\GameTitle\VRToStage1.cs" />
+    <Compile Include="Assets\script\GameTitle\YesOrNo.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Common\SessionData.cs" />
     <Compile Include="Assets\VRSampleScenes\Scripts\Examples\ExampleInteractiveItem.cs" />

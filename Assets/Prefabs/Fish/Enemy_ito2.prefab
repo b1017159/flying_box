@@ -380,9 +380,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5599478588267925650}
   - component: {fileID: 5599478588267925653}
-  - component: {fileID: 5599478588267925652}
   - component: {fileID: 5599478588267925655}
   - component: {fileID: 5599478588267925654}
+  - component: {fileID: 5599478588267925652}
   m_Layer: 0
   m_Name: Enemy_ito2
   m_TagString: Enemy
@@ -426,23 +426,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5599478588267925652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5599478588267925641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  scale: 1
-  name: "\u30A4\u30C8\u30A6"
-  targetObject: {fileID: 5599478588737187496}
-  S_color: {fileID: 5599478587979189284}
 --- !u!54 &5599478588267925655
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -472,6 +455,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70685244, y: 1, z: 4.560939}
   m_Center: {x: -0.044013977, y: 0, z: 0.09648669}
+--- !u!114 &5599478588267925652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599478588267925641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  scale: 10
+  min_scale: 5
+  name: "\u30A4\u30C8\u30A6"
+  Chase: 0
+  targetObject: {fileID: 5599478588737187496}
+  S_color: {fileID: 5599478587979189284}
 --- !u!1 &5599478588439020209
 GameObject:
   m_ObjectHideFlags: 0

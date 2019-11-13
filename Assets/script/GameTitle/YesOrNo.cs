@@ -11,7 +11,7 @@ public class YesOrNo : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            SceneManager.LoadScene("VRSetting");
+            SceneManager.LoadScene("Ruru");
         }
 
         if (Input.GetKeyDown(KeyCode.N))

@@ -18,7 +18,6 @@ public class OptionController : MonoBehaviour
     public GameObject CameraText_1; //選択時のFPSの文字表示
     public GameObject CameraText_3_non; //非選択時のTPSの文字表示
     public GameObject CameraText_1_non; //非選択時のTPSの文字表示
-    public GameObject sound;
     public GameObject YesTitle;
     public GameObject menuText;
     private GameObject FPS;  //一人称カメラ
@@ -232,13 +231,13 @@ public class OptionController : MonoBehaviour
         {
             status.SetActive(false);
             OptionMenu.SetActive(true);
-            sound.SetActive(true);
+           
         }
         else
         {
             status.SetActive(true);
             OptionMenu.SetActive(false);
-            sound.SetActive(true);
+          
 
 
         }

@@ -392,12 +392,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8968878745822682516}
   - component: {fileID: 1368487848350281966}
+  - component: {fileID: 4111064621016358594}
   - component: {fileID: -7934789054047599098}
   - component: {fileID: 886595535480613663}
-  - component: {fileID: 4111064621016358594}
   m_Layer: 0
   m_Name: itou_ver.3_E
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,6 +438,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4111064621016358594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5344790257375719303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  scale: 1
+  min_scale: 1
+  name: "\u30A4\u30C8\u30A6"
+  Chase: 0
+  targetObject: {fileID: 915812297160021044}
+  S_color: {fileID: 5127174323194441263}
 --- !u!54 &-7934789054047599098
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -467,25 +486,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4111064621016358594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5344790257375719303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  scale: 10
-  min_scale: 6
-  name: "\u30A4\u30C8\u30A6"
-  Chase: 0
-  targetObject: {fileID: 915812297160021044}
-  S_color: {fileID: 5127174323194441263}
 --- !u!1 &5785571270779083440
 GameObject:
   m_ObjectHideFlags: 0

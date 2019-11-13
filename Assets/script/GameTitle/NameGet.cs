@@ -13,7 +13,7 @@ public class NameGet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        username = InputFieldManager.GetName();
+        username = InputName.GetName();
 
         this.targetText = this.GetComponent<Text>();
 

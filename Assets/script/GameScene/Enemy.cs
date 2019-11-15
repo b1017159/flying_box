@@ -14,8 +14,9 @@ public class Enemy : MonoBehaviour
         private float randm;
         public float speed=1f;
         private float rotationSmooth = 100f;
-
-        public float scale=10f;//最大スケール
+        public float scale=6f;//最大スケール
+        public float min_scale=3f;
+        private float scale_multiple=0.3f;
         public string name;
         private Vector3 targetPosition;  //行先
         private float changeTargetSqrDistance = 10f;//この距離以下になったら新しい場所を探す
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
         private float color=0;//初期透明度（透明）
         private float rotation;
         public static int reticleSignal = 0;//FPSorTPSを判断
+        public bool Chase=false;//ONにすると追いかける
 
         //GameObject target_old = this.gameObject;
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
@@ -32,6 +34,9 @@ public class Enemy : MonoBehaviour
 
         void Start()
         {
+                if(Chase==true) {
+                        changeTargetSqrDistance=0;
+                }
                 targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
@@ -42,7 +47,7 @@ public class Enemy : MonoBehaviour
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
                 if(name==null) name = transform.name;
                 if (target == null) print("enemy_infoなし");
-                if(target!=null) target.Display(scale,0.3f,name);//後で直す(byたすく)
+                if(target!=null) target.Display(scale,scale_multiple,name); //後で直す(byたすく)
         }
 
         // Update is called once per frame
@@ -79,23 +84,22 @@ public class Enemy : MonoBehaviour
                 //角度を調整してから表示
                 if (S_color == null)
                 { //print(this.name + "写真なし");
-        }
+                }
                 if (S_color != null)
                 {
-                       // Debug.Log("prefabON");
+                        // Debug.Log("prefabON");
                         S_color.gameObject.SetActive(true); //salmon display
                 }
         }
         void OnTriggerEnter(Collider other){
                 if(other.gameObject.CompareTag("Enemy")) {
                         if (this.scale<other.gameObject.GetComponent<Enemy>().scale) {
-
                                 //Debug.Log(this.scale+":"+other.gameObject.GetComponent<Enemy>().scale);
                                 //ジェネリクス
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                target.Display(scale,0.3f,name);//後で直す(byたすく)
+                                target.Display(scale,scale_multiple,name);//後で直す(byたすく)
                                 //print("Triggererror");
                         }
                 }
@@ -134,9 +138,9 @@ public class Enemy : MonoBehaviour
                 }
         }
         public void Init(){
-                randm=Random.Range(0.3f,scale);
+                randm=Random.Range(min_scale,scale);
                 //Debug.Log(randm);
-                scale=randm;
+                scale=randm*scale_multiple;
                 //名前によってスケールを変えたい
                 this.transform.localScale = new Vector3(scale, scale, scale);
                 player_position=Player.m_instance.transform.position;//自機のポジション

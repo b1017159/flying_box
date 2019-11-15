@@ -23,5 +23,7 @@ public class TitleSceneManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameMenu");
         }
+
+         
     }
 }

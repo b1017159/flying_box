@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
                         changeTargetSqrDistance=0; //こうしないと追いかける魚が回転し始める
                         print("Chase_Start");
                 }
-                targetPosition = GetRandomPositionOnLevel(this.transform.position.y);                //ランダムに場所を取得
+                targetPosition = GetRandomPositionOnLevel(this.transform.position.y);//ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
                 //transform.Rotate(new Vector3(0,0,90));

@@ -21,7 +21,7 @@ public class ShowScore : MonoBehaviour
 
         score = ScoreText.GetScore();
 
-        username = InputFieldManager.GetName();
+        username = InputName.GetName();
     }
 
     // Update is called once per frame

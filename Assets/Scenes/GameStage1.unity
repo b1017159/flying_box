@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bc92ed9daba4f2e9553f9bdeb99274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 370216544}
+  status: {fileID: 0}
   OptionMenu: {fileID: 247008917}
   checkbox_camera: {fileID: 1736564211}
   checkbox_sound: {fileID: 1302645232}
@@ -1331,7 +1331,6 @@ MonoBehaviour:
   CameraText_1: {fileID: 486472282}
   CameraText_3_non: {fileID: 973945408}
   CameraText_1_non: {fileID: 763934283}
-  sound: {fileID: 77383343}
   YesTitle: {fileID: 1591879854}
   menuText: {fileID: 442777055}
 --- !u!4 &405446468
@@ -1844,7 +1843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23bc92ed9daba4f2e9553f9bdeb99274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 1133464108}
+  status: {fileID: 0}
   OptionMenu: {fileID: 1507125881}
   checkbox_camera: {fileID: 629285972}
   checkbox_sound: {fileID: 1467296369}
@@ -1856,7 +1855,6 @@ MonoBehaviour:
   CameraText_1: {fileID: 1905933022}
   CameraText_3_non: {fileID: 370549273}
   CameraText_1_non: {fileID: 1245865207}
-  sound: {fileID: 77383343}
   YesTitle: {fileID: 2085807197}
   menuText: {fileID: 629007494}
 --- !u!4 &645598053
@@ -2315,7 +2313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133464109
 Transform:
   m_ObjectHideFlags: 0
@@ -2569,7 +2567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7090a90e9825d4d5fb6e7fd15d035ad4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2783,7 +2781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bd1972fdb27ab48933fbee88dc73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minute: 1
+  minute: 3
   seconds: 0
   speed: 0.05
   rotate_speed: 1
@@ -3131,7 +3129,7 @@ PrefabInstance:
     - target: {fileID: 474238573694719170, guid: 67325460f9b8547ad9eea30469513836,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 474238573694719169, guid: 67325460f9b8547ad9eea30469513836,
         type: 3}

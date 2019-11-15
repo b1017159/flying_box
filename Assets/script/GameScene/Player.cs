@@ -192,9 +192,9 @@ public class Player : MonoBehaviour
                                 //自分より大きい魚にぶつかったらカウントを+1
                                 count++;
                                 other.gameObject.SetActive(false);
-                                Invoke("damageEFON", 0.1f);//ダメージ食らう
-                                Invoke("damageEFOFF", 0.5f);//ダメージ消える
-                                mp3.Mswich=2;//ダメージ音
+                                //Invoke("damageEFON", 0.1f);//ダメージ食らう
+                                //Invoke("damageEFOFF", 0.5f);//ダメージ消える
+                                //mp3.Mswich=2;//ダメージ音
                         }
 
                 }

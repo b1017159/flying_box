@@ -80,7 +80,7 @@ public class HPbar : MonoBehaviour
                         heart.SetActive(false);
                 }
                 Scene loadscene = SceneManager.GetActiveScene();
-                if (count == 5)
+                if (count == 30)
                 {
                         if (loadscene.name == "GameStage1")
                         {

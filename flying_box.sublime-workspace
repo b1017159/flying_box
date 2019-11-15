@@ -529,6 +529,51 @@
 			}
 		},
 		{
+			"file": "Assets/script/GameScene/Enemy.cs",
+			"settings":
+			{
+				"buffer_size": 7283,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/script/GameScene/OptionController.cs",
+			"settings":
+			{
+				"buffer_size": 7437,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/script/Gameclear/Ranking.cs",
+			"settings":
+			{
+				"buffer_size": 491,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/script/GameScene/Enemy_info.cs",
+			"settings":
+			{
+				"buffer_size": 2631,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/script/GameScene/EnemyManager.cs",
+			"settings":
+			{
+				"buffer_size": 1748,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Assets/script/Gameover/GameOver.cs",
 			"settings":
 			{
@@ -568,36 +613,36 @@
 			"file": "Assets/RuruPage.cs",
 			"settings":
 			{
-				"buffer_size": 545,
+				"buffer_size": 576,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/RuruPage2.cs",
 			"settings":
 			{
-				"buffer_size": 540,
+				"buffer_size": 560,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/RuruPage4.cs",
 			"settings":
 			{
-				"buffer_size": 540,
+				"buffer_size": 578,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/RuruPage3.cs",
 			"settings":
 			{
-				"buffer_size": 540,
+				"buffer_size": 560,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -613,16 +658,7 @@
 			"file": "Assets/script/GameTitle/VRToStage1.cs",
 			"settings":
 			{
-				"buffer_size": 551,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/script/GameTitle/TitleSceneManager.cs",
-			"settings":
-			{
-				"buffer_size": 912,
+				"buffer_size": 569,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -704,6 +740,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameTitle/TitleSceneManager.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameTitle/InputName.cs",
+		"/C/Users/project19/Documents/flying_box/Assets/script/GameTitle/InputFieldManager.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/GameScene/CameraController.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/GameTitle/Ruru_Script1.cs",
 		"/C/Users/project19/Documents/flying_box/Assets/script/GameTitle/Ruru_Script2.cs",
@@ -828,9 +867,7 @@
 		"/C/Users/project19/Documents/Moive/Assets/Scripts/HUDEnable.cs",
 		"/C/Users/project19/Documents/Moive/Assets/Scripts/GrabTest.cs",
 		"/C/Users/project19/Documents/Moive/Assets/Scripts/Grabb.cs",
-		"/C/Users/project19/Documents/Moive/Assets/Scenes/TestScript.cs",
-		"/C/Users/project19/Documents/Moive/Assets/Sound.cs",
-		"/C/Users/project19/Documents/Moive/Assets/Scripts/Test.cs"
+		"/C/Users/project19/Documents/Moive/Assets/Scenes/TestScript.cs"
 	],
 	"find":
 	{
@@ -875,7 +912,7 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -891,8 +928,8 @@
 						"selection":
 						[
 							[
-								7504,
-								7504
+								101,
+								122
 							]
 						],
 						"settings":
@@ -903,11 +940,161 @@
 						"translation.y": 4389.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "Assets/script/GameScene/Enemy.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 969.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/script/GameScene/OptionController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5829,
+								5829
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3078.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/script/Gameclear/Ranking.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/script/GameScene/Enemy_info.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/script/GameScene/EnemyManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 114.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "Assets/script/Gameover/GameOver.cs",
 					"semi_transient": false,
 					"settings":
@@ -933,11 +1120,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 7,
 					"file": "Assets/script/GameScene/ReticleSprite.cs",
 					"semi_transient": false,
 					"settings":
@@ -963,11 +1150,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 8,
 					"file": "Assets/script/GameScene/reticule.cs",
 					"semi_transient": false,
 					"settings":
@@ -993,11 +1180,11 @@
 						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 9,
 					"file": "Assets/script/GameTitle/OperationToStage1.cs",
 					"semi_transient": false,
 					"settings":
@@ -1025,20 +1212,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 10,
 					"file": "Assets/RuruPage.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 545,
+						"buffer_size": 576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								536,
-								536
+								245,
+								245
 							]
 						],
 						"settings":
@@ -1046,37 +1233,11 @@
 							"oops":
 							{
 								"0,5": "using ディレクティブは不要です。",
+								"114,119": "using ディレクティブは不要です。",
 								"26,31": "using ディレクティブは不要です。",
-								"339,351": "現在のコンテキストに 'SceneManager' という名前は存在しません。"
+								"343,351": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"360,368": "現在のコンテキストに 'OVRInput' という名前は存在しません。"
 							},
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/RuruPage2.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 540,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								25,
-								25
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1087,24 +1248,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "Assets/RuruPage4.cs",
+					"buffer": 11,
+					"file": "Assets/RuruPage2.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 540,
+						"buffer_size": 560,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								371,
+								371
 							]
 						],
 						"settings":
 						{
+							"oops":
+							{
+								"0,5": "using ディレクティブは不要です。",
+								"26,31": "using ディレクティブは不要です。",
+								"322,330": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"339,347": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"443,451": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"460,468": "現在のコンテキストに 'OVRInput' という名前は存在しません。"
+							},
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
@@ -1115,20 +1285,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "Assets/RuruPage3.cs",
+					"buffer": 12,
+					"file": "Assets/RuruPage4.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 540,
+						"buffer_size": 578,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								79,
-								113
+								247,
+								247
 							]
 						],
 						"settings":
@@ -1137,8 +1307,10 @@
 							{
 								"0,5": "using ディレクティブは不要です。",
 								"26,31": "using ディレクティブは不要です。",
-								"339,351": "現在のコンテキストに 'SceneManager' という名前は存在しません。",
-								"450,462": "現在のコンテキストに 'SceneManager' という名前は存在しません。"
+								"322,330": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"339,347": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"461,469": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"478,486": "現在のコンテキストに 'OVRInput' という名前は存在しません。"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
@@ -1146,11 +1318,48 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
+					"file": "Assets/RuruPage3.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								371,
+								371
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "using ディレクティブは不要です。",
+								"26,31": "using ディレクティブは不要です。",
+								"322,330": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"339,347": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"443,451": "現在のコンテキストに 'OVRInput' という名前は存在しません。",
+								"460,468": "現在のコンテキストに 'OVRInput' という名前は存在しません。"
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "Assets/script/GameTitle/YesOrNo.cs",
 					"semi_transient": false,
 					"settings":
@@ -1176,69 +1385,42 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 15,
 					"file": "Assets/script/GameTitle/VRToStage1.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 551,
+						"buffer_size": 569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								531,
-								531
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "Assets/script/GameTitle/TitleSceneManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 912,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								728,
-								728
+								135,
+								114
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"1,6": "using ディレクティブは不要です。",
-								"27,32": "using ディレクティブは不要です。",
-								"834,835": "'OVRInput.RawButton' に 'x' の定義がありません"
+								"0,5": "using ディレクティブは不要です。",
+								"114,119": "using ディレクティブは不要です。",
+								"26,31": "using ディレクティブは不要です。",
+								"502,503": ") が必要です。"
 							},
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 214.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]

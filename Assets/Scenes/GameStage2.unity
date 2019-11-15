@@ -11210,6 +11210,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7800f24ea5de3354f99c6f59c645489d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11265,11 +11270,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 7800f24ea5de3354f99c6f59c645489d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3cf18f674081b3a41bee5db5b82360ac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7800f24ea5de3354f99c6f59c645489d, type: 3}
 --- !u!4 &1931619483 stripped
@@ -11315,8 +11315,8 @@ MonoBehaviour:
   Plane_001: {fileID: 1931619484}
   damagecube_TPS: {fileID: 1306033119}
   damagecube_FPS: {fileID: 1497076413}
-  minute: 1
-  seconds: 10000
+  minute: 0
+  seconds: 10
   speed: 0.05
   rotate_speed: 1
   uemax: -60

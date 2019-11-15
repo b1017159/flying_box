@@ -363,7 +363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716748910
 GameObject:
@@ -1061,7 +1061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4817098320978224, guid: ee393f04960d94baeaf854699b2ae1e3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4817098320978224, guid: ee393f04960d94baeaf854699b2ae1e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1107,6 +1107,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bd1972fdb27ab48933fbee88dc73b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip1: {fileID: 0}
+  audioClip2: {fileID: 0}
+  FPS_camera_forward: {fileID: 0}
+  Armature: {fileID: 0}
+  Plane_001: {fileID: 0}
+  damagecube_TPS: {fileID: 0}
+  damagecube_FPS: {fileID: 0}
   minute: 0
   seconds: 0
   speed: 0.01
@@ -1114,9 +1121,10 @@ MonoBehaviour:
   uemax: -60
   sitamax: 60
   score: 0
-  size: 3
   scale: 0
-  mp3: {fileID: 0}
+  Max_speed: 1
+  Min_speed: 0.01
+  Speed_Down: 0
 --- !u!4 &2137397326
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,7 +1137,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2137397327
 MonoBehaviour:

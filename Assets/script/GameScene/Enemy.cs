@@ -47,13 +47,13 @@ public class Enemy : MonoBehaviour
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
                 if(name==null) name = transform.name;
                 if (target == null) print("enemy_infoなし");
-                if(target!=null) target.Display(scale,scale_multiple,name); //後で直す(byたすく)
+                if(target!=null) target.Display(scale,scale_multiple,name);
         }
 
         // Update is called once per frame
         void Update()
         {
-
+                if(Chase==true) targetPosition=Player.m_instance.transform.position;
                 //  if (color<1) color=color+color_speed;
                 //        gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);
                 //最初は透明だが時間経過で色がつく

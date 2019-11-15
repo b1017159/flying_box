@@ -11,8 +11,8 @@ public class Name_get : MonoBehaviour
         {
                 //this.GetComponent<TextMesh>().text =InputFieldManager.name;
                 //this.GetComponent<TextMesh>().text ="tesuto";
-                this.targetText = this.GetComponent<Text>(); // <---- 追加3
-                this.targetText.text = InputName.GetName(); // <---- 追加4
+                this.targetText = this.GetComponent<Text>();
+                this.targetText.text = InputName.GetName(); // テキストを名前に変更
                 //print(InputName.GetName()+"giru");
         }
 

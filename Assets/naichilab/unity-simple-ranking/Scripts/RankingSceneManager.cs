@@ -59,7 +59,8 @@ public class RankingSceneManager : MonoBehaviour
                 {
                         if (string.IsNullOrEmpty(nameInputField.text))
                         {
-                                return "名無し";
+                                //return "名無し";
+                                return InputName.GetName();
                         }
 
                         return nameInputField.text;

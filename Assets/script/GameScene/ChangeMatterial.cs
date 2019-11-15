@@ -12,7 +12,7 @@ public class ChangeMatterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        i = OptionController.GetOneDay();
+       // i = OptionController.GetOneDay();
 
         if (i == 0)
         {

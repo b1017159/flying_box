@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.XR;
 public class VRToStage1 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,12 +16,12 @@ public class VRToStage1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            SceneManager.LoadScene("GameStage1");
+            SceneManager.LoadScene("Ruru1Comp");
         }
 
-        if(OVRInput.GetDown(OVRInput.Button.One))
+        if(OVRInput.Get(OVRInput.RawButton.A))
         {
-            SceneManager.LoadScene("GameStage1");
+            SceneManager.LoadScene("Ruru1Comp");
         }
 
     }

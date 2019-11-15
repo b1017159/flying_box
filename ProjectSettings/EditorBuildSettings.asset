@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Name.unity
     guid: 5c1defa0b201c46f2a16a86fee456e63
   - enabled: 1
+    path: Assets/Scenes/NameEnter.unity
+    guid: 0ec5bcf4d79c14a3091e35e56d4760ba
+  - enabled: 1
     path: Assets/Scenes/VRsetting.unity
     guid: f9e0ccf20b72a471986326f5aaf0ba3c
   - enabled: 1
@@ -42,6 +45,15 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMenu.unity
     guid: f1ce6e84f65b1422eb0b6f8dae3db6b0
   - enabled: 1
+    path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
+    guid: 152244f5855414ac4a3874f14efa583c
+  - enabled: 0
+    path: Assets/Scenes/Ruru1.unity
+    guid: 9cdc62ed04dcc4096b831f15e5b3f01a
+  - enabled: 1
+    path: Assets/Scenes/Operation.unity
+    guid: 3c55b0d2ab1814da3bcce26815238e06
+  - enabled: 1
     path: Assets/Scenes/Stage3 G.unity
     guid: f5685973a9fff40c4aa4a01403eb8509
   - enabled: 1
@@ -53,4 +65,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zukan.unity
     guid: 3959fdef1e02d4d4fb01414c7de44414
+  - enabled: 1
+    path: Assets/Scenes/Ruru1Comp.unity
+    guid: c680d78f521c4df47a383887a0344f15
+  - enabled: 1
+    path: Assets/Scenes/Ruru2Comp.unity
+    guid: a69520ac5515fac44ad4b6dec729fc04
+  - enabled: 1
+    path: Assets/Scenes/Ruru3Comp.unity
+    guid: 2a4b86c51e4998e41a5c4e7769a3be90
+  - enabled: 1
+    path: Assets/Scenes/Ruru4Comp.unity
+    guid: 7a69f18c6e287ea499c48223f7d655d0
   m_configObjects: {}

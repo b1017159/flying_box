@@ -37,7 +37,7 @@ public class OptionController : MonoBehaviour
             CameraText_1_non.SetActive(true);
             CameraText_3.SetActive(true);
             CameraText_3_non.SetActive(false);
-            Camerasig = 1;
+         
         }
         else
         {
@@ -45,7 +45,7 @@ public class OptionController : MonoBehaviour
             CameraText_1_non.SetActive(false);
             CameraText_3.SetActive(false);
             CameraText_3_non.SetActive(true);
-            Camerasig = 3;
+         
         }
     }
 

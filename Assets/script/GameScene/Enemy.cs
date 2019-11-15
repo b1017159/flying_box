@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
                 if(name==null) name = transform.name;
                 if (target == null) print("enemy_infoなし");
-                if(target!=null) target.Display(scale,name);
+                if(target!=null) target.Display(scale,0.3f,name);//後で直す(byたすく)
         }
 
         // Update is called once per frame
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
                                 //Enemy型のコンポーネントを取得
                                 //その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                target.Display(scale,name);
+                                target.Display(scale,0.3f,name);//後で直す(byたすく)
                                 //print("Triggererror");
                         }
                 }

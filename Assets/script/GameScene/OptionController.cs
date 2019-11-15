@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering;
 
 public class OptionController : MonoBehaviour
 {
     public GameObject status; //スコアやタイムなどを全て格納
     private int Camerasig;
-    private int Lighting;
     public GameObject OptionMenu; //オプションに関するObjectを全て格納
     public GameObject checkbox_camera;
     public GameObject checkbox_sound;
@@ -20,20 +18,12 @@ public class OptionController : MonoBehaviour
     public GameObject CameraText_1; //選択時のFPSの文字表示
     public GameObject CameraText_3_non; //非選択時のTPSの文字表示
     public GameObject CameraText_1_non; //非選択時のTPSの文字表示
-    public GameObject LightText_3; //選択時の朝の文字表示
-    public GameObject LightText_1; //選択時の夜の文字表示
-    public GameObject LightText_3_non; //非選択時の朝の文字表示
-    public GameObject LightText_1_non; //非選択時の夜の文字表示
-    public GameObject sound;
     public GameObject YesTitle;
     public GameObject menuText;
-    public GameObject spotlight;
-    public GameObject sunlight;
     private GameObject FPS;  //一人称カメラ
     private int changemenu; //メニューを切り替えるための変数
     private int mode; //オプションとゲームシーンを切り替え
-    public static int oneDay;
-
+   
     // Start is called before the first frame update
 
     void Start()
@@ -55,11 +45,7 @@ public class OptionController : MonoBehaviour
             CameraText_3.SetActive(false);
             CameraText_3_non.SetActive(true);
         }
-
-            LightText_1.SetActive(true);
-            LightText_3.SetActive(false);
-            spotlight.SetActive(false);
-            SetOneDay(0);
+       
     }
 
     // Update is called once per frame
@@ -98,6 +84,8 @@ public class OptionController : MonoBehaviour
 
         if (changemenu == 0)
         {
+            //TextObject3.SetActive(false);
+            //TextObject6.SetActive(false);
             checkbox_camera.SetActive(true);
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);
@@ -130,45 +118,13 @@ public class OptionController : MonoBehaviour
         }
         if (changemenu == 1)
         {
-
+           
             checkbox_camera.SetActive(false);
             checkbox_sound.SetActive(true);
             checkbox_gotitle.SetActive(false);
             checkbox_backgame.SetActive(false);
             checkbox_yes.SetActive(false);
             checkbox_no.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Space)) //カメラの切り替えを行う
-            {
-                //夜
-                if (Lighting == 0)
-                {
-                    LightText_1.SetActive(false);
-                    LightText_1_non.SetActive(true);
-                    LightText_3.SetActive(true);
-                    LightText_3_non.SetActive(false);
-
-                    spotlight.SetActive(true);
-                    sunlight.SetActive(false);
-                    // 環境光の色を指定する
-                    RenderSettings.ambientLight = Color.black;
-                    SetOneDay(1);
-                    Lighting = 3;
-                }
-                else　//朝
-                {
-                    LightText_1.SetActive(true);
-                    LightText_1_non.SetActive(false);
-                    LightText_3.SetActive(false);
-                    LightText_3_non.SetActive(true);
-                    spotlight.SetActive(false);
-                    sunlight.SetActive(false);
-
-                    // 環境光の色を指定する
-                    RenderSettings.ambientLight = Color.white;
-                    SetOneDay(0);
-                    Lighting = 0;
-                }
-            }
         }
         if (changemenu == 2)
         {
@@ -182,12 +138,15 @@ public class OptionController : MonoBehaviour
             {
                 changemenu = 5;
                 YesTitle.SetActive(true);
-                menuText.SetActive(false);  
+                menuText.SetActive(false);
+
+               
             }
         }
 
         if (changemenu == 3)
         {
+            
             checkbox_camera.SetActive(false);
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);
@@ -249,9 +208,17 @@ public class OptionController : MonoBehaviour
                 checkbox_yes.SetActive(false);
                 checkbox_no.SetActive(false);
                 menuText.SetActive(true);
+
+
+
+
             }
         }
         //Debug.Log(changemenu);
+
+
+
+
 
         /* if (Input.GetKey(KeyCode.P))
            {
@@ -264,26 +231,16 @@ public class OptionController : MonoBehaviour
         {
             status.SetActive(false);
             OptionMenu.SetActive(true);
-            sound.SetActive(true);
+           
         }
         else
         {
             status.SetActive(true);
             OptionMenu.SetActive(false);
-            sound.SetActive(true);
+          
+
 
         }
-    }
-
-    private void SetOneDay(int a)
-    {
-        oneDay = a;
-        Debug.Log(a);
-    }
-
-    public static int GetOneDay()
-    {
-        return oneDay;
     }
 }
 

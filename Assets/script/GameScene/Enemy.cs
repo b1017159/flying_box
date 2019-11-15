@@ -34,8 +34,11 @@ public class Enemy : MonoBehaviour
 
         void Start()
         {
-                if(Chase==true) changeTargetSqrDistance=0; //こうしないと追いかける魚が回転し始める
-                targetPosition = GetRandomPositionOnLevel(this.transform.position.y);                //ランダムに場所を取得
+                if(Chase==true) {
+                        changeTargetSqrDistance=0; //こうしないと追いかける魚が回転し始める
+                        print("Chase_Start");
+                }
+                targetPosition = GetRandomPositionOnLevel(this.transform.position.y);//ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
                 //transform.Rotate(new Vector3(0,0,90));
@@ -149,17 +152,21 @@ public class Enemy : MonoBehaviour
                 var pos = player_position-pole_position+player_position;
                 //Debug.Log(pos);
                 //ベクトル＋それなりの距離
-                randm=Random.Range(0,2);
-                if(randm==0) randm=Random.Range(-10.0f,-5.0f);
-                if(randm==1) randm=Random.Range(5.0f,10.0f);
-                pos.x= pos.x+randm;
-                randm=Random.Range(1.0f,3.0f);
-                pos.y= pos.y+randm;
-                randm=Random.Range(0,2);
-                if(randm==0) randm=Random.Range(-7.0f,-5.0f);
-                if(randm==1) randm=Random.Range(5.0f,7.0f);
-                //randm=Random.Range(-5.0f,5.0f);
-                pos.z= pos.z+randm;
+                if(Chase==true) {
+                        pos = pos*3;
+                }else{
+                        randm=Random.Range(0,2);
+                        if(randm==0) randm=Random.Range(-10.0f,-5.0f);
+                        if(randm==1) randm=Random.Range(5.0f,10.0f);
+                        pos.x= pos.x+randm;
+                        randm=Random.Range(1.0f,3.0f);
+                        pos.y= pos.y+randm;
+                        randm=Random.Range(0,2);
+                        if(randm==0) randm=Random.Range(-7.0f,-5.0f);
+                        if(randm==1) randm=Random.Range(5.0f,7.0f);
+                        //randm=Random.Range(-5.0f,5.0f);
+                        pos.z= pos.z+randm;
+                }
                 transform.localPosition = pos;
         }
         public Vector3 GetRandomPositionOnLevel(float y)

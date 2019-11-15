@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour
         float sau = 0; //左右
         public static int ControllSwitch;
         public double score;
-        public static float scaledata; //魚のスケールを引き継ぐための変数
+        public static float sizedata = 3f; //魚のスケールを引き継ぐための変数
         public static double scoredata = 30; // スコア
         public static int camerasig;
         public static int count = 0;
@@ -50,12 +49,13 @@ public class Player : MonoBehaviour
         void Start()
         {
                 // static 変数にインスタンス情報を格納する
+                score = scoredata;
                 m_instance = this;
                 Time.timeScale = 1.0f;
                 ControllSwitch = 1;
                 // スコアを加算します
                 score = scoredata;
-                scale = scaledata;
+                size = sizedata;
                 //   SetCountText();
                 FPS = GameObject.Find("One_person");
                 TPS = GameObject.Find("Third_person");
@@ -79,9 +79,11 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
+                Debug.Log("魚のサイズ=" + this.transform.localScale);
+                Debug.Log("size=" + size);
                 scale = this.transform.localScale.x;
                 // use OVRInput
-                OVRInput.Update();
+
                 //　制限時間が0秒以下なら何もしない
                 if (totalTime <= 0f)
                 {
@@ -113,10 +115,7 @@ public class Player : MonoBehaviour
                                 TPS.SetActive(false);
                         }
 
-                        //oculasの左スティックで操作
-                        updown -= OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).y * rotate_speed;
-                        updown = Mathf.Clamp(updown, uemax, sitamax);
-                        sau += OVRInput.Get(OVRInput.RawAxis2D.LThumbstick).x * rotate_speed;
+
                         // 上方向ボタンを押した瞬間にif文の中を実行
                         if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
                         {
@@ -137,10 +136,7 @@ public class Player : MonoBehaviour
                         {
                                 sau -= rotate_speed;
                         }
-                        if (OVRInput.Get(OVRInput.RawButton.A))
-                        {
-                                transform.Translate(0.0f, 0.0f, 0.1f);
-                        }
+
                         if (Input.GetKey(KeyCode.S))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.3f);
@@ -182,19 +178,12 @@ public class Player : MonoBehaviour
                                 Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
                                 // その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                // スコアを加算します
-                                if(other.gameObject.GetComponent<Enemy>().scale < this.scale + score - 1)
-                                {
-                                        score = score + 1; // スコアを加算します
-                                        size = size + 0.1f;
-                                }else{
-                                        score = score + 1;//スコアを加算
-                                        size = size + 0.1f;
-                                }
+                                score = score + 1;        //スコアを加算
+                                size = size + 0.1f;
                                 this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                                 //スコアを次のシーンに引き継ぐ
                                 scoredata = score;
-                                scaledata = scale;
+                                sizedata = size;
                                 mp3.Mswich=1;//咀嚼音
                         }
                         if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)

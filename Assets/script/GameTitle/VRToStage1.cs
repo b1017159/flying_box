@@ -19,10 +19,5 @@ public class VRToStage1 : MonoBehaviour
             SceneManager.LoadScene("Ruru");
         }
 
-        if(OVRInput.GetDown(OVRInput.Button.One))
-        {
-            SceneManager.LoadScene("Ruru");
-        }
-
     }
 }

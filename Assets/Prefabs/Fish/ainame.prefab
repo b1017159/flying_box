@@ -514,7 +514,7 @@ MonoBehaviour:
   scale: 6
   min_scale: 5
   name: "\u30A2\u30A4\u30CA\u30E1"
-  Chase: 0
+  Chase: 1
   targetObject: {fileID: 3239514471185635376}
   S_color: {fileID: 187180303034579865}
 --- !u!1 &8073534916608251054

@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
                 //Debug.Log(pos);
                 //ベクトル＋それなりの距離
                 if(Chase==true) {
-                        pos = pos+player_position;
+                        pos = pos*3;
                 }else{
                         randm=Random.Range(0,2);
                         if(randm==0) randm=Random.Range(-10.0f,-5.0f);

@@ -5053,7 +5053,7 @@ MonoBehaviour:
   score: 1
   size: 3
   scale: 0
-  mp3: {fileID: 0}
+  mp3: {fileID: 247030432}
 --- !u!65 &177294131
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7196,11 +7196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: itou_ver.4
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 1677cc889d4ac114fb295e4d0e32f34e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 39c020c0a1822c944b909477f9192c83, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1677cc889d4ac114fb295e4d0e32f34e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7256,6 +7251,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1677cc889d4ac114fb295e4d0e32f34e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 39c020c0a1822c944b909477f9192c83, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1677cc889d4ac114fb295e4d0e32f34e, type: 3}
 --- !u!1 &1289218427

@@ -433,7 +433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &77383346
 AudioSource:
@@ -1099,7 +1099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370216544
 GameObject:
@@ -2635,11 +2635,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: itou_ver.4
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 1677cc889d4ac114fb295e4d0e32f34e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 39c020c0a1822c944b909477f9192c83, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1677cc889d4ac114fb295e4d0e32f34e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2695,6 +2690,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1677cc889d4ac114fb295e4d0e32f34e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 39c020c0a1822c944b909477f9192c83, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1677cc889d4ac114fb295e4d0e32f34e, type: 3}
 --- !u!1 &1406530737

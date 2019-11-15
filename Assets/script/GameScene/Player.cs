@@ -48,8 +48,8 @@ public class Player : MonoBehaviour
         public MP3 mp3;  //.Mswichの数字でSEを管理
         void Start()
         {
-        // static 変数にインスタンス情報を格納する
-        score = scoredata;
+                // static 変数にインスタンス情報を格納する
+                score = scoredata;
                 m_instance = this;
                 Time.timeScale = 1.0f;
                 ControllSwitch = 1;
@@ -79,11 +79,11 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-        Debug.Log("魚のサイズ=" + this.transform.localScale);
-        Debug.Log("size=" + size);
+                Debug.Log("魚のサイズ=" + this.transform.localScale);
+                Debug.Log("size=" + size);
                 scale = this.transform.localScale.x;
                 // use OVRInput
-              
+
                 //　制限時間が0秒以下なら何もしない
                 if (totalTime <= 0f)
                 {
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
                                 TPS.SetActive(false);
                         }
 
-                       
+
                         // 上方向ボタンを押した瞬間にif文の中を実行
                         if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
                         {
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
                         {
                                 sau -= rotate_speed;
                         }
-                        
+
                         if (Input.GetKey(KeyCode.S))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.3f);
@@ -178,8 +178,8 @@ public class Player : MonoBehaviour
                                 Debug.Log(this.scale + ":::::::" + other.gameObject.GetComponent<Enemy>().scale + "大きくなるよ!!");
                                 // その収集アイテムを非表示にします
                                 other.gameObject.SetActive(false);
-                                        score = score + 1;//スコアを加算
-                                        size = size + 0.1f;
+                                score = score + 1;        //スコアを加算
+                                size = size + 0.1f;
                                 this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                                 //スコアを次のシーンに引き継ぐ
                                 scoredata = score;

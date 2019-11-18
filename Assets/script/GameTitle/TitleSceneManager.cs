@@ -21,7 +21,7 @@ public class TitleSceneManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            SceneManager.LoadScene("GameMenu");
+            SceneManager.LoadScene("TopRanking");
         }
     }
 }

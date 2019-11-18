@@ -19,13 +19,17 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
         {
             SceneManager.LoadScene("GameStage1");
+            Player.scoredata = 30;
+            Player.sizedata = 3f;
         }
-        if (Input.GetKey(KeyCode.B))
+        if (OVRInput.GetDown(OVRInput.RawButton.B))
         {
             SceneManager.LoadScene("GameMenu");
+            Player.scoredata = 30;
+            Player.sizedata = 3f;
         }
     }
 }

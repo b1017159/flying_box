@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
 
         void Start()
         {
+                this.tag = "Enemy";
                 if(Chase==true) {
                         changeTargetSqrDistance=0;
                 }

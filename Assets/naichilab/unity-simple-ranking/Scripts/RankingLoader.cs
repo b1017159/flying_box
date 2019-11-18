@@ -91,6 +91,11 @@ namespace naichilab
             CurrentRanking = board;
             LastScore = score;
             SceneManager.LoadScene("Ranking", LoadSceneMode.Additive);
+            Scene loadscene = SceneManager.GetActiveScene();
+            if(loadscene.name == "TopRanking")
+            {
+                SceneManager.LoadScene("TitleRanking", LoadSceneMode.Additive);
+            }
         }
     }
 }

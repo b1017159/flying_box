@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.T))
         {
-            SceneManager.LoadScene("GameMenu");
+            SceneManager.LoadScene("GameTitle");
             Player.scoredata = 30;
             Player.sizedata = 3f;
         }

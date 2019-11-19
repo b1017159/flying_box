@@ -11429,8 +11429,8 @@ MonoBehaviour:
   Plane_001: {fileID: 1931619484}
   damagecube_TPS: {fileID: 1306033119}
   damagecube_FPS: {fileID: 1497076413}
-  minute: 1
-  seconds: 10000
+  minute: 0
+  seconds: 30
   speed: 0.05
   rotate_speed: 1
   uemax: -60

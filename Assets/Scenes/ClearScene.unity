@@ -806,7 +806,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 9628dc1d9f30a40cfad6788e09d33407, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4282137771
+    rgba: 4291911177
 --- !u!23 &1334680523
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1110,6 +1110,7 @@ MonoBehaviour:
   audioClip1: {fileID: 0}
   audioClip2: {fileID: 0}
   FPS_camera_forward: {fileID: 0}
+  TPS_camera_forward: {fileID: 0}
   Armature: {fileID: 0}
   Plane_001: {fileID: 0}
   damagecube_TPS: {fileID: 0}

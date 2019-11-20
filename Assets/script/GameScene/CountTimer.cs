@@ -18,7 +18,7 @@ public class CountTimer : MonoBehaviour
     private GameObject FPS;　//一人称カメラ
     private GameObject TPS; //三人称カメラ
 
-    public static int signal;
+    public static int signal = 3;
 
     private int CamerasigCT;
     

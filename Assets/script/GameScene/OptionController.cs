@@ -61,8 +61,9 @@ public class OptionController : MonoBehaviour
             Player.ControllSwitch = 0;
             Time.timeScale = 0;
         }
-        
-        if (changemenu != 5 && changemenu !=9 && OVRInput.GetDown(OVRInput.RawButton.LThumbstickDown))
+        if (mode == 1)
+        {
+            if (changemenu != 5 && changemenu !=9 && OVRInput.GetDown(OVRInput.RawButton.LThumbstickDown))
         {
             changemenu += 1;
         }
@@ -79,6 +80,18 @@ public class OptionController : MonoBehaviour
             changemenu -= 4;
         }
 
+            status.SetActive(false);
+            OptionMenu.SetActive(true);
+            sound.SetActive(false);
+        }
+        else
+        {
+            status.SetActive(true);
+            OptionMenu.SetActive(false);
+            sound.SetActive(false);
+
+
+        }
         //メニューごとに実行内容を変更
         if (changemenu == -1)
         {
@@ -228,19 +241,8 @@ public class OptionController : MonoBehaviour
             Time.timeScale = 1.0f;
         }*/
 
-        if(mode == 1)
-        {
-            status.SetActive(false);
-            OptionMenu.SetActive(true);
-            sound.SetActive(false);
-        }
-        else
-        {
-            status.SetActive(true);
-            OptionMenu.SetActive(false);
-            sound.SetActive(false);
-
-
-        }
+       
+      
+        
     }
 }

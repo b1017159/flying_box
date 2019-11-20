@@ -29,21 +29,20 @@ public class Enemy : MonoBehaviour
         //GameObject target_old = this.gameObject;
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
         Enemy_info target;//enemyinfoのスクリプトを取得
-        public GameObject targetObject;        //ennemy_info
+        public GameObject targetObject;//Enemy_info
         public GameObject S_color;
 
         void Start()
         {
-                this.tag = "Enemy";
-                if(Chase==true) {
-                        changeTargetSqrDistance=0;
-                }
+                this.tag = "Enemy";//タグ変更
+                targetObject=transform.Find ("Enemy_info").gameObject;
+                if(targetObject==null) Debug.Log("Enemy_infoつけてないぞ");
+                if(Chase==true) changeTargetSqrDistance=0;
                 targetPosition = GetRandomPositionOnLevel();//ランダムに場所を取得
                 // gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 //this.GetComponent<Image> ().color = new Color (1.0f, 1.0f, 1.0f, 0.25f);
                 //transform.Rotate(new Vector3(0,0,90));
-
-                target = this.transform.Find("enemy_info").GetComponent<Enemy_info>();
+                target = this.transform.Find("Enemy_info").GetComponent<Enemy_info>();
                 //発生するまで親子関係が無いので上で書かずstartで書く
                 // Enemy_info target = targetObject.GetComponent<Enemy_info>();
                 if(name==null) name = transform.name;

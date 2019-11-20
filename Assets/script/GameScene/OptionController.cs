@@ -33,19 +33,19 @@ public class OptionController : MonoBehaviour
         Camerasig = Player.camerasig;
         if (Camerasig == 1)
         {
-            CameraText_1.SetActive(false);
-            CameraText_1_non.SetActive(true);
-            CameraText_3.SetActive(true);
-            CameraText_3_non.SetActive(false);
-         
-        }
-        else
-        {
             CameraText_1.SetActive(true);
             CameraText_1_non.SetActive(false);
             CameraText_3.SetActive(false);
             CameraText_3_non.SetActive(true);
-         
+
+        }
+        else
+        {
+            CameraText_1.SetActive(false);
+            CameraText_1_non.SetActive(true);
+            CameraText_3.SetActive(true);
+            CameraText_3_non.SetActive(false);
+          
         }
     }
 
@@ -79,7 +79,35 @@ public class OptionController : MonoBehaviour
         {
             changemenu -= 4;
         }
-
+            if (changemenu == 0)
+            {
+                checkbox_camera.SetActive(true);
+                checkbox_sound.SetActive(false);
+                checkbox_gotitle.SetActive(false);
+                checkbox_backgame.SetActive(false);
+                checkbox_yes.SetActive(false);
+                checkbox_no.SetActive(false);
+                YesTitle.SetActive(false);
+                if (OVRInput.GetDown(OVRInput.RawButton.A)) //カメラの切り替えを行う
+                {
+                    if (Camerasig == 1)
+                    {
+                        CameraText_1.SetActive(false);
+                        CameraText_1_non.SetActive(true);
+                        CameraText_3.SetActive(true);
+                        CameraText_3_non.SetActive(false);
+                        Camerasig = 3;
+                    }
+                    else
+                    {
+                        CameraText_1.SetActive(true);
+                        CameraText_1_non.SetActive(false);
+                        CameraText_3.SetActive(false);
+                        CameraText_3_non.SetActive(true);
+                        Camerasig = 1;
+                    }
+                }
+            }
             status.SetActive(false);
             OptionMenu.SetActive(true);
             sound.SetActive(false);
@@ -97,35 +125,7 @@ public class OptionController : MonoBehaviour
         {
             changemenu = 3;
         }
-        if (changemenu == 0)
-        {
-            checkbox_camera.SetActive(true);
-            checkbox_sound.SetActive(false);
-            checkbox_gotitle.SetActive(false);
-            checkbox_backgame.SetActive(false);
-            checkbox_yes.SetActive(false);
-            checkbox_no.SetActive(false);
-            YesTitle.SetActive(false);
-                if (OVRInput.GetDown(OVRInput.RawButton.A)) //カメラの切り替えを行う
-            {
-                if (Camerasig == 1)
-                {
-                    CameraText_1.SetActive(false);
-                    CameraText_1_non.SetActive(true);
-                    CameraText_3.SetActive(true);
-                    CameraText_3_non.SetActive(false);
-                    Camerasig = 3;
-                }
-                else
-                {
-                    CameraText_1.SetActive(true);
-                    CameraText_1_non.SetActive(false);
-                    CameraText_3.SetActive(false);
-                    CameraText_3_non.SetActive(true);
-                    Camerasig = 1;
-                }
-            }
-        }
+        
         if (changemenu == 1)
         {
             checkbox_camera.SetActive(false);

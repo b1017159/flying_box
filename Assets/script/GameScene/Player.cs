@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
 
                         if (Input.GetKey(KeyCode.S))
                         {
-                                transform.Translate(0.0f, 0.0f, 0.3f);
+                                transform.Translate(0.0f, 0.0f, 0.1f);
                                 animation.SetBool("dash", true);
                                 //Dashアニメーションを実行
                         }

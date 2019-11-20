@@ -596,8 +596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minute: 1
   seconds: 0
-  speed: 0.05
-  rotate_speed: 1
+  speed: 0.01
+  rotate_speed: 0.5
   uemax: -60
   sitamax: 60
   score: 1

@@ -171,7 +171,7 @@ public class Enemy : MonoBehaviour
                 //randm=Random.Range(-5.0f,5.0f);
                 pos.z = pos.z + randm;
                 distance = Vector3.SqrMagnitude(pos- player_position);
-                if (distance >= 150) break;
+                if (distance >= 200) break;
             }
             Debug.Log("distance" + distance);
                 }

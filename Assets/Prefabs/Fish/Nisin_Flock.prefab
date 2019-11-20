@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789045789675}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364788889255854}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789179504736}
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789517637076}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789589298054}
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789569667071}
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789561890361}
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364789449030264}
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790115334081}
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790380344499}
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790688449572}
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790679610792}
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790515198770}
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 8228364790786073722}
@@ -6429,7 +6429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210903871565059}
@@ -6626,7 +6626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904356773268}
@@ -7360,7 +7360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904992293291}
@@ -7464,7 +7464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904389504200}
@@ -7813,7 +7813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904257371470}
@@ -9696,7 +9696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210905182432629}
@@ -10305,7 +10305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904495028094}
@@ -10833,7 +10833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210903909304841}
@@ -10937,7 +10937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210904915776462}
@@ -11361,7 +11361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 7144210903612319812}
@@ -11496,10 +11496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 10
   scale: 10
   min_scale: 10
-  name: "\u30CB\u30B7\u30F3\u306E\u7FA4\u308C"
+  name: "\u30CB\u30B7\u30F3\u306E\u3080\u308C"
   Chase: 0
   targetObject: {fileID: 6241325958457803478}
   S_color: {fileID: 0}
@@ -13139,7 +13139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   scale: 1
-  min_scale: 0.1
+  min_scale: 1
   name: "\u30CB\u30B7\u30F3"
   Chase: 0
   targetObject: {fileID: 1698998409367990432}

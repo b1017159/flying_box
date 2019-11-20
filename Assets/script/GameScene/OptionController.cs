@@ -33,20 +33,26 @@ public class OptionController : MonoBehaviour
     private int changemenu; //メニューを切り替えるための変数
     private int mode; //オプションとゲームシーンを切り替え
     public static int oneDay;
+    public static int cameraizing;
 
     // Start is called before the first frame update
 
     void Start()
     {
+        //シーン移行しても継続
+        Player.camerasig = GetCameRaizing();
+        Lighting = GetOneDay();
+
         mode = 0;
         changemenu = 0;
         FPS = GameObject.Find("One_person");
+
         if (FPS.activeSelf)
         {
             CameraText_1.SetActive(false);
             CameraText_1_non.SetActive(true);
             CameraText_3.SetActive(true);
-            CameraText_3_non.SetActive(false);  
+            CameraText_3_non.SetActive(false);
         }
         else
         {
@@ -56,10 +62,22 @@ public class OptionController : MonoBehaviour
             CameraText_3_non.SetActive(true);
         }
 
+        if (Lighting == 0)
+        {
             LightText_1.SetActive(true);
             LightText_3.SetActive(false);
-            spotlight.SetActive(false);
             SetOneDay(0);
+            spotlight.SetActive(false);
+            sunlight.SetActive(true);
+        }
+        else
+        {
+            LightText_1.SetActive(false);
+            LightText_3.SetActive(true);
+            SetOneDay(1);
+            spotlight.SetActive(true);
+            sunlight.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -108,12 +126,13 @@ public class OptionController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space)) //カメラの切り替えを行う
             {
                 Debug.Log(Camerasig);
-                if (Camerasig == 1)
+                if (Camerasig　== 1)
                 {
                     CameraText_1.SetActive(false);
                     CameraText_1_non.SetActive(true);
                     CameraText_3.SetActive(true);
                     CameraText_3_non.SetActive(false);
+
                     Camerasig = 3;
                 }
                 else
@@ -122,8 +141,7 @@ public class OptionController : MonoBehaviour
                     CameraText_1_non.SetActive(false);
                     CameraText_3.SetActive(false);
                     CameraText_3_non.SetActive(true);
-                   
-                    
+
                     Camerasig = 1;
                 }
             }
@@ -149,8 +167,7 @@ public class OptionController : MonoBehaviour
 
                     spotlight.SetActive(true);
                     sunlight.SetActive(false);
-                    // 環境光の色を指定する
-                    RenderSettings.ambientLight = Color.black;
+
                     SetOneDay(1);
                     Lighting = 3;
                 }
@@ -163,8 +180,7 @@ public class OptionController : MonoBehaviour
                     spotlight.SetActive(false);
                     sunlight.SetActive(false);
 
-                    // 環境光の色を指定する
-                    RenderSettings.ambientLight = Color.white;
+
                     SetOneDay(0);
                     Lighting = 0;
                 }
@@ -200,10 +216,12 @@ public class OptionController : MonoBehaviour
                 if (Camerasig == 1)
                 {
                     Player.camerasig = 1;
+                    SetCameRaizing(1);
                 }
                 else
                 {
                     Player.camerasig = 3;
+                    SetCameRaizing(3);
                 }
                 mode = 0;
                 Player.ControllSwitch = 1;
@@ -278,12 +296,21 @@ public class OptionController : MonoBehaviour
     private void SetOneDay(int a)
     {
         oneDay = a;
-        Debug.Log(a);
     }
 
     public static int GetOneDay()
     {
         return oneDay;
+    }
+
+    private void SetCameRaizing(int b)
+    {
+        cameraizing = b;
+    }
+
+    public static int GetCameRaizing()
+    {
+        return cameraizing;
     }
 }
 

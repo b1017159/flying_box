@@ -14,6 +14,8 @@ public class Enemy_info : MonoBehaviour
         private float one_hund_scale;
         void Start()
         {
+                pare_enemy = transform.root.gameObject;
+                if(pare_enemy==null) Debug.Log("enemy_infoの親オブジェクト無いぞ");
                 //gameObject.GetComponent<Renderer>().material.color=new Color(1,1,1,color);//透明化
                 myRectTfm = GetComponent<RectTransform>();
                 gameObject.GetComponent<Renderer>().material.color = new Color(1, 1, 1, color);//透明化

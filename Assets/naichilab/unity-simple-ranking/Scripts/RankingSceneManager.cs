@@ -62,6 +62,7 @@ public class RankingSceneManager : MonoBehaviour
                         {
                                 //return "名無し";
                                 return InputName.GetName();
+                                //return "momizi";
                         }
 
                         return nameInputField.text;
@@ -70,11 +71,11 @@ public class RankingSceneManager : MonoBehaviour
 
         void Start()
         {
-            Scene loadscene = SceneManager.GetActiveScene();
-            if (loadscene.name == "Ranking")
-            {
-                sendScoreButton.interactable = false;
-            }
+                Scene loadscene = SceneManager.GetActiveScene();
+                if (loadscene.name == "Ranking")
+                {
+                        sendScoreButton.interactable = false;
+                }
                 _board = RankingLoader.Instance.CurrentRanking;
                 _lastScore = RankingLoader.Instance.LastScore;
 
@@ -87,9 +88,9 @@ public class RankingSceneManager : MonoBehaviour
         {
                 scoreLabel.text = _lastScore.TextForDisplay;
                 captionLabel.text = string.Format("{0}ランキング", _board.BoardName);
-            Scene loadscene = SceneManager.GetActiveScene();
-            //ハイスコア取得
-            {
+                Scene loadscene = SceneManager.GetActiveScene();
+                //ハイスコア取得
+                {
                         highScoreLabel.text = "取得中...";
 
                         var hiScoreCheck = new YieldableNcmbQuery<NCMBObject>(_board.ClassName);
@@ -103,12 +104,12 @@ public class RankingSceneManager : MonoBehaviour
 
                                 var s = _board.BuildScore(_ncmbRecord[COLUMN_SCORE].ToString());
                                 highScoreLabel.text = s != null ? s.TextForDisplay : "エラー";
-                   
-                    if (loadscene.name == "Ranking")
-                    {
-                        nameInputField.text = _ncmbRecord[COLUMN_NAME].ToString();
-                    }
-                   
+
+                                if (loadscene.name == "Ranking")
+                                {
+                                        nameInputField.text = _ncmbRecord[COLUMN_NAME].ToString();
+                                }
+
                         }
                         else
                         {
@@ -127,10 +128,10 @@ public class RankingSceneManager : MonoBehaviour
                 }
                 else
                 {
-               if(loadscene.name == "Ranking")
-                {
-                    sendScoreButton.interactable = true;//ハイスコア更新してなくてもランキング登録できる
-                }
+                        if(loadscene.name == "Ranking")
+                        {
+                                sendScoreButton.interactable = true;//ハイスコア更新してなくてもランキング登録できる
+                        }
                         // var highScore = _board.BuildScore(_ncmbRecord[COLUMN_SCORE].ToString());
                         //
                         // if (_board.Order == ScoreOrder.OrderByAscending)
@@ -157,12 +158,12 @@ public class RankingSceneManager : MonoBehaviour
 
         private IEnumerator SendScoreEnumerator()
         {
-            Scene loadscene = SceneManager.GetActiveScene();
-            if(loadscene.name == "Ranking")
-            {
-                sendScoreButton.interactable = false;
-            }
-               
+                Scene loadscene = SceneManager.GetActiveScene();
+                if(loadscene.name == "Ranking")
+                {
+                        sendScoreButton.interactable = false;
+                }
+
                 highScoreLabel.text = "送信中...";
 
                 //ハイスコア送信

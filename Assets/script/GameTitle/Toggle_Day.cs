@@ -8,7 +8,7 @@ public class Toggle_Day : MonoBehaviour
 {
     public static int oneDay;
 
-    private void SetOneDay(int a)
+    public void SetOneDay(int a)
     {
       oneDay = a;
       Debug.Log(a);
@@ -19,12 +19,6 @@ public class Toggle_Day : MonoBehaviour
         SetOneDay(0);
         transform.eulerAngles = new Vector3(90, 0, 0);
 
-    }
-
-    public void ChageAfternoon()
-    {
-        SetOneDay(1);
-        transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
     public void ChageNight()

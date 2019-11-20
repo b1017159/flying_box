@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_intervalFrom: 2
   m_intervalTo: 1
-  m_elapsedTimeMax: 10
+  m_elapsedTimeMax: 4
   m_elapsedTime: 0
   m_enemyPrefabs:
   - {fileID: 1823359905427395095, guid: c2ea064fe2f4aba468b9da0195ad5d8a, type: 3}
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   - {fileID: 6161974086891815364, guid: 5f9ed36522e4c0c41b03d072d1c8b461, type: 3}
   - {fileID: 7685778324461934555, guid: a7134671e95d20144b4d3afa7617924e, type: 3}
   - {fileID: 1295912424979266156, guid: 7c9333261f4acad4083781b9d319fc65, type: 3}
-  - {fileID: 7036503208034285053, guid: 5754e2c3a2505ea47a2a5bbe88ff853f, type: 3}
+  - {fileID: 7144210904939034142, guid: 2546fe5ba55a50945a09442dbab79aca, type: 3}
   - {fileID: 7036503208034285053, guid: 5754e2c3a2505ea47a2a5bbe88ff853f, type: 3}
   - {fileID: 7036503208034285053, guid: 5754e2c3a2505ea47a2a5bbe88ff853f, type: 3}
   - {fileID: 7036503208034285053, guid: 5754e2c3a2505ea47a2a5bbe88ff853f, type: 3}
@@ -2224,7 +2224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &963730048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2626,7 +2626,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7090a90e9825d4d5fb6e7fd15d035ad4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2754,6 +2754,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 39c020c0a1822c944b909477f9192c83, type: 2}
+    - target: {fileID: 3050767779185917609, guid: 1677cc889d4ac114fb295e4d0e32f34e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1677cc889d4ac114fb295e4d0e32f34e, type: 3}
 --- !u!1 &1406530737
@@ -3395,7 +3400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902293153}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: -7.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1427065562}
@@ -8711,6 +8716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: reticule
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753636984600494188, guid: 8fbf19b7b84da2c4db0334a579e44320,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4753636984600494187, guid: 8fbf19b7b84da2c4db0334a579e44320,
         type: 3}

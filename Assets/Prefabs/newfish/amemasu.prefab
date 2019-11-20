@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  scale: 6
+  scale: 7
   min_scale: 5
   name: "\u30A2\u30E1\u30DE\u30B9"
   Chase: 0

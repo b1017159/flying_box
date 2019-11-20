@@ -33,14 +33,12 @@ public class OptionController : MonoBehaviour
     private int changemenu; //メニューを切り替えるための変数
     private int mode; //オプションとゲームシーンを切り替え
     public static int oneDay;
-    public static int cameraizing;
 
     // Start is called before the first frame update
 
     void Start()
     {
         //シーン移行しても継続
-        Player.camerasig = GetCameRaizing();
         Lighting = GetOneDay();
 
         mode = 0;
@@ -100,18 +98,16 @@ public class OptionController : MonoBehaviour
                 if (Camerasig == 1)
                 {
                     Player.camerasig = 1;
-                    SetCameRaizing(1);
                 }
                 else
                 {
                     Player.camerasig = 3;
-                    SetCameRaizing(3);
                 }
                 mode = 0;
                 Player.ControllSwitch = 1;
                 Time.timeScale = 1.0f;
-            
-        }
+
+            }
             if (changemenu != 5 && changemenu != 9 && Input.GetKeyDown(KeyCode.DownArrow))
             {
                 changemenu += 1;
@@ -174,7 +170,7 @@ public class OptionController : MonoBehaviour
             changemenu = 3;
         }
 
-      
+
         if (changemenu == 1)
         {
 
@@ -227,7 +223,7 @@ public class OptionController : MonoBehaviour
             {
                 changemenu = 5;
                 YesTitle.SetActive(true);
-                menuText.SetActive(false);  
+                menuText.SetActive(false);
             }
         }
 
@@ -245,12 +241,12 @@ public class OptionController : MonoBehaviour
                 if (Camerasig == 1)
                 {
                     Player.camerasig = 1;
-                    SetCameRaizing(1);
+
                 }
                 else
                 {
                     Player.camerasig = 3;
-                    SetCameRaizing(3);
+
                 }
                 mode = 0;
                 Player.ControllSwitch = 1;
@@ -270,7 +266,7 @@ public class OptionController : MonoBehaviour
             checkbox_sound.SetActive(false);
             checkbox_gotitle.SetActive(false);
             checkbox_backgame.SetActive(false);
-           
+
             if (Input.GetKey(KeyCode.Y)) //カメラの切り替えを行う
             {
                 SceneManager.LoadScene("GameTitle");
@@ -310,14 +306,5 @@ public class OptionController : MonoBehaviour
         return oneDay;
     }
 
-    private void SetCameRaizing(int b)
-    {
-        cameraizing = b;
-    }
-
-    public static int GetCameRaizing()
-    {
-        return cameraizing;
-    }
 }
 

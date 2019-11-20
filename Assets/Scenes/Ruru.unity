@@ -503,10 +503,10 @@ Transform:
   m_GameObject: {fileID: 271472151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.86, y: -1.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 359404152}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &271472153
 SpriteRenderer:
@@ -709,10 +709,10 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 992750766}
-  - {fileID: 1871445139}
   - {fileID: 1075612161}
   - {fileID: 1212090292}
   - {fileID: 271472152}
+  - {fileID: 1871445139}
   - {fileID: 1262065459}
   m_Father: {fileID: 379960049}
   m_RootOrder: 2
@@ -868,7 +868,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382333292}
-  m_Text: "\u81EA\u5206\u306E\u30B5\u30A4\u30BA\u306F\u753B\u9762\u5DE6\u4E0A\u306B\u8868\u793A\u3055\u308C\u3066\u308B\u304B\u3089\u78BA\u8A8D\u3057\u3066\u306D\u3002\n(\u3042\u306A\u305F\u306E\u30B5\u30A4\u30BA\uFF1A2.0cm)"
+  m_Text: "\u81EA\u5206\u306E\u30B5\u30A4\u30BA\u306F\u753B\u9762\u5DE6\u4E0A\u306B\u8868\u793A\u3055\u308C\u3066\u308B\u304B\u3089\u78BA\u8A8D\u3057\u3066\u306D\u3002\n(\u3042\u306A\u305F\u306E\u30B5\u30A4\u30BA\uFF1A30cm)"
   m_OffsetZ: 0
   m_CharacterSize: 0.08
   m_LineSpacing: 1
@@ -966,7 +966,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640288278}
-  m_Text: "HP\u304C\u5168\u90E8\u306A\u304F\u306A\u308B\u3068\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC"
+  m_Text: "\u4F53\u529B\uFF08HP\uFF09\u304C\u5168\u90E8\u306A\u304F\u306A\u308B\u3068\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC"
   m_OffsetZ: 0
   m_CharacterSize: 0.08
   m_LineSpacing: 1
@@ -1805,7 +1805,7 @@ Transform:
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
   m_Children: []
   m_Father: {fileID: 359404152}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094645779
 GameObject:
@@ -1928,7 +1928,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 359404152}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1212090293
 SpriteRenderer:
@@ -2398,7 +2398,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589780545}
-  m_Text: "\u5236\u9650\u6642\u9593\u306F\uFF13\u5206\u3002"
+  m_Text: "\u5236\u9650\u6642\u9593\u306F\uFF13\u5206\u3002\n\u753B\u9762\u53F3\u4E0B\u306B\u8868\u793A\u3055\u308C\u3066\u308B\u3088\u3002"
   m_OffsetZ: 0
   m_CharacterSize: 0.08
   m_LineSpacing: 1
@@ -2857,11 +2857,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871445138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 0.77, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
+  m_LocalPosition: {x: 1.04, y: 0.77, z: -0.019}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 2}
   m_Children: []
   m_Father: {fileID: 359404152}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &1871445140
 TextMesh:

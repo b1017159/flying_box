@@ -4911,8 +4911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minute: 1
   seconds: 0
-  speed: 0.05
-  rotate_speed: 1
+  speed: 0.01
+  rotate_speed: 0.5
   uemax: -60
   sitamax: 60
   score: 1
@@ -6733,8 +6733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c990dafc69dd244d8673fe9f49f8d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_intervalFrom: 10
-  m_intervalTo: 1
+  m_intervalFrom: 20
+  m_intervalTo: 20
   m_elapsedTimeMax: 10
   m_elapsedTime: 0
   m_enemyPrefabs:

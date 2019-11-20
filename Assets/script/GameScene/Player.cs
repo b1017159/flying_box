@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         public double score;
         public static float sizedata = 3f; //魚のスケールを引き継ぐための変数
         public static double scoredata = 30; // スコア
-        public static int camerasig;
+        public static int camerasig = 3;
         public static int count = 0;
 
         public float size = 3f; // 初期大きさ
@@ -63,15 +63,13 @@ public class Player : MonoBehaviour
                 damagecube_FPS = GameObject.Find("DamageEffect_FPS");
                 damagecube_TPS.SetActive(false);
                 damagecube_FPS.SetActive(false);
-                camerasig = 3;
                 TPS.SetActive(false);
                 FPS.SetActive(true);
                 totalTime = minute * 60 + seconds;
                 minutedata = minute;
                 secondsdata = seconds;
                 totaltimedata = totalTime;
-
-                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
+        this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                 //最初の大きさ
                 animation = GetComponent<Animator>();
         }
@@ -79,8 +77,8 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-                Debug.Log("魚のサイズ=" + this.transform.localScale);
-                Debug.Log("size=" + size);
+                
+                Debug.Log("camerasig=" + camerasig);
                 scale = this.transform.localScale.x;
                 // use OVRInput
 
@@ -94,6 +92,7 @@ public class Player : MonoBehaviour
                 totalTime = minute * 60 + seconds;
                 totalTime -= Time.deltaTime;
                 totaltimedata = totalTime;
+       
                 //　再設定
                 minute = (int)totalTime / 60;
                 seconds = totalTime - minute * 60;

@@ -27,6 +27,7 @@ public class memo : MonoBehaviour
            1ウミタナゴ 3 1
            1ベロ 2 1
            1ドロメ 2 1 
+           1ニシン 1 1
            
          */
     }

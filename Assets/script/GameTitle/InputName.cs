@@ -22,6 +22,19 @@ public class InputName : MonoBehaviour
         smallenglish.SetActive(false);
     }
 
+    void Update()
+    {
+        if (name.Length > 8)
+        {
+            Destory();
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SceneManager.LoadScene("GameTitle");
+        }
+       
+    }
 
     // Update is called once per frame
     public void ButtonA()

@@ -227,7 +227,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155674708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d515c26e762662149a00aefe7a965ca1, type: 3}
   m_Name: 
@@ -814,7 +814,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241239275}
-  m_Text: 'PressR: Retry'
+  m_Text: 'PressA: Retry'
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1

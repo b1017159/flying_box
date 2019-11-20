@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 1275073055933419348}
   m_Layer: 0
   m_Name: ihidai
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,8 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  scale: 10
-  min_scale: 7
+  scale: 7
+  min_scale: 3
   name: "\u30A4\u30B7\u30C0\u30A4"
   Chase: 0
   targetObject: {fileID: 0}

@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
         private Vector3 FPS_forward;
         private Vector3 FPS_rotate;
         public Transform FPS_camera_forward;
+    public Transform TPS_camera_forward;
 
-        //カメラが一人称か、三人称か判定するときに使用するぜ
-        public static int Camerasignal;
+    //カメラが一人称か、三人称か判定するときに使用するぜ
+    public static int Camerasignal;
 
         //自分の魚を消すときのオブジェクト宣言
         public GameObject Armature;
@@ -67,7 +68,7 @@ public class Player : MonoBehaviour
         public double score;
         public static float sizedata; //魚のスケールを引き継ぐための変数
         public static double scoredata = 30; // スコア
-        public static int camerasig;
+        public static int camerasig = 3;
         private float size = 3f;//初期大きさ
         private float scale_multiple=0.3f;
         public static int count = 0;
@@ -125,7 +126,7 @@ public class Player : MonoBehaviour
                 damagecube_TPS.SetActive(false);//初期の段階はエフェクトoff
                 damagecube_FPS.SetActive(false);//初期の段階はエフェクトoff
 
-
+      
                 Camerasignal = CountTimer.signal;
                 camerasig = Camerasignal;
 
@@ -149,10 +150,13 @@ public class Player : MonoBehaviour
                         Plane_001.SetActive(true);//自身の魚を見えなくする
                         reticuleFPS.SetActive(false);
                         reticuleTPS.SetActive(true);
-                }
+          
+
+        }
 
                 FPS_camera_forward = transform.Find("First_person");//FPS時に向いている方向を取得？
-                this.transform.localScale=new Vector3(size*scale_multiple,size*scale_multiple,size*scale_multiple);
+        TPS_camera_forward = transform.Find("Third_person");//FPS時に向いている方向を取得？
+        this.transform.localScale=new Vector3(size*scale_multiple,size*scale_multiple,size*scale_multiple);
         }
 
 
@@ -184,9 +188,10 @@ public class Player : MonoBehaviour
                 secondsdata = seconds;
 
                 if (ControllSwitch == 1)
-                {
+        {
+            Debug.Log(TPS_camera_forward.transform.rotation);
 
-                        if (camerasig == 3)
+            if (camerasig == 3)
                         {
                                 //三人称にしたときに、自身が見えるようにするのと、一人称のレティクル関係を消す
                                 //自身の魚がみえてる
@@ -197,8 +202,10 @@ public class Player : MonoBehaviour
                                 reticuleFPS.SetActive(false);
                                 reticuleTPS.SetActive(true);
                                 reticule_picFPS.SetActive(false);
+               
+               
                                 reticule_picTPS.SetActive(true);
-                        }
+            }
                         else
                         {
                                 //一人称にしたときに、三人称と逆のこと
@@ -255,7 +262,7 @@ public class Player : MonoBehaviour
                                 }
 
 
-                                transform.rotation = Quaternion.Euler(updown, sau, 0);
+                                transform.rotation = Quaternion.Euler(updown, sau, 0); 
                                 transform.Translate(Vector3.forward * speed);
                         }
                         else

@@ -166,9 +166,11 @@
     <Compile Include="Assets\script\GameTitle\MenuToOption.cs" />
     <Compile Include="Assets\script\GameTitle\NameGet.cs" />
     <Compile Include="Assets\script\GameTitle\NameSceneManager.cs" />
+    <Compile Include="Assets\script\GameTitle\NametoTitle.cs" />
     <Compile Include="Assets\script\GameTitle\OperationToStage1.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnMenu.cs" />
     <Compile Include="Assets\script\GameTitle\ReturnTitle.cs" />
+    <Compile Include="Assets\script\GameTitle\RuruBack.cs" />
     <Compile Include="Assets\script\GameTitle\RuruToOperation.cs" />
     <Compile Include="Assets\script\GameTitle\TitleSceneManager.cs" />
     <Compile Include="Assets\script\GameTitle\TitleToStage1.cs" />

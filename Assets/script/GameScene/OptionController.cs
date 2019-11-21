@@ -9,6 +9,8 @@ public class OptionController : MonoBehaviour
     public GameObject status; //スコアやタイムなどを全て格納
     private int Camerasig;
     private int Lighting;
+    public AudioClip OpenOption;
+    AudioSource audioSource;
     public GameObject OptionMenu; //オプションに関するObjectを全て格納
     public GameObject checkbox_camera;
     public GameObject checkbox_sound;
@@ -38,6 +40,7 @@ public class OptionController : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //シーン移行しても継続
         Lighting = GetOneDay();
 
@@ -83,6 +86,7 @@ public class OptionController : MonoBehaviour
     {
         if (changemenu != 5 && changemenu != 9 && Input.GetKeyDown(KeyCode.P))
         {
+            audioSource.PlayOneShot(OpenOption);
             mode = 1;
             changemenu = 0;
             Player.ControllSwitch = 0;
@@ -95,6 +99,7 @@ public class OptionController : MonoBehaviour
             sound.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Backspace))
             {
+                audioSource.PlayOneShot(OpenOption);
                 if (Camerasig == 1)
                 {
                     Player.camerasig = 1;
@@ -203,7 +208,7 @@ public class OptionController : MonoBehaviour
                     LightText_3.SetActive(false);
                     LightText_3_non.SetActive(true);
                     spotlight.SetActive(false);
-                    sunlight.SetActive(false);
+                    sunlight.SetActive(true);
 
 
                     SetOneDay(0);
@@ -238,6 +243,7 @@ public class OptionController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                audioSource.PlayOneShot(OpenOption);
                 if (Camerasig == 1)
                 {
                     Player.camerasig = 1;

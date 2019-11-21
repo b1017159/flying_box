@@ -28,12 +28,6 @@ public class InputName : MonoBehaviour
         {
             Destory();
         }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            SceneManager.LoadScene("GameTitle");
-        }
-       
     }
 
     // Update is called once per frame

@@ -1,16 +1,14 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
- 
-public class TitleSceneManager : MonoBehaviour
+public class NametoTitle : MonoBehaviour
 {
     public AudioClip SoundEffect;
     AudioSource audioSource;
     private void Awake()
     {
-        int DestroyCheck = FindObjectsOfType<TitleSceneManager>().Length;
+        int DestroyCheck = FindObjectsOfType<NametoTitle>().Length;
         if (DestroyCheck > 1)
         {
             Destroy(gameObject);
@@ -27,24 +25,18 @@ public class TitleSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
         Scene loadscene = SceneManager.GetActiveScene();
-        if (loadscene.name == "GameTitle")
+        if (loadscene.name == "Name")
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.B))
             {
                 audioSource.PlayOneShot(SoundEffect);
-                SceneManager.LoadScene("Name");
+                SceneManager.LoadScene("GameTitle");
             }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                audioSource.PlayOneShot(SoundEffect);
-                SceneManager.LoadScene("TopRanking");
-            }
+          
         }
-     
 
     }
-   
-
 }
+

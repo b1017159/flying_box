@@ -10780,6 +10780,7 @@ MonoBehaviour:
   audioClip1: {fileID: 0}
   audioClip2: {fileID: 0}
   FPS_camera_forward: {fileID: 1237555863}
+  TPS_camera_forward: {fileID: 0}
   Armature: {fileID: 1644441839}
   Plane_001: {fileID: 1644441838}
   damagecube_TPS: {fileID: 229769648}
@@ -11107,9 +11108,15 @@ MonoBehaviour:
   CameraText_1: {fileID: 1101557298}
   CameraText_3_non: {fileID: 1621558070}
   CameraText_1_non: {fileID: 1864116660}
+  LightText_3: {fileID: 0}
+  LightText_1: {fileID: 0}
+  LightText_3_non: {fileID: 0}
+  LightText_1_non: {fileID: 0}
   sound: {fileID: 0}
   YesTitle: {fileID: 2068475235}
   menuText: {fileID: 1724731300}
+  spotlight: {fileID: 0}
+  sunlight: {fileID: 0}
 --- !u!4 &1660658803
 Transform:
   m_ObjectHideFlags: 0
@@ -12606,9 +12613,15 @@ MonoBehaviour:
   CameraText_1: {fileID: 1025015406}
   CameraText_3_non: {fileID: 386165618}
   CameraText_1_non: {fileID: 1088208126}
+  LightText_3: {fileID: 0}
+  LightText_1: {fileID: 0}
+  LightText_3_non: {fileID: 0}
+  LightText_1_non: {fileID: 0}
   sound: {fileID: 0}
   YesTitle: {fileID: 2083920692}
   menuText: {fileID: 1021251273}
+  spotlight: {fileID: 0}
+  sunlight: {fileID: 0}
 --- !u!4 &1979128503
 Transform:
   m_ObjectHideFlags: 0

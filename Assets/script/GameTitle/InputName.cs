@@ -7,9 +7,28 @@ using UnityEngine.SceneManagement;
 public class InputName : MonoBehaviour
 {
     public Text textA;
-    public static string name="";
+    public static string name = "";
     // Start is called before the first frame update
+    public GameObject english; 
+    public GameObject japanese;
+    public GameObject smallenglish;
+    public GameObject da;
+    public GameObject pa;
+    public GameObject smalltext;
 
+    void Start()
+    {
+        english.SetActive(false);
+        smallenglish.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (name.Length > 8)
+        {
+            Destory();
+        }
+    }
 
     // Update is called once per frame
     public void ButtonA()
@@ -244,6 +263,270 @@ public class InputName : MonoBehaviour
         name = textA.text;
     }
 
+
+    public void Button_a1()
+    {
+        textA.text += "a";
+        name = textA.text;
+    }
+    public void Button_a2()
+    {
+        textA.text += "b";
+        name = textA.text;
+    }
+    public void Button_a3()
+    {
+        textA.text += "c";
+        name = textA.text;
+    }
+    public void Button_a4()
+    {
+        textA.text += "d";
+        name = textA.text;
+    }
+    public void Button_a5()
+    {
+        textA.text += "e";
+        name = textA.text;
+    }
+    public void Button_b1()
+    {
+        textA.text += "f";
+        name = textA.text;
+    }
+    public void Button_b2()
+    {
+        textA.text += "g";
+        name = textA.text;
+    }
+    public void Button_b3()
+    {
+        textA.text += "h";
+        name = textA.text;
+    }
+    public void Button_b4()
+    {
+        textA.text += "i";
+        name = textA.text;
+    }
+    public void Button_b5()
+    {
+        textA.text += "j";
+        name = textA.text;
+    }
+    public void Button_c1()
+    {
+        textA.text += "k";
+        name = textA.text;
+    }
+    public void Button_c2()
+    {
+        textA.text += "l";
+        name = textA.text;
+    }
+    public void Button_c3()
+    {
+        textA.text += "m";
+        name = textA.text;
+    }
+    public void Button_c4()
+    {
+        textA.text += "n";
+        name = textA.text;
+    }
+    public void Button_c5()
+    {
+        textA.text += "o";
+        name = textA.text;
+    }
+    public void Button_d1()
+    {
+        textA.text += "p";
+        name = textA.text;
+    }
+    public void Button_d2()
+    {
+        textA.text += "q";
+        name = textA.text;
+    }
+    public void Button_d3()
+    {
+        textA.text += "r";
+        name = textA.text;
+    }
+    public void Button_d4()
+    {
+        textA.text += "s";
+        name = textA.text;
+    }
+    public void Button_d5()
+    {
+        textA.text += "t";
+        name = textA.text;
+    }
+    public void Button_e1()
+    {
+        textA.text += "u";
+        name = textA.text;
+    }
+    public void Button_e2()
+    {
+        textA.text += "v";
+        name = textA.text;
+    }
+    public void Button_e3()
+    {
+        textA.text += "w";
+        name = textA.text;
+    }
+    public void Button_e4()
+    {
+        textA.text += "x";
+        name = textA.text;
+    }
+    public void Button_e5()
+    {
+        textA.text += "y";
+        name = textA.text;
+    }
+    public void Button_e6()
+    {
+        textA.text += "z";
+        name = textA.text;
+    }
+
+    public void Button_A1()
+    {
+        textA.text += "A";
+        name = textA.text;
+    }
+    public void Button_A2()
+    {
+        textA.text += "B";
+        name = textA.text;
+    }
+    public void Button_A3()
+    {
+        textA.text += "C";
+        name = textA.text;
+    }
+    public void Button_A4()
+    {
+        textA.text += "D";
+        name = textA.text;
+    }
+    public void Button_A5()
+    {
+        textA.text += "E";
+        name = textA.text;
+    }
+    public void Button_B1()
+    {
+        textA.text += "F";
+        name = textA.text;
+    }
+    public void Button_B2()
+    {
+        textA.text += "G";
+        name = textA.text;
+    }
+    public void Button_B3()
+    {
+        textA.text += "H";
+        name = textA.text;
+    }
+    public void Button_B4()
+    {
+        textA.text += "I";
+        name = textA.text;
+    }
+    public void Button_B5()
+    {
+        textA.text += "J";
+        name = textA.text;
+    }
+    public void Button_C1()
+    {
+        textA.text += "K";
+        name = textA.text;
+    }
+    public void Button_C2()
+    {
+        textA.text += "L";
+        name = textA.text;
+    }
+    public void Button_C3()
+    {
+        textA.text += "M";
+        name = textA.text;
+    }
+    public void Button_C4()
+    {
+        textA.text += "N";
+        name = textA.text;
+    }
+    public void Button_C5()
+    {
+        textA.text += "O";
+        name = textA.text;
+    }
+    public void Button_D1()
+    {
+        textA.text += "P";
+        name = textA.text;
+    }
+    public void Button_D2()
+    {
+        textA.text += "Q";
+        name = textA.text;
+    }
+    public void Button_D3()
+    {
+        textA.text += "R";
+        name = textA.text;
+    }
+    public void Button_D4()
+    {
+        textA.text += "S";
+        name = textA.text;
+    }
+    public void Button_D5()
+    {
+        textA.text += "T";
+        name = textA.text;
+    }
+    public void Button_E1()
+    {
+        textA.text += "U";
+        name = textA.text;
+    }
+    public void Button_E2()
+    {
+        textA.text += "V";
+        name = textA.text;
+    }
+    public void Button_E3()
+    {
+        textA.text += "W";
+        name = textA.text;
+    }
+    public void Button_E4()
+    {
+        textA.text += "X";
+        name = textA.text;
+    }
+    public void Button_E5()
+    {
+        textA.text += "Y";
+        name = textA.text;
+    }
+    public void Button_E6()
+    {
+        textA.text += "Z";
+        name = textA.text;
+    }
+
+
     public void Enter()
     {
         if (name != "")
@@ -251,6 +534,40 @@ public class InputName : MonoBehaviour
             SceneManager.LoadScene("NameEnter");
         }
     }
+
+    public void Alfa()
+    {
+        if (english.activeSelf)
+        {
+            smallenglish.SetActive(true);
+            english.SetActive(false);
+            japanese.SetActive(false);
+            da.SetActive(false);
+            pa.SetActive(false);
+            smalltext.SetActive(false);
+        }
+        else if(smallenglish.activeSelf)
+        {
+            da.SetActive(true);
+            pa.SetActive(true);
+            smalltext.SetActive(true);
+            english.SetActive(false);
+            japanese.SetActive(true);
+            smallenglish.SetActive(false); 
+
+        }
+        else
+        {
+            da.SetActive(false);
+            pa.SetActive(false);
+            smalltext.SetActive(false);
+            english.SetActive(true);
+            japanese.SetActive(false);
+            smallenglish.SetActive(false);
+        }
+
+    }
+
     public void Destory()
     {
         if (name != "")
@@ -262,11 +579,11 @@ public class InputName : MonoBehaviour
 
     public void Pa()
     {
-        string last = name.Substring(name.Length-1);
-        if (last== "は")
+        string last = name.Substring(name.Length - 1);
+        if (last == "は")
         {
             Destory();
-            name += "ぱ";   
+            name += "ぱ";
         }
         if (last == "ひ")
         {
@@ -604,6 +921,16 @@ public class InputName : MonoBehaviour
         {
             Destory();
             name += "よ";
+        }
+        if (last == "つ")
+        {
+            Destory();
+            name += "っ";
+        }
+        if (last == "っ")
+        {
+            Destory();
+            name += "つ";
         }
         textA.text = name;
     }

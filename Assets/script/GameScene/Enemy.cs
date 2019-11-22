@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         private float rotation;
         public static int reticleSignal = 0;//FPSorTPSを判断
         public bool Chase=false;//ONにすると追いかける
-
+        private float distance=0;//出現位置とプレイヤーの距離
         //GameObject target_old = this.gameObject;
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
         Enemy_info target;//enemyinfoのスクリプトを取得
@@ -152,17 +152,21 @@ public class Enemy : MonoBehaviour
                 var pos = player_position-pole_position+player_position;
                 //Debug.Log(pos);
                 //ベクトル＋それなりの距離
-                randm=Random.Range(0,2);
-                if(randm==0) randm=Random.Range(-10.0f,-5.0f);
-                if(randm==1) randm=Random.Range(5.0f,10.0f);
-                pos.x= pos.x+randm;
-                randm=Random.Range(1.0f,3.0f);
-                pos.y= pos.y+randm;
-                randm=Random.Range(0,2);
-                if(randm==0) randm=Random.Range(-7.0f,-5.0f);
-                if(randm==1) randm=Random.Range(5.0f,7.0f);
-                //randm=Random.Range(-5.0f,5.0f);
-                pos.z= pos.z+randm;
+                while(true) {
+                        randm=Random.Range(0,2);
+                        if(randm==0) randm=Random.Range(-10.0f,-5.0f);
+                        if(randm==1) randm=Random.Range(5.0f,10.0f);
+                        pos.x= pos.x+randm;
+                        randm=Random.Range(1.0f,3.0f);
+                        pos.y= pos.y+randm;
+                        randm=Random.Range(0,2);
+                        if(randm==0) randm=Random.Range(-7.0f,-5.0f);
+                        if(randm==1) randm=Random.Range(5.0f,7.0f);
+                        //randm=Random.Range(-5.0f,5.0f);
+                        pos.z= pos.z+randm;
+                        distance=Vector3.SqrMagnitude(pos-player_position);
+                        if(distance>=200) break;
+                }
                 transform.localPosition = pos;
         }
         public Vector3 GetRandomPositionOnLevel()

@@ -1511,9 +1511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676ba08ea3b83946a3f7bb6fdbe4366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  scale: 10
-  min_scale: 5
+  speed: 5
+  scale: 25
+  min_scale: 10
   name: "\u30DE\u30F3\u30DC\u30A6"
   Chase: 0
   targetObject: {fileID: 0}

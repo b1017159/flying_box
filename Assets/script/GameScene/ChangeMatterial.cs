@@ -9,24 +9,27 @@ public class ChangeMatterial : MonoBehaviour
     int i = 0;
    
 
-    void Start()
-    {
-        //朝夜の判断
-        i = Toggle_Day.GetOneDay();
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+        i = OptionController.GetOneDay();
         //夜背景に変更
-        if (i==2){
-            this.GetComponent<Renderer>().sharedMaterial = _material[1];
+        if (i==0){
+            this.GetComponent<Renderer>().sharedMaterial = _material[0];
    
-            // 環境光のライティング設定
-            // ソースをFlatに変更する
-            //RenderSettings.ambientMode = AmbientMode.Flat;
+
+            // 環境光の色を指定する
+            RenderSettings.ambientLight = Color.white;
+        }
+        else
+        {
+            this.GetComponent<Renderer>().sharedMaterial = _material[1];
+
+
             // 環境光の色を指定する
             RenderSettings.ambientLight = Color.black;
-            }
+        }
     }
 }

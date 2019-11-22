@@ -6,15 +6,43 @@ using UnityEngine.SceneManagement;
 
 public class YesOrNo : MonoBehaviour
 {
+    public AudioClip SoundEffect;
+    AudioSource audioSource;
+    private void Awake()
+    {
+        int DestroyCheck = FindObjectsOfType<YesOrNo>().Length;
+        if (DestroyCheck > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        Scene loadscene = SceneManager.GetActiveScene();
+        if (loadscene.name == "NameEnter")
         {
-            SceneManager.LoadScene("VRSetting");
-        }
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                audioSource.PlayOneShot(SoundEffect);
+                SceneManager.LoadScene("VRSetting");
+            }
 
-        if (Input.GetKeyDown(KeyCode.N))
-            SceneManager.LoadScene("Name");
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                SceneManager.LoadScene("Name");
+                audioSource.PlayOneShot(SoundEffect);
+            }
+        }
     }
 }
+

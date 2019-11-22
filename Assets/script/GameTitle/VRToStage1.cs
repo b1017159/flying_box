@@ -5,24 +5,41 @@ using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 public class VRToStage1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioClip SoundEffect;
+    AudioSource audioSource;
+    private void Awake()
     {
-        
+        int DestroyCheck = FindObjectsOfType<VRToStage1>().Length;
+        if (DestroyCheck > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
-
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        Scene loadscene = SceneManager.GetActiveScene();
+        if (loadscene.name == "VRsetting")
         {
-            SceneManager.LoadScene("Ruru1Comp");
-        }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                SceneManager.LoadScene("Ruru1Comp");
+                audioSource.PlayOneShot(SoundEffect);
+            }
 
-        if(OVRInput.Get(OVRInput.RawButton.A))
-        {
-            SceneManager.LoadScene("Ruru1Comp");
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
+                SceneManager.LoadScene("Ruru1Comp");
+                audioSource.PlayOneShot(SoundEffect);
+            }
         }
-
     }
 }

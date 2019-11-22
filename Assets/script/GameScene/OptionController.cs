@@ -147,7 +147,7 @@ public class OptionController : MonoBehaviour
         {
             status.SetActive(true);
             OptionMenu.SetActive(false);
-            sound.SetActive(false);
+            sound.SetActive(true);
 
 
         }

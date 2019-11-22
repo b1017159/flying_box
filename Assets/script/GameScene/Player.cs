@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         public static Player m_instance;
         public float uemax = -60;//上に向く角度の最大値：負の値
         public float sitamax = 60;//下に向く角度の最大値
-        float updown = 0; //上下
+        public static float updown = 0; //上下
         float sau = 0; //左右
         public static int ControllSwitch;
         public double score;
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
                 minutedata = minute;
                 secondsdata = seconds;
                 totaltimedata = totalTime;
-        this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
+                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple, size*scale_multiple);
                 //最初の大きさ
                 animation = GetComponent<Animator>();
         }
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-                
+
                 Debug.Log("camerasig=" + camerasig);
                 scale = this.transform.localScale.x;
                 // use OVRInput
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
                 totalTime = minute * 60 + seconds;
                 totalTime -= Time.deltaTime;
                 totaltimedata = totalTime;
-       
+
                 //　再設定
                 minute = (int)totalTime / 60;
                 seconds = totalTime - minute * 60;

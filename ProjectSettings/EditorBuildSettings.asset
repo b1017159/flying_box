@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/naichilab/unity-simple-ranking/Scenes/Ranking.unity
     guid: 152244f5855414ac4a3874f14efa583c
   - enabled: 0
-    path: Assets/Scenes/Ruru1.unity
+    path: 
     guid: 9cdc62ed04dcc4096b831f15e5b3f01a
   - enabled: 1
     path: Assets/Scenes/Operation.unity
@@ -77,4 +77,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ruru4Comp.unity
     guid: 7a69f18c6e287ea499c48223f7d655d0
+  - enabled: 1
+    path: Assets/Scenes/TopRanking.unity
+    guid: cf27200d720c0ef43819754c1a00e7e1
+  - enabled: 1
+    path: Assets/naichilab/unity-simple-ranking/Scenes/TitleRanking.unity
+    guid: 644a536b1232a6e44a645d8d9ae722f2
   m_configObjects: {}

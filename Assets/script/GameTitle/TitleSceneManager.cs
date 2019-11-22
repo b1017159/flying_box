@@ -23,7 +23,11 @@ public class TitleSceneManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameMenu");
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            SceneManager.LoadScene("TopRanking");
+        }
 
-         
+
     }
 }

@@ -80,7 +80,7 @@ public class RankingSceneManager : MonoBehaviour
                 Debug.Log(BoardIdPlayerPrefsKey + "=" + PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null));
 
                 StartCoroutine(GetHighScoreAndRankingBoard());
-                StartCoroutine(SendScoreEnumerator());  //スコアを送信
+              //  StartCoroutine(SendScoreEnumerator());  //スコアを送信
         }
 
         IEnumerator GetHighScoreAndRankingBoard()

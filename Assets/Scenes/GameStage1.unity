@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -2004,6 +2004,55 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &492746996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492746998}
+  - component: {fileID: 492746997}
+  m_Layer: 0
+  m_Name: EnemyManager_ver2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492746997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492746996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c990dafc69dd244d8673fe9f49f8d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_intervalFrom: 10
+  m_intervalTo: 1
+  m_elapsedTimeMax: 10
+  m_elapsedTime: 0
+  m_enemyPrefabs:
+  - {fileID: 5062207295351121476, guid: d4526a209ec0661419ed3192caa50e67, type: 3}
+--- !u!4 &492746998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492746996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9741032, y: -0.87, z: -6.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508206997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2468,7 +2517,8 @@ PrefabInstance:
       propertyPath: m_Range
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2584225972961186504, guid: 6ce901d9320db49acbfeaa47eab833e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ce901d9320db49acbfeaa47eab833e7, type: 3}
 --- !u!4 &667563078 stripped
 Transform:
@@ -4194,15 +4244,15 @@ MonoBehaviour:
   Plane_001: {fileID: 1240989619}
   damagecube_TPS: {fileID: 1114699377}
   damagecube_FPS: {fileID: 1144877865}
-  minute: 0
-  seconds: 30
+  minute: 1
+  seconds: 0
   speed: 0.05
   rotate_speed: 1
   uemax: -60
   sitamax: 60
   score: 1
   scale: 0
-  Max_speed: 0.5
+  Max_speed: 0.175
   Min_speed: 0.01
   Speed_Down: 0
   mp3: {fileID: 77383347}
@@ -11738,7 +11788,8 @@ PrefabInstance:
       propertyPath: m_Range
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2584225972961186504, guid: 6ce901d9320db49acbfeaa47eab833e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ce901d9320db49acbfeaa47eab833e7, type: 3}
 --- !u!4 &1873770115 stripped
 Transform:

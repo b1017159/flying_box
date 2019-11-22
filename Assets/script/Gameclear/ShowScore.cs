@@ -31,18 +31,48 @@ public class ShowScore : MonoBehaviour
         Result.text = username+"のスコア　"+score+"m";
 
         Scene loadscene = SceneManager.GetActiveScene();
-        if (OVRInput.Get(OVRInput.RawButton.A)) 
+        if (loadscene.name == "Stage1 G")
         {
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
                 SceneManager.LoadScene("GameStage1");
-            Player.scoredata = 30;
-            Player.sizedata = 3f;
+
+               
+            }
+        }
+        if (loadscene.name == "Stage2 G")
+        {
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
+                SceneManager.LoadScene("GameStage2");
+              
+            }
+        }
+        if (loadscene.name == "Stage3 G")
+        {
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
+                SceneManager.LoadScene("GameStage3");
+            }
+        }
+        if (loadscene.name == "ClearScene")
+        {
+            if (OVRInput.Get(OVRInput.RawButton.A))
+            {
+                SceneManager.LoadScene("GameStage1");
+                Player.scoredata = 30;
+                Player.sizedata = 3f;
+                Player.count = 0;
+            }
         }
         if (OVRInput.Get(OVRInput.RawButton.B))
-        {
-            SceneManager.LoadScene("GameTitle");
-            Player.scoredata = 30;
-            Player.sizedata = 3f;
-        }
+            {
+                SceneManager.LoadScene("GameTitle");
+                Player.scoredata = 30;
+                Player.sizedata = 3f;
+            Player.count = 0;
+            }
+        
 
 
     }

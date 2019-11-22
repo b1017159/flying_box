@@ -11481,7 +11481,7 @@ MonoBehaviour:
   sitamax: 60
   score: 1
   scale: 0
-  Max_speed: 0.5
+  Max_speed: 0.175
   Min_speed: 0.01
   Speed_Down: 0
   mp3: {fileID: 175270448}

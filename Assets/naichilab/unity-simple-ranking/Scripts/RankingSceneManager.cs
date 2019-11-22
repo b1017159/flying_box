@@ -75,6 +75,7 @@ public class RankingSceneManager : MonoBehaviour
                 Debug.Log(BoardIdPlayerPrefsKey + "=" + PlayerPrefs.GetString(BoardIdPlayerPrefsKey, null));
 
                 StartCoroutine(GetHighScoreAndRankingBoard());
+                StartCoroutine(SendScoreEnumerator());
         }
 
         IEnumerator GetHighScoreAndRankingBoard()
@@ -148,11 +149,11 @@ public class RankingSceneManager : MonoBehaviour
                 highScoreLabel.text = "送信中...";
 
                 //ハイスコア送信
-                if (_ncmbRecord == null)
-                {
-                        _ncmbRecord = new NCMBObject(_board.ClassName);
-                        _ncmbRecord.ObjectId = ObjectID;
-                }
+                //if (_ncmbRecord == null)
+                //{
+                _ncmbRecord = new NCMBObject(_board.ClassName);
+                //_ncmbRecord.ObjectId = ObjectID;
+                //}
 
                 _ncmbRecord[COLUMN_NAME] = InputtedNameForSave;
                 _ncmbRecord[COLUMN_SCORE] = _lastScore.Value;

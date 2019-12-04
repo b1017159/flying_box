@@ -37,7 +37,7 @@ public class TitleSceneManager : MonoBehaviour
                     SceneManager.LoadScene("Name");
                 }
 
-                if (Input.GetKeyDown(KeyCode.C))
+                if (Input.GetKeyDown(KeyCode.B))
                 {
                     audioSource.PlayOneShot(SoundEffect);
                     SceneManager.LoadScene("TopRanking");

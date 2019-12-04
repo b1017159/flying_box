@@ -10466,8 +10466,8 @@ MonoBehaviour:
   m_elapsedTimeMax: 10
   m_elapsedTime: 0
   m_enemyPrefabs:
-  - {fileID: 7144210904939034142, guid: 2546fe5ba55a50945a09442dbab79aca, type: 3}
-  - {fileID: 7144210904939034142, guid: 2546fe5ba55a50945a09442dbab79aca, type: 3}
+  - {fileID: 8343742933220091716, guid: b8fc63463483e9942884680c72c59f69, type: 3}
+  - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 1885987503770898196, guid: bfea3b452de505a4aae5e33befce9086, type: 3}
@@ -10486,9 +10486,9 @@ MonoBehaviour:
   - {fileID: 8989241152605723217, guid: ad9148e77bd7aa347a9c76876d46deac, type: 3}
   - {fileID: 8989241152605723217, guid: ad9148e77bd7aa347a9c76876d46deac, type: 3}
   - {fileID: 8989241152605723217, guid: ad9148e77bd7aa347a9c76876d46deac, type: 3}
-  - {fileID: 4576039908492214122, guid: c557529dc9794ad44bedaf290fcab2b9, type: 3}
-  - {fileID: 4576039908492214122, guid: c557529dc9794ad44bedaf290fcab2b9, type: 3}
-  - {fileID: 4576039908492214122, guid: c557529dc9794ad44bedaf290fcab2b9, type: 3}
+  - {fileID: 6788333131737137471, guid: 489d0aa70bf12d8418f08194a53a8d2d, type: 3}
+  - {fileID: 6788333131737137471, guid: 489d0aa70bf12d8418f08194a53a8d2d, type: 3}
+  - {fileID: 6788333131737137471, guid: 489d0aa70bf12d8418f08194a53a8d2d, type: 3}
   - {fileID: 6828819657937272879, guid: c6318602c0d802d469aa4ce2374e6971, type: 3}
   - {fileID: 6828819657937272879, guid: c6318602c0d802d469aa4ce2374e6971, type: 3}
   - {fileID: 6828819657937272879, guid: c6318602c0d802d469aa4ce2374e6971, type: 3}
@@ -11473,15 +11473,15 @@ MonoBehaviour:
   Plane_001: {fileID: 1931619484}
   damagecube_TPS: {fileID: 1306033119}
   damagecube_FPS: {fileID: 1497076413}
-  minute: 0
-  seconds: 30
+  minute: 1
+  seconds: 0
   speed: 0.05
   rotate_speed: 1
   uemax: -60
   sitamax: 60
   score: 1
   scale: 0
-  Max_speed: 0.5
+  Max_speed: 0.175
   Min_speed: 0.01
   Speed_Down: 0
   mp3: {fileID: 175270448}

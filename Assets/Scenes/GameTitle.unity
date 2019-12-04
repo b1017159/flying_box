@@ -448,7 +448,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "B:\u9B5A\u56F3\u9451\n"
+  m_Text: '
+
+'
 --- !u!222 &835110801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -651,8 +653,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1850089152}
   - {fileID: 1852489049}
+  - {fileID: 1850089152}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -695,7 +697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.18, y: -0.92962444}
+  m_AnchoredPosition: {x: -0.204, y: -0.317}
   m_SizeDelta: {x: 679.6, y: 124.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &956712311
@@ -729,7 +731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "C:\u30E9\u30F3\u30AD\u30F3\u30B0\n"
+  m_Text: "B:\u30E9\u30F3\u30AD\u30F3\u30B0\n"
 --- !u!222 &956712312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1168,7 +1170,7 @@ Transform:
   - {fileID: 367528039}
   - {fileID: 1824007491}
   m_Father: {fileID: 932964941}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852489047
 GameObject:
@@ -1244,9 +1246,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852489047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250.39546, y: -236, z: -103.63747}
+  m_LocalPosition: {x: 295, y: -232, z: -131}
   m_LocalScale: {x: 18.63252, y: 17.474092, z: 39.82824}
   m_Children: []
   m_Father: {fileID: 932964941}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

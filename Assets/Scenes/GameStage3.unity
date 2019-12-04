@@ -1452,8 +1452,8 @@ MonoBehaviour:
   m_elapsedTimeMax: 10
   m_elapsedTime: 0
   m_enemyPrefabs:
-  - {fileID: 7144210904939034142, guid: 2546fe5ba55a50945a09442dbab79aca, type: 3}
-  - {fileID: 7144210904939034142, guid: 2546fe5ba55a50945a09442dbab79aca, type: 3}
+  - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
+  - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
   - {fileID: 3134882408037198244, guid: fbdb8c0f546f9434391b9f227e027209, type: 3}
@@ -1471,8 +1471,8 @@ MonoBehaviour:
   - {fileID: 1870738347225260598, guid: 313ec85e6082e1d4e88704b25b0ad2e7, type: 3}
   - {fileID: 8989241152605723217, guid: ad9148e77bd7aa347a9c76876d46deac, type: 3}
   - {fileID: 8989241152605723217, guid: ad9148e77bd7aa347a9c76876d46deac, type: 3}
-  - {fileID: 4576039908492214122, guid: c557529dc9794ad44bedaf290fcab2b9, type: 3}
-  - {fileID: 4576039908492214122, guid: c557529dc9794ad44bedaf290fcab2b9, type: 3}
+  - {fileID: 6788333131737137471, guid: 489d0aa70bf12d8418f08194a53a8d2d, type: 3}
+  - {fileID: 6788333131737137471, guid: 489d0aa70bf12d8418f08194a53a8d2d, type: 3}
   - {fileID: 6828819657937272879, guid: c6318602c0d802d469aa4ce2374e6971, type: 3}
   - {fileID: 6828819657937272879, guid: c6318602c0d802d469aa4ce2374e6971, type: 3}
   - {fileID: 60316034436850760, guid: b85b6a4cfff834b4ba677f8f17f9a1f7, type: 3}
@@ -10680,15 +10680,15 @@ MonoBehaviour:
   Plane_001: {fileID: 1644441838}
   damagecube_TPS: {fileID: 229769648}
   damagecube_FPS: {fileID: 981806366}
-  minute: 0
-  seconds: 30
+  minute: 1
+  seconds: 0
   speed: 0.05
   rotate_speed: 1
   uemax: -60
   sitamax: 60
   score: 1
   scale: 0
-  Max_speed: 0.5
+  Max_speed: 0.175
   Min_speed: 0.01
   Speed_Down: 0
   mp3: {fileID: 1651381714}

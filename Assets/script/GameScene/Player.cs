@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         public GameObject damagecube_FPS;//FPSでのダメージエフェクト宣言
 
         //カメラのオブジェクト宣言
-        private GameObject FPS; 　//一人称カメラ
+        private GameObject FPS; //一人称カメラ
         private GameObject TPS; //三人称カメラ
 
         　 //　トータル制限時間
@@ -66,13 +66,13 @@ public class Player : MonoBehaviour
         float sau = 0; //左右
         public static int ControllSwitch;
         public double score;
-        public static float sizedata; //魚のスケールを引き継ぐための変数
+        public static float sizedata = 0.9f; //魚のスケールを引き継ぐための変数
         public static double scoredata = 30; // スコア
         public static int camerasig = 3;
         private float size = 3f;//初期大きさ
         private float scale_multiple=0.3f;
         public static int count = 0;
-        public float scale;
+    public float scale;
       //  public static float sizedata;
 
         //コントローラの宣言
@@ -111,9 +111,12 @@ public class Player : MonoBehaviour
                 ControllSwitch = 1;
                 // スコアを加算します
                 score = scoredata;
-                scale = sizedata;
-                //   SetCountText();
-                FPS = GameObject.Find("First_person");//シーン内での一人称カメラを探す
+        scale = sizedata; //scale = size
+        //size = sizedata;
+                
+
+        //   SetCountText();
+        FPS = GameObject.Find("First_person");//シーン内での一人称カメラを探す
                 TPS = GameObject.Find("Third_person");//シーン内での三人称カメラを探す
                 camerasig = 3;
                 TPS.SetActive(false);
@@ -121,6 +124,7 @@ public class Player : MonoBehaviour
                 totalTime = minute * 60 + seconds;
                 minutedata = minute;
                 secondsdata = seconds;
+
                 totaltimedata = totalTime;
 
                 damagecube_TPS.SetActive(false);//初期の段階はエフェクトoff
@@ -156,7 +160,7 @@ public class Player : MonoBehaviour
 
                 FPS_camera_forward = transform.Find("First_person");//FPS時に向いている方向を取得？
         TPS_camera_forward = transform.Find("Third_person");//FPS時に向いている方向を取得？
-        this.transform.localScale=new Vector3(size*scale_multiple,size*scale_multiple,size*scale_multiple);
+        this.transform.localScale=new Vector3(scale,scale,scale);
         }
 
 
@@ -167,6 +171,9 @@ public class Player : MonoBehaviour
                 FPS_rotate = FPS_camera_forward.localEulerAngles;//一人称視点の時に自機の傾きを取得
 
                 scale = this.transform.localScale.x;//自分の大きさを取得（サイズ）
+        //Debug.Log(scale);
+
+
 
                 // use OVRInput
                 OVRInput.Update();
@@ -189,7 +196,7 @@ public class Player : MonoBehaviour
 
                 if (ControllSwitch == 1)
         {
-            Debug.Log(TPS_camera_forward.transform.rotation);
+           // Debug.Log(TPS_camera_forward.transform.rotation);
 
             if (camerasig == 3)
                         {
@@ -331,11 +338,12 @@ public class Player : MonoBehaviour
                                 other.gameObject.SetActive(false);
                                 // スコアを加算します
                                 score = score + 1; // スコアを加算します
-                                size = size + 0.1f;
-                                this.transform.localScale = new Vector3(size*scale_multiple, size*scale_multiple,size*scale_multiple);
+                                scale = scale + 0.03f;
+                                this.transform.localScale = new Vector3(scale, scale,scale);
                                 //スコアを次のシーンに引き継ぐ
                                 scoredata = score;
-                                sizedata = scale;
+                                sizedata = scale;//scale=size
+                
                                 mp3.Mswich=1;//咀嚼音
                         }
                         if (this.scale <= other.gameObject.GetComponent<Enemy>().scale)

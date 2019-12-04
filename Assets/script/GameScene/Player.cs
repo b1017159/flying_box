@@ -311,7 +311,13 @@ public class Player : MonoBehaviour
 
                         }
                 }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            //audioSource.PlayOneShot(SoundEffect);
+            SceneManager.LoadScene("ClearScene");
         }
+    }
 
         //ダメージ判定関数
         void damageEFON()

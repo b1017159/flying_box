@@ -64,6 +64,7 @@ public class ShowScore : MonoBehaviour
                 SceneManager.LoadScene("GameStage1");
                       Player.scoredata = 30;
                 Player.sizedata = 3f;
+                Player.count = 0;
 
             }
         }

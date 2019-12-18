@@ -276,7 +276,7 @@ public class OptionController : MonoBehaviour
                         checkbox_sound.SetActive(false);
                         checkbox_gotitle.SetActive(false);
                         checkbox_backgame.SetActive(false);
-
+                        Player.scoredata=30;
                         if (Input.GetKey(KeyCode.Y)||Input.GetKeyDown ("joystick button 1"))
                         {
                                 SceneManager.LoadScene("GameTitle");

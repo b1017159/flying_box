@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-        //public float m_speed; // 移動する速さ
+        //public float m_speed; // 移動する速さ//test
         private Vector3 m_direction;
         // Start is called before the first frame update
         private Vector3 player_position;

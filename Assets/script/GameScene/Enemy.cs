@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-        //public float m_speed; // 移動する速さ
+        //public float m_speed; // 移動する速さ//test
         private Vector3 m_direction;
         // Start is called before the first frame update
         private Vector3 player_position;
@@ -29,9 +29,9 @@ public class Enemy : MonoBehaviour
         //GameObject target_old = this.gameObject;
         // Transform target = target_old.transform.Find("enemy_info"); //子オブジェクトの3Dテキストを見つける
         Enemy_info target;//enemyinfoのスクリプトを取得
-        public GameObject targetObject;        //ennemy_info
+        public GameObject targetObject;//ennemy_info
         public GameObject S_color;
-    private float distance;
+        private float distance;
 
         void Start()
         {
@@ -156,24 +156,24 @@ public class Enemy : MonoBehaviour
                 if(Chase==true) {
                         pos = pos*3;
                 }else{
-            while (true)
-            {
-              
-                randm = Random.Range(0, 2);
-                if (randm == 0) randm = Random.Range(-10.0f, -5.0f);
-                if (randm == 1) randm = Random.Range(5.0f, 10.0f);
-                pos.x = pos.x + randm;
-                randm = Random.Range(1.0f, 3.0f);
-                pos.y = pos.y + randm;
-                randm = Random.Range(0, 2);
-                if (randm == 0) randm = Random.Range(-7.0f, -5.0f);
-                if (randm == 1) randm = Random.Range(5.0f, 7.0f);
-                //randm=Random.Range(-5.0f,5.0f);
-                pos.z = pos.z + randm;
-                distance = Vector3.SqrMagnitude(pos- player_position);
-                if (distance >= 200) break;
-            }
-            Debug.Log("distance" + distance);
+                        while (true)
+                        {
+
+                                randm = Random.Range(0, 2);
+                                if (randm == 0) randm = Random.Range(-10.0f, -5.0f);
+                                if (randm == 1) randm = Random.Range(5.0f, 10.0f);
+                                pos.x = pos.x + randm;
+                                randm = Random.Range(1.0f, 3.0f);
+                                pos.y = pos.y + randm;
+                                randm = Random.Range(0, 2);
+                                if (randm == 0) randm = Random.Range(-7.0f, -5.0f);
+                                if (randm == 1) randm = Random.Range(5.0f, 7.0f);
+                                //randm=Random.Range(-5.0f,5.0f);
+                                pos.z = pos.z + randm;
+                                distance = Vector3.SqrMagnitude(pos- player_position);
+                                if (distance >= 200) break;
+                        }
+                        Debug.Log("distance" + distance);
                 }
                 transform.localPosition = pos;
         }

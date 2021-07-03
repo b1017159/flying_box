@@ -6,41 +6,41 @@ using UnityEngine.SceneManagement;
 
 public class YesOrNo : MonoBehaviour
 {
-    public AudioClip SoundEffect;
-    AudioSource audioSource;
-    private void Awake()
-    {
-        int DestroyCheck = FindObjectsOfType<YesOrNo>().Length;
-        if (DestroyCheck > 1)
+        public AudioClip SoundEffect;
+        AudioSource audioSource;
+        private void Awake()
         {
-            Destroy(gameObject);
+                int DestroyCheck = FindObjectsOfType<YesOrNo>().Length;
+                if (DestroyCheck > 1)
+                {
+                        Destroy(gameObject);
+                }
+                else
+                {
+                        DontDestroyOnLoad(gameObject);
+                }
         }
-        else
+        private void Start()
         {
-            DontDestroyOnLoad(gameObject);
+                audioSource = GetComponent<AudioSource>();
         }
-    }
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        Scene loadscene = SceneManager.GetActiveScene();
-        if (loadscene.name == "NameEnter")
+        // Update is called once per frame
+        void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                audioSource.PlayOneShot(SoundEffect);
-                SceneManager.LoadScene("Ruru");
-            }
+                Scene loadscene = SceneManager.GetActiveScene();
+                if (loadscene.name == "NameEnter")
+                {
+                        if (Input.GetKeyDown(KeyCode.Y)||Input.GetKeyDown ("joystick button 1"))
+                        {
+                                audioSource.PlayOneShot(SoundEffect);
+                                SceneManager.LoadScene("Ruru");
+                        }
 
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                audioSource.PlayOneShot(SoundEffect);
-                SceneManager.LoadScene("Name");
-            }
+                        if (Input.GetKeyDown(KeyCode.N)||Input.GetKeyDown ("joystick button 0"))
+                        {
+                                audioSource.PlayOneShot(SoundEffect);
+                                SceneManager.LoadScene("Name");
+                        }
+                }
         }
-    }
 }

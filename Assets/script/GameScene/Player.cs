@@ -77,7 +77,6 @@ public class Player : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-
                 Debug.Log("camerasig=" + camerasig);
                 scale = this.transform.localScale.x;
                 // use OVRInput
@@ -114,7 +113,30 @@ public class Player : MonoBehaviour
                                 TPS.SetActive(false);
                         }
 
-
+                        float hori = Input.GetAxis ("Horizontal");//左スティック
+                        float vert = Input.GetAxis ("Vertical");
+                        if(( hori != 0) ||  (vert != 0) ) {
+                                // 上方向ボタンを押した瞬間にif文の中を実行
+                                if (vert>0.5 && updown > uemax)
+                                {
+                                        updown -= rotate_speed;
+                                }
+                                // 下方向ボタンを押した瞬間にif文の中を実行
+                                if (vert<-0.5 && updown < sitamax)
+                                {
+                                        updown += rotate_speed;
+                                }
+                                // 右方向ボタンを押した瞬間にif文の中を実行
+                                if (hori>0.5)
+                                {
+                                        sau += rotate_speed;
+                                }
+                                // 左方向ボタンを押した瞬間にif文の中を実行
+                                if (hori<-0.5)
+                                {
+                                        sau -= rotate_speed;
+                                }
+                        }
                         // 上方向ボタンを押した瞬間にif文の中を実行
                         if (Input.GetKey(KeyCode.UpArrow) && updown > uemax)
                         {
@@ -136,7 +158,7 @@ public class Player : MonoBehaviour
                                 sau -= rotate_speed;
                         }
 
-                        if (Input.GetKey(KeyCode.S))
+                        if (Input.GetKey(KeyCode.S)||Input.GetKey ("joystick button 2"))
                         {
                                 transform.Translate(0.0f, 0.0f, 0.1f);
                                 animation.SetBool("dash", true);
